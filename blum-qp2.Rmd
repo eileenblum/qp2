@@ -1,0 +1,133 @@
+---
+title             : "On the locality of vowel harmony over multi-tiered autosegmental representations"
+shorttitle        : "Locality of vh over multi-tiered ARs"
+
+author: 
+  - name          : "Eileen Blum"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "18 Seminary Place, New Brunswick, NJ 08901"
+    email         : "eileen.blum@rutgers.edu"
+
+affiliation:
+  - id            : "1"
+    institution   : "Rutgers University"
+
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : ["r-references.bib"]
+
+figsintext        : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : no
+mask              : no
+
+class             : "man"
+output            : papaja::apa6_pdf
+header-includes:
+  - \usepackage{tipa}
+  - \usepackage{gb4e}
+  - \noautomath
+  - \usepackage{tikz}
+  - \usetikzlibrary{matrix}
+  - \tikzset{marked/.style={draw=none, fill=none}}
+---
+
+```{r load_packages, include = FALSE}
+library("papaja")
+```
+
+# Finnish
+
+Native Finnish words present a case of backness harmony with four transparent front vowels. The Finnish vowel inventory, in Table \ref{finnish_vowels}, consists of 16 vowels with contrastive length and two main featural distinctions: $\pm$ back and $\pm$ neutral [@valimaablum1986; @ringenheinamaki1999]. The four vowels transparent to backness harmony, \textipa{[i, i:, e, e:]}, are all +neutral and -back. All other Finnish vowels are considered -neutral and distinguished by backness such that the +back vowels are \textipa{[u, u:, o, o:, A, A:]} and the -neutral, -back vowels are \textipa{[y, y:, \o, \o:, \ae, \ae:]}
+
+\begin{table}
+  \caption{Finnish Vowels}
+  \begin{tabular}{c|c|c}
+  \multicolumn{2}{l|}{-back}          & +back\\\hline\hline
+  \textipa{i, i:} & \textipa{y, y:}   & \textipa{u, u:}\\ \cline{1-3}
+  \textipa{e, e:} & \textipa{\o, \o:}  & \textipa{o, o:}\\ \cline{1-3}
+                  & \textipa{\ae, \ae:} & \textipa{A, A:}\\ \cline{1-3}\hline\hline
+  +neutral        & \multicolumn{2}{|l}{-neutral} \\
+  \end{tabular}
+  \label{finnish_vowels}
+\end{table}
+
+The harmony generalization is that all the -neutral vowels in a root will share the same back feature with each other and the vowels in any suffixes [@valimaablum1986; @ringenheinamaki1999]. For example, the words in (\ref{finnish_-neutral}) contain only -neutral vowels, which are also all either +back or -back. A hyphen represents a morpheme boundary.
+
+\begin{exe}
+\ex{-neutral vowels share a back feature value}\label{finnish_-neutral}
+\begin{xlist}
+  \ex \textipa{p\o yt\ae} `table' \\
+  \ex \textipa{k\ae n-t\ae:} `turn' \\
+  \ex \textipa{tyk\ae-t\ae} `like' \\
+  \ex \textipa{poutA} `fine weather' \\
+  \ex \textipa{mur-tA:} `break' \\
+  \ex \textipa{kokA-tA} `cook' \\
+  \end{xlist}
+\end{exe}
+
+The surface requirement that adjacent -neutral vowels share the same ATR feature can also be written as a FSC, which forbids two adjacent vowels associated to the same -neutral feature from being associated to different back features, as in (\ref{fsc.finnish}), even across a morpheme boundary. The ordering relation on the back tier in (\ref{fsc.finnish}) is omitted because the + or - values of the two back features are irrelevant for this constraint, as long as they differ. The ordering relation on the melody tier of this FSC is also omitted and the reason will be made clear by the example in (\ref{finnish.poytana}).
+
+\begin{exe}
+\ex \label{fsc.finnish}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+* & |(a)| +back & |(f)| -back \\
+  & |(c)| V    & |(h)| V \\
+  & |(e)| -neutral &  \\
+  };
+  \draw (a.south) -- (c.north);
+  \draw (f.south) -- (h.north);
+  \draw foreach \x in {c, h} {(\x.south) -- (e.north)};
+  \end{tikzpicture}
+\end{exe}
+
+\begin{exe}
+\ex{\textipa{[p\o yt\ae-n\ae]} `table (essive)'}\label{finnish.poytana}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=4ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+(a) &          & |(a)| -back    &         &         &           &         & \\ 
+    & |(b)| p  & |(c)| \o       & |(d)| y & |(e)| t & |(f)| \ae & |(g)| n & |(r)| \ae \\
+    &          & |(h)| -neutral &         &         &           &         &  \\          
+(b) * &         & |[red](i)| \textbf{-back} &         &         &                                            &         & |[red](j)| \textbf{+back} \\
+      & |(k)| p & |(l)| \o                  & |(m)| y & |(n)| t & |[red](o)| \textbf{\ae}                    & |(p)| n & |[red](s)| \textbf{\textipa{A}} \\
+      &         & |[red](q)| \textbf{-neutral} &                       &         &                              &         & \\
+  };
+  \draw foreach \x in {c, d, f, r} {(a.south) -- (\x.north)};
+  \draw foreach \x in {c, d, f, r} {(\x.south) -- (h.north)};
+  \draw foreach \x in {l, m} {(i.south) -- (\x.north)};
+  \draw[red,thick] (i.south) -- (o.north);
+  \draw[red,thick] (j.south) -- (s.north);
+  \draw foreach \x in {l, m} {(\x.south) -- (q.north)};
+  \draw[red,thick] foreach \x in {o, s} {(\x.south) -- (q.north)};
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (f) -- (g);
+  \draw[black,->] (g) -- (r);
+  \draw[black,->] (i) -- (j);
+  \draw[black,->] (k) -- (l);
+  \draw[black,->] (l) -- (m);
+  \draw[black,->] (m) -- (n);
+  \draw[black,->] (n) -- (o);
+  \draw[black,->] (o) -- (p);
+  \draw[black,->] (p) -- (s);
+  \end{tikzpicture}
+\end{exe}
+
+\newpage
+
+# References
+```{r create_r-references}
+r_refs(file = "r-references.bib")
+```
+
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
