@@ -39,10 +39,265 @@ header-includes:
 ```{r load_packages, include = FALSE}
 library("papaja")
 ```
+# Introduction
 
-# Finnish
+  This qualifying paper aims to investigate the locality of vowel harmony patterns over autosegmental representations (ARs) using @jardinelocaltone's forbidden substructure constraints (FSCs) over ARs. The investigation will provide a well-defined, computationally motivated theory of well-formedness in vowel harmony. @jardinelocaltone developed a theory of tonal well-formedness and determined that tone patterns are fundamentally local over two-tiered ARs. Investigating the locality of vowel harmony patterns will determine the expressive power of multi-tiered ARs and allows for a theory of well-formedness that makes accurate typological predictions.
+  
+  A goal shared by all of generative phonology is to distinguish attested patterns from logically possible, but unattested ones. A theory of well-formedness in vowel harmony that accomplishes this goal must be both expressive enough to explain the attested typology of vowel harmony patterns and restrictive enough to exclude the logically possible unattested vowel harmony patterns. This qualifying paper will adopt a formal language theory approach that provides explicit ways of determining the expressivity and restrictiveness of phonological patterns.
 
-Native Finnish words present a case of backness harmony with four transparent front vowels. The Finnish vowel inventory, in Table \ref{finnish_vowels}, consists of 16 vowels with contrastive length and two main featural distinctions: $\pm$ back and $\pm$ neutral [@valimaablum1986; @ringenheinamaki1999]. The four vowels transparent to backness harmony, \textipa{[i, i:, e, e:]}, are all +neutral and -back. All other Finnish vowels are considered -neutral and distinguished by backness such that the +back vowels are \textipa{[u, u:, o, o:, A, A:]} and the -neutral, -back vowels are \textipa{[y, y:, \o, \o:, \ae, \ae:]}
+## The formal language theory approach
+
+  The goal of distinguishing attested phonological patterns from possible unattested patterns is currently being investigated using formal language theory to determine the expressive power required to compute phonological patterns in general. The Chomsky hierarchy, in (\ref{chomsky.hierarchy}), classifies stringsets in terms of the relative expressivity of the grammars needed to generate them. Each class that is lower on the hierarchy is also a proper subset of the class above it. 
+  
+\begin{exe}
+\ex{The Chomsky Hierarchy:}\label{chomsky.hierarchy} 
+Finite $\subsetneq$ Regular $\subsetneq$ Context-Free $\subsetneq$ Context-Sensitive $\subsetneq$ Computably Enumerable
+\end{exe}
+A significant body of work in computational phonology shows that phonological generalizations are properly contained within the regular class of stringsets [@heinzidsardi2013]. Recent work has further established a subregular  hierarchy of stringset classes, i.e. star-free (SF) and weaker classes [@rogersetal2013; @heinzetaltsl, @rogerspullum2011]. A generative phonlogical theory must be expressive enough to predict the regular patterns and restrictive enough to rule out patterns that fall into a larger class, such as context-free. The classifications of stringsets and ARs in this manner are not directly comparable, but @jardineexpressag [following @jardineheinz2015] provides a method for comparing the expressivity of the grammars that generate them. @jardineexpressag establishes a sub-SF class of "forbidden k-factor grammars" over ARs, ASL^g^, that is expressive enough to capture a range of attested tone patterns (ASL^g~T~^). The ASL^g~T~^ class includes patterns that would also fall within three different subregular stringset classes: strictly local (SL), tier-based strictly local (TSL), and strictly piecewise (SP). The goal of this qualifying paper is to determine whether or not the typology of vowel harmony patterns must be captured by a class of grammars, using ARs with more than two tiers, that is more expressive than the ASL^g~T~^ class.
+
+  Patterns represented with multi-tiered ARs demonstrate whether or not enriching the representation necessarily increases the expressivity of a grammar. Representations of vowel harmony refer to subsegmental features, which will be represented using multiple featural tiers, such that each feature occupies a separate tier that is associated to a vowel on the melody tier [following @Clements1976; @mccarthyfg1988]. Such ARs include at least one additional tier compared with the ARs of tone patterns, which utilize only two tiers [@jardinelocaltone; @jardinediss; @jardineexpressag]. This qualifying paper will determine whether or not enriching ARs in this way increases the expressivity of a grammar such that it falls outside of the previously established ASL^g~T~^ class. Three aspects of multi-tiered ARs of vowel harmony are investigated: the complexity of vowel harmony generalizations that include domain information in Turkish and Finnish, the locality of an asymmetry between harmony triggers and undergoers in Baiyina Oroquen [@walkeroroquen], and whether or not multi-tiered ARs predict the generation of an unattested pattern: "sour grapes" [@padgett1995; @walker2010; @mccarthy2011]. Each of these investigations will provide additional evidence of the expressive power needed for a grammar to generate vowel harmony patterns.
+  
+  Vowel harmony can be viewed either as an input-output map or as a phonotactic "cooccurrence restriction upon the vowels that may occur in a word" [@Clements1976]. A hierarchy that classifies sets of ARs, based on the Chomsky and related subregular hierarchies, differs significantly from a parallel hierarchy for sets of pairs of ARs, such as in a transformation (or map) from underlying to surface form. Previous analyses use ARs to describe vowel harmony patterns as the spreading of a vowel feature from one vowel throughout the word until it is blocked [@Goldsmith1976; @Clements1976; @sagey1986; @mccarthyfg1988; @padgett2002; @walker2010; @walker2014; @vdHulst2017]. @Clements1976's well-formedness condition motivates feature spreading in order to ensure that all elements on one tier of an AR are connected via an association relation to some element on another tier of the same AR. The result is an AR in which all elements on one tier are associated to some element on another tier. A majority of scholars have thus viewed vowel harmony as mapping an input with a vowel feature associated to one vowel onto an output where that same feature is associated to multiple vowels. 
+  
+  This qualifying paper constitutes the first in-depth formal language theoretic study of vowel harmony as a phonotactic restriction rather than an input-output map. ARs within the Chomsky-based hierarchy cannot be compared with sets of pairs of ARs within a separate hierarchy. In order to compare vowel harmony with other patterns classified within the subregular hierarchy of ARs this qualifying paper will be taking a slightly different approach than has been taken before by evaluating only the restrictions on output substructures. While vowel harmony has been considered a derivational process, this paper will aim to determine the locality of only the surface restrictions on vowel harmony patterns over ARs. The harmonizing ARs that will be examined contain at least one feature that is associated to more than one vowel, as it would be on the surface. Ignoring input structures in this way allows for the classification of vowel harmony within the sub-SF hierarchy of patterns, which allows for the comparison of vowel harmony with other phonological patterns that have been classified on the same hierarchy, such as tone in @jardineexpressag.
+
+## Motivating Autosegmental Representations (ARs)
+
+  This qualifying paper will determine the locality of surface restrictions on vowel harmony patterns over multi-tiered ARs by investigating whether they can be captured using @jardinelocaltone's "forbidden substructure constraints"(FSCs). FSCs are defined as surface markedness constraints [OT; @princesmolensky1993; -@princesmolensky2004], "which ban pieces of autosegmental representations" [@jardinelocaltone p.1]. FSCs serve as a type of phonotactic restriction such that "well-formedness is based on contiguous structures of a specific size" [@jardinelocaltone p.3]. One can use FSCs as a definition of locality because they refer to elements within a structure that are connected by either an ordering or association relation. A phonological pattern is thus local if it can be described with FSCs because it can be captured by referring to a subset of the elements within structures and their connections. @jardinelocaltone uses FSCs to show that attested tone patterns are local in this way. 
+
+### Multi-tiered ARs
+
+  Autosegmental representations (ARs) of tonal patterns generally consist of two tiers: the TBU and melody tiers [@Goldsmith1976; @jardinediss; -@jardinelocaltone], but an open question that remains is: From a formal perspective, what is the range of patterns that can be represented using more than two autosegmental tiers? This paper investigates the expressive power needed to represent one such pattern. Vowel harmony patterns refer to subsegmental features, which will be represented using multiple featural tiers; each feature occupies a separate tier that is associated to a vowel on the melody tier [following @Clements1976; @mccarthyfg1988]. For example, assuming binary features, vowel features like [$\pm$ back], [$\pm$ high], etc. are represented on separate tiers and associated to a vowel on the melody tier, as in (\ref{fsc.ex}).
+
+\begin{exe}
+\ex \label{fsc.ex}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes,
+          row sep=1em, 
+          nodes={text height=1em, text depth=0.5em}] {
+|(h)| $\pm$ high\\
+|(v)| V         \\
+|(b)| $\pm$ back\\
+  };
+   \draw (h.south) -- (v.north);
+   \draw (v.south) -- (b.north);
+  \end{tikzpicture}
+\end{exe}
+
+  The goal for this project is to extend the work of @jardinelocaltone to determine whether vowel harmony patterns are local over ARs with more than two tiers, as in (\ref{fsc.ex}). This qualifying paper evaluates whether or not the restrictions on attested vowel harmony patterns can be captured using FSCs. 
+
+### Representational assumptions
+
+  Use of ARs requires discussion of at least some of the basic representational assumptions held throughout this paper. The basic assumptions include @Clements1976's Well-Formedness Condition, which includes stipulations of *Full Specification* (FS), the *No Crossing Constraint* (NCC) [@Goldsmith1976; @sagey1986], and the *Obligatory Contour Principle* (OCP) [@leben1973]. Examples of structures that violate each of these assumptions are shown in (\ref{akan.ex2})-(\ref{akan.ex4}) below. 
+
+\begin{exe}
+\ex \label{akan.ex2} Violates FS
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+* & |(b)| -ATR & \\
+  & |(d)| V    & |(e)| V \\
+  & |(f)| -low & \\
+  };
+  \draw (b.south) -- (d.north);
+  \draw (d.south) -- (f.north);
+  \draw[thick,black,->] (d) -- (e);
+  \draw foreach \x in {d, e} {(\x.south) -- (f.north)};
+  \end{tikzpicture}
+\end{exe}
+
+\begin{exe}
+\ex \label{akan.ex3} Violates NCC
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+* & |(a)| +ATR & |(b)| -ATR \\
+  & |(c)| V    & |(d)| V \\
+  & |(e)| -low &  \\
+  };
+  \draw (a.south) -- (d.north);
+  \draw (b.south) -- (c.north);
+  \draw[thick,black,->] (a) -- (b);
+  \draw[thick,black,->] (c) -- (d);
+  \draw foreach \x in {c, d} {(\x.south) -- (e.north)};
+  \end{tikzpicture}
+\end{exe}
+
+\begin{exe}
+\ex \label{akan.ex4} Violates OCP
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+* & |(a)| -ATR & |(b)| -ATR \\
+  & |(c)| V    & |(d)| V \\
+  & |(e)| -low & |(f)| -low \\
+  };
+  \draw (a.south) -- (c.north);
+  \draw (b.south) -- (d.north);
+  \draw (c.south) -- (e.north);
+  \draw (d.south) -- (f.north);
+  \draw[thick,black,->] (a) -- (b);
+  \draw[thick,black,->] (c) -- (d);
+  \draw[thick,black,->] (e) -- (f);
+  \end{tikzpicture}
+\end{exe}
+
+First, FS means that each featural element must be associated with at least one vowel on the melody tier and each vowel on the melody tier must be associated with at least one element on a featural tier. FS crucially allows vowels to be associated with multiple featural tiers as is necessary for each vowel feature to occupy its own tier. The hypothetical representation in (\ref{akan.ex2}) straighforwardly violates FS because there is a vowel that is not associated to any feature on the ATR tier. While both vowels are associated to a single -low feature, the second vowel is not associated to any feature on the ATR tier. Since vowel harmony patterns will be analyzed, it will be assumed that consonants cannot be associated to vowel features and that FS and vowel harmony in general ignore consonantal elements on the melody tier. 
+
+Second, the NCC states that association lines between the melody tier and a feature tier never cross. @odden1994 adds that the NCC can only evaluate the association between the melody and one featural tier at a time. The representation in (\ref{akan.ex3}) violates the NCC because +ATR precedes -ATR, but is associated to a vowel that is preceded by a vowel associated to -ATR; this configuration creates visually crossed association lines. 
+  
+  A notable effect of FS along with the NCC is that they prevent what have been called gapped structures [@archangelipulleyblank1994; @ringenvago1998]. A gapped structure is one in which a feature appears to have skipped over a vowel that it could potentially be associated to. FS would prevent gapped structures in which the "skipped" vowel is not associated to anything on that particular feature's tier. The NCC would prevent gapped structures in which the surrounding two vowels are associated to the same feature and the "skipped" vowel is associated to a different feature on the same tier. 
+  
+  Lastly, the OCP stipulates that adjacent featural elements must be distinct. The representation in (\ref{akan.ex4}) violates the OCP because on both the ATR and low feature tiers there are two identical adjacent features, -ATR and -low respectively. The OCP in conjunction with FS results in representations where multiple adjacent vowels are associated to a single feature rather than having multiple adjacent iterations of the same feature each associated to a single vowel. An example representation of an Akan word that satisfies all of the AR properties discussed here is shown in (\ref{akan.ex}).
+  
+\begin{exe}
+\ex \label{akan.ex} Satisfies FS, NCC, and OCP
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+  &            & |(b)| -ATR & \\
+  & |(c)| t    & |(d)| i    & |(e)| e \\
+  &            & |(f)| -low & \\
+  };
+  \draw foreach \x in {d, e} {(b.south) -- (\x.north)};
+  \draw foreach \x in {d, e} {(\x.south) -- (f.north)};
+  \draw[thick,black,->] (c) -- (d);
+  \draw[thick,black,->] (d) -- (e);
+  \end{tikzpicture}
+\end{exe}
+
+  Again, the initial consonant cannot be associated to a vowel feature so, while it is ordered with respect to the vowels, FS does not require the consonant to be associated to any element on either feature tier. The AR of *tie* satisfies FS because each vowel is associated to a feature on each of the featural tiers and all features are associated to at lease on vowel. The AR of *tie* also satisfies both the NCC and the OCP because there is only one of each feature. The features are represented on separate tiers so association lines cannot cross and there is nothing else on those tiers that could violate the OCP. In addition, (\ref{akan.ex2})-(\ref{akan.ex}) illustrate that, unlike the usual notation, this paper will be adding a representation of the successor ordering relation on each tier using arrows. 
+
+# A Generic case of vowel harmony
+
+  This paper begins with an example vowel harmony pattern that can be captured with a FSC: ATR harmony in Akan [@Clements1976]. The Akan vowel inventory, in Table \ref{akan_vowels}, consists of ten vowels with two main featural distinctions: $\pm$ ATR and $\pm$ low. There are two +low vowels, [\textipa{3}] and [a], +ATR and -ATR, respectively. All other vowels are considered -low and distinguished by ATR such that the +ATR vowels are [i, e, u, o] and the -ATR vowels are [\textipa{I, E, U, O}]. 
+ 
+\begin{table}
+  \caption{Akan Vowels}
+  \begin{tabular}{c|c|c}
+       & +ATR        & -ATR       \\\hline\hline
+  -low & i           & \textipa{I}\\ \cline{2-3}
+       & u           & \textipa{U}\\ \cline{2-3}
+       & e           & \textipa{E}\\ \cline{2-3}
+       & o           & \textipa{O}\\\hline
+  +low & \textipa{3} & a\\\hline
+  \end{tabular}
+  \label{akan_vowels}
+\end{table}
+
+
+  The harmony generalization is that if a word contains a sequence of -low vowels, then those vowels will also share the same ATR feature [@Clements1976]. For example, the words in (\ref{akan_-low}) contain only -low vowels, which are also all either +ATR or -ATR.
+
+
+\begin{exe}
+\ex{-low vowels share an ATR feature value}\label{akan_-low}
+\begin{xlist}
+  \ex tie `listen'                                             \\
+  \ex obejii `he came and removed it' \\
+  \ex \textipa{O}b\textipa{E}j\textipa{E}\textipa{I} `he came and did it' \\
+  \ex wubenum\textraiseglotstop   `you will suck it'             \\
+  \ex w\textipa{U}b\textipa{E}n\textipa{U}m\textraiseglotstop   `you will drink it' \\
+  \end{xlist}
+\end{exe}
+
+The surface requirement that adjacent -low vowels share the same ATR feature can also be written as a FSC, which forbids two adjacent vowels associated to the same -low feature from being associated to different ATR features, as in (\ref{fsc.akana}). The ordering relation on the ATR tier in (\ref{fsc.akana}) is omitted because the + or - values of the two ATR features are irrelevant for this constraint, as long as they differ. The ordering relation on the melody tier of this FSC is also omitted and the reason will be made clear by the example in (\ref{akan.obeijii}).
+
+\begin{exe}
+\ex \label{fsc.akana}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+* & |(a)| +ATR & |(f)| -ATR \\
+  & |(c)| V    & |(h)| V \\
+  & |(e)| -low &  \\
+  };
+  \draw (a.south) -- (c.north);
+  \draw (f.south) -- (h.north);
+  \draw foreach \x in {c, h} {(\x.south) -- (e.north)};
+  \end{tikzpicture}
+\end{exe}
+
+\begin{exe}
+\ex{[obejii] `he came and removed it'}\label{akan.obeijii}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=4ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+(a) & |(a)| +ATR  &         &         &         &         &         & (b) * & |[red](i)|  \textbf{+ATR}  &         &         &         & |[red](j)| \textbf{-ATR}    & \\
+    & |(b)| o     & |(c)| b & |(d)| e & |(e)| j & |(f)| i & |(g)| i &       & |(k)| o     & |(l)| b & |[red](m)| \textbf{e} & |(n)| j & |[red](o)| \textbf{\textipa{I}} & |(p)| \textipa{I} \\
+    & |(h)| -low  &         &         &         &         &         &       & |[red](q)| \textbf{-low} & \\
+  };
+  \draw foreach \x in {b, d, f, g} {(a.south) -- (\x.north)};
+  \draw foreach \x in {b, d, f, g} {(\x.south) -- (h.north)};
+  \draw (i.south) -- (k.north);
+  \draw[red,thick] (i.south) -- (m.north);
+  \draw[red,thick] (j.south) -- (o.north);
+  \draw (j.south) -- (p.north);
+  \draw foreach \x in {k, p} {(\x.south) -- (q.north)};
+  \draw[red,thick] foreach \x in {m, o} {(\x.south) -- (q.north)};
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (f) -- (g);
+  \draw[black,->] (i) -- (j);
+  \draw[black,->] (k) -- (l);
+  \draw[black,->] (l) -- (m);
+  \draw[black,->] (m) -- (n);
+  \draw[black,->] (n) -- (o);
+  \draw[black,->] (o) -- (p);
+  \end{tikzpicture}
+\end{exe}
+
+The AR for the grammatical Akan word [obeijii] 'he came and removed it' is shown in (\ref{akan.obeijii}a). Here a single +ATR and a single -low feature are each associated to each vowel within the word, demonstrating full ATR and low harmony. On the other hand, the hypothetical Akan word, [obej\textipa{II}], represented in (\ref{akan.obeijii}b) is ungrammatical because it demonstrates full -low harmony, but does not demonstrate full ATR harmony; so, the AR in (\ref{akan.obeijii}b) contains the forbidden structure of (\ref{fsc.akana}), shown in bold and red.
+
+  However, in traditional vowel harmony terms the presence of a +low vowel blocks the rightward spread of ATR, some examples are shown in (\ref{akan_+low}). Translating this to the static surface representations assumed here, two -low vowels must be associated to the same ATR feature, but if a +low vowel intervenes they can be associated to different ATR features. The representation of (\ref{akan_+low}a) exemplifies this pattern and is shown in (\ref{ex.akan+low}). 
+
+\begin{exe}
+  \ex{Vowels on either side of +low can have different ATR features}\label{akan_+low} 
+  \begin{xlist}
+    \ex p\textipa{I}r\textipa{3}ko  `pig'                                        \\
+    \ex obisa\textipa{I} `he asked'                                              \\
+    \ex m\textipa{I}k\textipa{O}k\textipa{3}ri  `I go and weight it'   \\
+    \ex okog\textsuperscript{w}\textsuperscript{j}ar\textipa{I}\textraiseglotstop `he goes and washes' \\
+  \end{xlist}
+\end{exe}
+
+\begin{exe}
+\ex{[p\textipa{I}r\textipa{3}ko] `pig'}\label{ex.akan+low} 
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, 
+          row sep=2.5ex, column sep=2.25ex,
+          nodes={text height=1em, text depth=0.5em}] 
+  {
+        & |(a)| -ATR        &         &                   &         & |(b)| +ATR\\
+|(c)| p & |(d)| \textipa{I} & |(e)| r & |(f)| \textipa{3} & |(g)| k & |(h)| o\\
+        & |(i)| -low        &         & |(j)| +low        &         & |(k)| -low\\
+  };
+  \draw foreach \x in {d, f} {(a.south) -- (\x.north)};
+  \draw (b.south) -- (h.north);
+  \draw (d.south) -- (i.north);
+  \draw (f.south) -- (j.north);
+  \draw (h.south) -- (k.north);
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (f) -- (g);
+  \draw[black,->] (g) -- (h);
+  \draw[black,->] (i) -- (j);
+  \draw[black,->] (j) -- (k);
+  \end{tikzpicture}
+\end{exe}
+
+  Crucially, the AR in (\ref{ex.akan+low}) does not contain the FSC from (\ref{fsc.akana}). While the AR for [p\textipa{Ir3}ko] 'pig' does contain two vowels associated to a -low feature and two different ATR features, the presence of a blocking [\textipa{3}] vowel associated to a  +low feature  causes the surrounding vowels to be associated to two separate -low features in order to satisfy FS and the NCC. Because the forbidden structure is not present [p\textipa{Ir3}ko] 'pig' is grammatical.
+
+  In summary, the basic vowel harmony pattern of Akan, can be captured using the FSC in (\ref{fsc.akana}), which does not refer to adjacency on any tier. Akan vowel harmony could thus be considered local because the FSC that captures the pattern need only refer to the associations between vowels and features. The next sections outline similar analyses of a variety of other vowel harmony patterns in order to determine whether or not there are any patterns that FSCs cannot capture and would thus fall outside of the ASL^gT^ class.
+
+# Domain-sensitive vowel harmony
+
+## Finnish
+
+Native Finnish words demonstrate backness harmony with four transparent front vowels. The Finnish vowel inventory in Table \ref{finnish_vowels} consists of 16 vowels with contrastive length and two main featural distinctions that will be the focus of this analysis: $\pm$ back and $\pm$ neutral [@valimaablum1986; @ringenheinamaki1999]. The four vowels transparent to backness harmony, \textipa{[i, i:, e, e:]}, are all +neutral and -back. All other Finnish vowels are considered -neutral and distinguished by backness such that the +back vowels are \textipa{[u, u:, o, o:, A, A:]} and the -neutral, -back vowels are \textipa{[y, y:, \o, \o:, \ae, \ae:]}.
 
 \begin{table}
   \caption{Finnish Vowels}
@@ -56,7 +311,7 @@ Native Finnish words present a case of backness harmony with four transparent fr
   \label{finnish_vowels}
 \end{table}
 
-The harmony generalization is that all the -neutral vowels in a root will share the same back feature with each other and the vowels in any suffixes [@valimaablum1986; @ringenheinamaki1999]. For example, the words in (\ref{finnish_-neutral}) contain only -neutral vowels, which are also all either +back or -back. A hyphen represents a morpheme boundary.
+The Finnish harmony generalization is that all the -neutral vowels in a root will share the same back feature with each other and -neutral suffix vowels will share the same back feature with the root-final -neutral vowel [@valimaablum1986; @ringenheinamaki1999]. For example, the words in (\ref{finnish_-neutral}) contain only -neutral vowels, which are also all either +back or -back. A hyphen represents a morpheme boundary.
 
 \begin{exe}
 \ex{-neutral vowels share a back feature value}\label{finnish_-neutral}
@@ -70,7 +325,7 @@ The harmony generalization is that all the -neutral vowels in a root will share 
   \end{xlist}
 \end{exe}
 
-The surface requirement that adjacent -neutral vowels share the same ATR feature can also be written as a FSC, which forbids two adjacent vowels associated to the same -neutral feature from being associated to different back features, as in (\ref{fsc.finnish}), even across a morpheme boundary. The ordering relation on the back tier in (\ref{fsc.finnish}) is omitted because the + or - values of the two back features are irrelevant for this constraint, as long as they differ. The ordering relation on the melody tier of this FSC is also omitted and the reason will be made clear by the example in (\ref{finnish.poytana}).
+The surface requirement that -neutral vowels share the same ATR feature can also be written as a FSC, which forbids two vowels associated to the same -neutral feature from being associated to different back features, as in (\ref{fsc.finnish}). The general Finnish FSC does not include morpheme boundaries because the same constraint applies within roots and across morpheme boundaries. The ordering relation on the back tier in (\ref{fsc.finnish}) is omitted because the + or - values of the two back features are irrelevant for this constraint, as long as they differ. The ordering relation on the melody tier of this FSC is also omitted because the vowels can have consonants between them, as in (\ref{finnish.poytana}). 
 
 \begin{exe}
 \ex \label{fsc.finnish}
@@ -121,6 +376,42 @@ The surface requirement that adjacent -neutral vowels share the same ATR feature
   \draw[black,->] (p) -- (s);
   \end{tikzpicture}
 \end{exe}
+
+The AR for the grammatical Finnish word \textipa{[p\o yt\ae-n\ae]} `table (essive)', shown in (\ref{finnish.poytana}a), contains a single -back and a single -neutral feature. Both features are associated to each vowel in the word, which demonstrates full back and neutral harmony. The hypothetical Finnish word, \textipa{[p\o yt\ae-nA]} in (\ref{finnish.poytana}b)
+, however, contains the forbidden structure of (\ref{fsc.finnish}) in bold and red because it demonstrates full neutral harmony, but not full back harmony.
+
+In (\ref{finnish.poytana}b) the suffix vowel does not harmonize with the root-final vowel. While the Finnish pattern is captured by (\ref{fsc.finnish}), the question remains whether including a morpheme boundary in a representation would provide any necessary information.
+
+## Turkish
+
+Native Turkish words also demonstrate backness harmony where all suffix vowels share the back feature of the root-final vowel, but it is debated whether or not Turkish also utilizes back harmony within roots. The vowel inventory of Turkish in Table \ref{turkish_vowels} consists of eight vowels with three main featural distinctions: $\pm$ high, $\pm$ back, $\pm$ round. The current analysis will focus only on the $\pm$ high and $\pm$ back features in order to analyze three-tiered representations. In Turkish the +high -back vowels are [i, ü], the +high +back vowels are \textipa{[1, u]}, the -high -back vowels are [e, ö], and the -high +back vowels are [a, o].
+
+\begin{table}
+  \caption{Turkish Vowels}
+  \begin{tabular}{cc|c|cc|c|c|cc}
+        & & \multicolumn{2}{|l}{-back}  &        & \multicolumn{2}{|l}{+back} &             & \\\cline{1-7}\cline{1-7}
+  +high & & i                           & ü      &                            & \textipa{1} & u \\\cline{1-7}
+  -high & & e                           & ö      &                            & a           & o \\\cline{1-7}\cline{1-7}
+        & & -round                      & +round &                            & -round      & +round \\
+  \end{tabular}
+  \label{turkish_vowels}
+\end{table}
+
+The Turkish harmony generalization is that a suffix vowel shares the same back feature as the root-final vowel [@Clements1976; @padgett2002; @vdHulst2017; @Nevins2010; @crothersshibatani1980]. For example, the words in (\ref{turkish_back}) contain suffix vowels that have the same back feature as the preceding root-final vowel regardless of whether or not the high feature values are the same.
+
+\begin{exe}
+\ex{suffix vowels share a back feature with root-final vowels}\label{turkish_back}
+\begin{xlist}
+  \ex \textipa{ip-ler} `rope (Nom.pl)'
+  \ex \textipa{köy-ün} `village (Gen.sg)'
+  \ex \textipa{el-i}   `hand (Acc.sg)'
+  \ex \textipa{k1z-1n} `girl (Gen.sg)'
+  \ex \textipa{son-u}  `end (Acc.sg)'
+  \ex \textipa{pul-lar} `stamp (Nom.pl)'
+\end{xlist}
+\end{exe}
+
+
 
 \newpage
 
