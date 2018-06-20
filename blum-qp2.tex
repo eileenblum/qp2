@@ -782,12 +782,13 @@ representations. In Turkish the +high -back vowels are {[}i, ü{]}, the
   \label{turkish_vowels}
 \end{table}
 
-The Turkish harmony generalization is that a suffix vowel shares the
+The Turkish harmony generalization is that all suffix vowels share the
 same back feature as the root-final vowel (Clements, 1976; Crothers \&
 Shibatani, 1980; Nevins, 2010; Padgett, 2002; vanderHulst, 2017). For
 example, the words in (\ref{turkish_back}) contain suffix vowels that
 have the same back feature as the preceding root-final vowel regardless
-of whether or not the high feature values are the same.
+of whether or not the high feature values are the same. A hyphen
+represents a morpheme boundary.
 
 \begin{exe}
 \ex{suffix vowels share a back feature with root-final vowels}\label{turkish_back}
@@ -799,6 +800,53 @@ of whether or not the high feature values are the same.
   \ex \textipa{son-u}  `end (Acc.sg)'
   \ex \textipa{pul-lar} `stamp (Nom.pl)'
 \end{xlist}
+\end{exe}
+
+A straightforward pattern of backness harmony like Turkish can also be
+written as an FSC that forbids vowels on either side of a morpheme
+boundary from being associated to different back features, as in
+(\ref{fsc.turkish}). No ordering relation is included on the back tier
+because it forbids a root-final and suffix-initial vowel from being
+associated to different back features regardless of which feature each
+associates to. The melody tier also does not include an adjacency
+ordering relation because the vowels can be separated by one or more
+consonants and are necessarily separated by a morpheme boundary.
+
+\begin{exe}
+\ex \label{fsc.turkish}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+* & |(a)| +back &     & |(f)| -back \\
+  & |(c)| V     & -- & |(h)| V \\
+  };
+  \draw (a.south) -- (c.north);
+  \draw (f.south) -- (h.north);
+  \end{tikzpicture}
+\end{exe}
+
+\begin{exe}
+\ex{ip-ler `rope (Nom.pl)'}\label{turkish.ipler}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=4ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+(a) & |(a)| -back &              &         &         &         &         & (b) * & |[red](h)| \textbf{-back} &         &         &         & |[red](i)| \textbf{+back} \\ 
+    & |(b)| i     & |(c)| p      & |(d)| -- & |(e)| l & |(f)| e & |(g)| r &       & |[red](j)| \textbf{i}                   & |(k)| p & |[red](l)| \textbf{--} & |(m)| l & |[red](n)| \textbf{a} & |(o)| r \\
+  };
+  \draw foreach \x in {b, f} {(a.south) -- (\x.north)};
+  \draw[red,thick] (h.south) -- (j.north);
+  \draw[red,thick] (i.south) -- (n.north);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (f) -- (g);
+  \draw[black,->] (j) -- (k);
+  \draw[black,->] (k) -- (l);
+  \draw[black,->] (l) -- (m);
+  \draw[black,->] (m) -- (n);
+  \draw[black,->] (n) -- (o);
+  \end{tikzpicture}
 \end{exe}
 
 \newpage
