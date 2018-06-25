@@ -311,21 +311,21 @@ Native Finnish words demonstrate backness harmony with four transparent front vo
   \label{finnish_vowels}
 \end{table}
 
-The Finnish harmony generalization is that all the -neutral vowels in a root will share the same back feature with each other and -neutral suffix vowels will share the same back feature with the root-final -neutral vowel [@valimaablum1986; @ringenheinamaki1999]. For example, the words in (\ref{finnish_-neutral}) contain only -neutral vowels, which are also all either +back or -back. A hyphen represents a morpheme boundary.
+The Finnish harmony generalization is that all the -neutral vowels in a root will share the same back feature with each other and -neutral suffix vowels will share the same back feature with the root-final -neutral vowel [@valimaablum1986; @ringenheinamaki1999]. For example, the words in (\ref{finnish_-neutral}) contain only -neutral vowels, which are also all either +back or -back. A pound sign represents a morpheme boundary.
 
 \begin{exe}
 \ex{-neutral vowels share a back feature value}\label{finnish_-neutral}
 \begin{xlist}
   \ex \textipa{p\o yt\ae} `table' \\
-  \ex \textipa{k\ae n-t\ae:} `turn' \\
-  \ex \textipa{tyk\ae-t\ae} `like' \\
+  \ex \textipa{k\ae n$\#$t\ae:} `turn' \\
+  \ex \textipa{tyk\ae$\#$t\ae} `like' \\
   \ex \textipa{poutA} `fine weather' \\
-  \ex \textipa{mur-tA:} `break' \\
-  \ex \textipa{kokA-tA} `cook' \\
+  \ex \textipa{mur$\#$tA:} `break' \\
+  \ex \textipa{kokA$\#$tA} `cook' \\
   \end{xlist}
 \end{exe}
 
-The surface requirement that -neutral vowels share the same ATR feature can also be written as a FSC, which forbids two vowels associated to the same -neutral feature from being associated to different back features, as in (\ref{fsc.finnish}). The general Finnish FSC does not include morpheme boundaries because the same constraint applies within roots and across morpheme boundaries. The ordering relation on the back tier in (\ref{fsc.finnish}) is omitted because the + or - values of the two back features are irrelevant for this constraint, as long as they differ. The ordering relation on the melody tier of this FSC is also omitted because the vowels can have consonants between them, as in (\ref{finnish.poytana}). 
+The surface requirement that -neutral vowels share the same ATR feature can also be written as a FSC, which forbids two vowels associated to the same -neutral feature from being associated to different back features, as in (\ref{fsc.finnish}). The general Finnish FSC does not include morpheme boundaries because the same constraint applies within roots and across morpheme boundaries. The ordering relation on the back tier in (\ref{fsc.finnish}) is omitted because the + or - values of the two back features are irrelevant for this constraint, as long as they differ. The ordering relation on the melody tier of this FSC is also omitted because the vowels can have consonants between them, as in (\ref{finnish.poytana}). While the Finnish pattern is captured by (\ref{fsc.finnish}), the FSC does not need to refer to the morpheme boundary because the same harmony pattern holds within roots as well as between root and suffix morphemes.
 
 \begin{exe}
 \ex \label{fsc.finnish}
@@ -347,12 +347,12 @@ The surface requirement that -neutral vowels share the same ATR feature can also
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep=4ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
   {
-(a) &          & |(a)| -back    &         &         &           &         & \\ 
-    & |(b)| p  & |(c)| \o       & |(d)| y & |(e)| t & |(f)| \ae & |(g)| n & |(r)| \ae \\
-    &          & |(h)| -neutral &         &         &           &         &  \\          
-(b) * &         & |[red](i)| \textbf{-back} &         &         &                                            &         & |[red](j)| \textbf{+back} \\
-      & |(k)| p & |(l)| \o                  & |(m)| y & |(n)| t & |[red](o)| \textbf{\ae}                    & |(p)| n & |[red](s)| \textbf{\textipa{A}} \\
-      &         & |[red](q)| \textbf{-neutral} &                       &         &                              &         & \\
+(a) &          & |(a)| -back    &         &         &           &         &  & \\ 
+    & |(b)| p  & |(c)| \o       & |(d)| y & |(e)| t & |(f)| \ae & |(t)| $\#$ & |(g)| n & |(r)| \ae \\
+    &          & |(h)| -neutral &         &         &           &         &  &  \\          
+(b) * &         & |[red](i)| \textbf{-back} &         &         &                         &               &         & |[red](j)| \textbf{+back} \\
+      & |(k)| p & |(l)| \o                  & |(m)| y & |(n)| t & |[red](o)| \textbf{\ae} & |(u)| $\#$ & |(p)| n & |[red](s)| \textbf{\textipa{A}} \\
+      &         & |[red](q)| \textbf{-neutral} &                &                         &               &         & \\
   };
   \draw foreach \x in {c, d, f, r} {(a.south) -- (\x.north)};
   \draw foreach \x in {c, d, f, r} {(\x.south) -- (h.north)};
@@ -365,26 +365,26 @@ The surface requirement that -neutral vowels share the same ATR feature can also
   \draw[black,->] (c) -- (d);
   \draw[black,->] (d) -- (e);
   \draw[black,->] (e) -- (f);
-  \draw[black,->] (f) -- (g);
+  \draw[black,->] (f) -- (t);
+  \draw[black,->] (t) -- (g);
   \draw[black,->] (g) -- (r);
   \draw[black,->] (i) -- (j);
   \draw[black,->] (k) -- (l);
   \draw[black,->] (l) -- (m);
   \draw[black,->] (m) -- (n);
   \draw[black,->] (n) -- (o);
-  \draw[black,->] (o) -- (p);
+  \draw[black,->] (o) -- (u);
+  \draw[black,->] (u) -- (p);
   \draw[black,->] (p) -- (s);
   \end{tikzpicture}
 \end{exe}
 
-The AR for the grammatical Finnish word \textipa{[p\o yt\ae-n\ae]} `table (essive)', shown in (\ref{finnish.poytana}a), contains a single -back and a single -neutral feature. Both features are associated to each vowel in the word, which demonstrates full back and neutral harmony. The hypothetical Finnish word, \textipa{[p\o yt\ae-nA]} in (\ref{finnish.poytana}b)
-, however, contains the forbidden structure of (\ref{fsc.finnish}) in bold and red because it demonstrates full neutral harmony, but not full back harmony.
-
-In (\ref{finnish.poytana}b) the suffix vowel does not harmonize with the root-final vowel. While the Finnish pattern is captured by (\ref{fsc.finnish}), the question remains whether including a morpheme boundary in a representation would provide any necessary information.
+The AR for the grammatical Finnish word \textipa{[p\o yt\ae$\#$n\ae]} `table (essive)', shown in (\ref{finnish.poytana}a), contains a single -back and a single -neutral feature. Both features are associated to each vowel in the word, which demonstrates full back and neutral harmony. The hypothetical Finnish word, \textipa{[p\o yt\ae$\#$nA]} in (\ref{finnish.poytana}b)
+, however, contains the forbidden structure of (\ref{fsc.finnish}) in bold and red because it demonstrates full neutral harmony, but not full back harmony. In (\ref{finnish.poytana}b) the suffix vowel does not harmonize with the root-final vowel because they are associated to different back features. 
 
 ## Turkish
 
-Native Turkish words also demonstrate backness harmony where all suffix vowels share the back feature of the root-final vowel, but it is debated whether or not Turkish also utilizes back harmony within roots. The vowel inventory of Turkish in Table \ref{turkish_vowels} consists of eight vowels with three main featural distinctions: $\pm$ high, $\pm$ back, $\pm$ round. The current analysis will focus only on the $\pm$ high and $\pm$ back features in order to analyze three-tiered representations. In Turkish the +high -back vowels are [i, ü], the +high +back vowels are \textipa{[1, u]}, the -high -back vowels are [e, ö], and the -high +back vowels are [a, o].
+Native Turkish words demonstrate two separate harmony patterns: back and round harmony. In Turkish, a suffix vowel shares its back feature with the root-final vowel, but it is debated whether or not Turkish also utilizes back harmony within roots. In addition, a +high suffix vowel shares its round feature with the root-final vowel. The vowel inventory of Turkish in Table \ref{turkish_vowels} consists of eight vowels with three main featural distinctions: $\pm$ high, $\pm$ back, $\pm$ round.  In Turkish the +high -back vowels are [i, ü], the +high +back vowels are \textipa{[1, u]}, the -high -back vowels are [e, ö], and the -high +back vowels are [a, o].
 
 \begin{table}
   \caption{Turkish Vowels}
@@ -397,29 +397,29 @@ Native Turkish words also demonstrate backness harmony where all suffix vowels s
   \label{turkish_vowels}
 \end{table}
 
-The Turkish harmony generalization is that all suffix vowels share the same back feature as the root-final vowel [@Clements1976; @padgett2002; @vdHulst2017; @Nevins2010; @crothersshibatani1980]. For example, the words in (\ref{turkish_back}) contain suffix vowels that have the same back feature as the preceding root-final vowel regardless of whether or not the high feature values are the same. A hyphen represents a morpheme boundary.
+The Turkish back harmony generalization is that all suffix vowels share the same back feature as the root-final vowel and the round harmony generalization is that a high suffix vowel shares the same round feature as the root-final vowel [@Clements1976; @padgett2002; @vdHulst2017; @Nevins2010; @crothersshibatani1980]. For example, the words in (\ref{turkish_back}) contain suffix vowels that have the same back feature as the preceding root-final vowel. In addition, the high suffix vowels in (\ref{turkish_back}b-e) have the same round feature as the root-final vowel. A pound sign represents a morpheme boundary.
 
 \begin{exe}
 \ex{suffix vowels share a back feature with root-final vowels}\label{turkish_back}
 \begin{xlist}
-  \ex \textipa{ip-ler} `rope (Nom.pl)'
-  \ex \textipa{köy-ün} `village (Gen.sg)'
-  \ex \textipa{el-i}   `hand (Acc.sg)'
-  \ex \textipa{k1z-1n} `girl (Gen.sg)'
-  \ex \textipa{son-u}  `end (Acc.sg)'
-  \ex \textipa{pul-lar} `stamp (Nom.pl)'
+  \ex \textipa{ip$\#$ler} `rope (Nom.pl)'
+  \ex \textipa{köy$\#$ün} `village (Gen.sg)'
+  \ex \textipa{el$\#$i}   `hand (Acc.sg)'
+  \ex \textipa{k1z$\#$1n} `girl (Gen.sg)'
+  \ex \textipa{son$\#$u}  `end (Acc.sg)'
+  \ex \textipa{pul$\#$lar} `stamp (Nom.pl)'
 \end{xlist}
 \end{exe}
 
-A straightforward pattern of backness harmony like Turkish can also be written as an FSC that forbids vowels on either side of a morpheme boundary from being associated to different back features, as in (\ref{fsc.turkish}). No ordering relation is included on the back tier because it forbids a root-final and suffix-initial vowel from being associated to different back features regardless of which feature each associates to. The melody tier also does not include an adjacency ordering relation because the vowels can be separated by one or more consonants and are necessarily separated by a morpheme boundary.
+A straightforward pattern of backness harmony like in Turkish can also be written as an FSC that forbids vowels on either side of a morpheme boundary from being associated to different back features, as in (\ref{fsc.turkishback}). No ordering relation is included on the back tier because it forbids a root-final and suffix-initial vowel from being associated to different back features regardless of which feature each associates to. The melody tier also does not include an adjacency ordering relation because the vowels can be separated by one or more consonants and are necessarily separated by a morpheme boundary.
 
 \begin{exe}
-\ex \label{fsc.turkish}
+\ex \label{fsc.turkishback}
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
   {
-* & |(a)| +back &     & |(f)| -back \\
-  & |(c)| V     & -- & |(h)| V \\
+* & |(a)| +back &      & |(f)| -back \\
+  & |(c)| V     & $\#$ & |(h)| V \\
   };
   \draw (a.south) -- (c.north);
   \draw (f.south) -- (h.north);
@@ -427,12 +427,12 @@ A straightforward pattern of backness harmony like Turkish can also be written a
 \end{exe}
 
 \begin{exe}
-\ex{ip-ler `rope (Nom.pl)'}\label{turkish.ipler}
+\ex{ip$\#$ler `rope (Nom.pl)'}\label{turkish.ipler}
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep=4ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
   {
 (a) & |(a)| -back &              &         &         &         &         & (b) * & |[red](h)| \textbf{-back} &         &         &         & |[red](i)| \textbf{+back} \\ 
-    & |(b)| i     & |(c)| p      & |(d)| -- & |(e)| l & |(f)| e & |(g)| r &       & |[red](j)| \textbf{i}                   & |(k)| p & |[red](l)| \textbf{--} & |(m)| l & |[red](n)| \textbf{a} & |(o)| r \\
+    & |(b)| i     & |(c)| p      & |(d)| $\#$ & |(e)| l & |(f)| e & |(g)| r &       & |[red](j)| \textbf{i}                   & |(k)| p & |[red](l)| \textbf{$\#$} & |(m)| l & |[red](n)| \textbf{a} & |(o)| r \\
   };
   \draw foreach \x in {b, f} {(a.south) -- (\x.north)};
   \draw[red,thick] (h.south) -- (j.north);
@@ -449,6 +449,57 @@ A straightforward pattern of backness harmony like Turkish can also be written a
   \draw[black,->] (n) -- (o);
   \end{tikzpicture}
 \end{exe}
+
+Turkish round harmony can also be written as an FSC, which forbids a suffix vowel that is associated to a +high feature from also being associated to a different round feature from the root-final vowel, as in (\ref{fsc.turkishround}). No ordering relation is included on the round tier because the + or - value of the round features is irrelevant, as long as they differ.
+
+\begin{exe}
+\ex \label{fsc.turkishround}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+* &              &      & |(a)| +high \\
+  & |(b)| V      & $\#$ & |(c)| V \\
+  & |(d)| +round &      & |(e)| -round \\
+  };
+  \draw (a.south) -- (c.north);
+  \draw (b.south) -- (d.north);
+  \draw (c.south) -- (e.north);
+  \end{tikzpicture}
+\end{exe}
+
+\begin{exe}
+\ex{köy-ün `village (Gen.sg)'}\label{turkish.koyun}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=4ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+(a) &         & |(a)| -high  &         &    & |(g)| +high &  \\
+    & |(b)| k & |(c)| ö      & |(d)| y & |(s)| $\#$ & |(e)| ü     & |(f)| n \\
+    &         & |(p)| +round &         &    &             & \\         
+(b) * &         & |(h)| -high           &           &                        & |[red](i)| \textbf{+high}  & \\
+      & |(j)| k & |[red](k)| \textbf{ö} & |(l)| y & |[red](m)| \textbf{$\#$} & |[red](n)| \textbf{i}      & |(o)| n \\
+      &         & |[red](q)| \textbf{+round} &         &                     & |[red](r)| \textbf{-round} & \\
+  };
+  \draw (a.south) -- (c.north);
+  \draw (g.south) -- (e.north);
+  \draw foreach \x in {c, e} {(\x.south) -- (p.north)};
+  \draw (h.south) -- (k.north);
+  \draw[red,thick] (i.south) -- (n.north);
+  \draw[red,thick] (k.south) -- (q.north);
+  \draw[red,thick] (n.south) -- (r.north);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (s);
+  \draw[black,->] (s) -- (e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (j) -- (k);
+  \draw[black,->] (k) -- (l);
+  \draw[black,->] (l) -- (m);
+  \draw[black,->] (m) -- (n);
+  \draw[black,->] (n) -- (o);
+  \end{tikzpicture}
+\end{exe}
+
+The AR for the grammatical Turkish word [köy-ün] `village (Gen.sg)', shown in (\ref{turkish.koyun}a), contains a -high root-final vowel and a +high suffix vowel. Both vowels are associated to a single +round feature, which demonstrates full round harmony. The hypothetical Turkish word, [köy-in] in (\ref{turkish.koyun}b), contains the forbidden structure of (\ref{fsc.turkishround}) in bold and red because it does not demonstrate full round harmony; the +high suffix vowel is associated to a different round feature than the root-final vowel.
 
 \newpage
 
