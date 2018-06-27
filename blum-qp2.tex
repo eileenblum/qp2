@@ -327,7 +327,8 @@ The goal for this project is to extend the work of Jardine (2017) to
 determine whether vowel harmony patterns are local over ARs with more
 than two tiers, as in (\ref{fsc.ex}). This qualifying paper evaluates
 whether or not the restrictions on attested vowel harmony patterns can
-be captured using FSCs.
+be captured using FSCs that contain elements of more than one feature
+tier.
 
 \subsubsection{Representational
 assumptions}\label{representational-assumptions}
@@ -456,25 +457,36 @@ while it is ordered with respect to the vowels, FS does not require the
 consonant to be associated to any element on either feature tier. The AR
 of \emph{tie} satisfies FS because each vowel is associated to a feature
 on each of the featural tiers and all features are associated to at
-lease on vowel. The AR of \emph{tie} also satisfies both the NCC and the
-OCP because there is only one of each feature. The features are
+least one vowel. The AR of \emph{tie} also satisfies both the NCC and
+the OCP because there is only one of each feature. The features are
 represented on separate tiers so association lines cannot cross and
 there is nothing else on those tiers that could violate the OCP. In
 addition, (\ref{akan.ex2})-(\ref{akan.ex}) illustrate that, unlike the
 usual notation, this paper will be adding a representation of the
 successor ordering relation on each tier using arrows.
 
-\section{A Generic case of vowel
-harmony}\label{a-generic-case-of-vowel-harmony}
+\section{Neutral vowels}\label{neutral-vowels}
 
-This paper begins with an example vowel harmony pattern that can be
-captured with a FSC: ATR harmony in Akan (Clements, 1976). The Akan
-vowel inventory, in Table \ref{akan_vowels}, consists of ten vowels with
-two main featural distinctions: \(\pm\) ATR and \(\pm\) low. There are
-two +low vowels, {[}\textipa{3}{]} and {[}a{]}, +ATR and -ATR,
-respectively. All other vowels are considered -low and distinguished by
-ATR such that the +ATR vowels are {[}i, e, u, o{]} and the -ATR vowels
-are {[}\textipa{I, E, U, O}{]}.
+In languages that exhibit vowel harmony patterns, vowels are described
+as either undergoing harmony or remaining neutral. Traditional accounts
+of vowel harmony have identified two categories of neutral vowels:
+blocking and transparent (Norval Smith, 1986). A vowel is said to block
+harmony when the vowels on either side do not have to share the same
+feature. A vowel is said to be transparent when the vowels around it
+have the same feature, but the transparent vowel does not share that
+feature. In other words, harmony appears to skip over transparent
+vowels.
+
+\subsection{Blocking vowels}\label{blocking-vowels}
+
+An example of vowels that block harmony is found with ATR harmony in
+Akan (Clements, 1976). The Akan vowel inventory, in Table
+\ref{akan_vowels}, consists of ten vowels with two main featural
+distinctions: \(\pm\) ATR and \(\pm\) low. There are two +low vowels,
+{[}\textipa{3}{]} and {[}a{]}, +ATR and -ATR, respectively. All other
+vowels are considered -low and distinguished by ATR such that the +ATR
+vowels are {[}i, e, u, o{]} and the -ATR vowels are
+{[}\textipa{I, E, U, O}{]}.
 
 \begin{table}
   \caption{Akan Vowels}
@@ -634,44 +646,43 @@ of a variety of other vowel harmony patterns in order to determine
 whether or not there are any patterns that FSCs cannot capture and would
 thus fall outside of the ASL\textsuperscript{gT} class.
 
-\section{Domain-sensitive vowel
-harmony}\label{domain-sensitive-vowel-harmony}
-
-\subsection{Finnish}\label{finnish}
+\subsection{Transparent vowels}\label{transparent-vowels}
 
 Native Finnish words demonstrate backness harmony with four transparent
 front vowels. The Finnish vowel inventory in Table \ref{finnish_vowels}
-consists of 16 vowels with contrastive length and two main featural
-distinctions that will be the focus of this analysis: \(\pm\) back and
-\(\pm\) neutral (Ringen \& Heinamaki, 1999; Välimaa-Blum, 1986). The
-four vowels transparent to backness harmony, \textipa{[i, i:, e, e:]},
-are all +neutral and -back. All other Finnish vowels are considered
--neutral and distinguished by backness such that the +back vowels are
-\textipa{[u, u:, o, o:, A, A:]} and the -neutral, -back vowels are
-\textipa{[y, y:, \o, \o:, \ae, \ae:]}.
+consists of 16 vowels with contrastive length and three main featural
+distinctions: \(\pm\) back, \(\pm\) low, and \(\pm\) round (Ringen \&
+Heinamaki, 1999; Välimaa-Blum, 1986). The four vowels transparent to
+backness harmony, \textipa{[i, i:, e, e:]}, are all -back, -round, and
+-low. Of the harmonizing vowels \textipa{[y, y:, u, u:, \o, \o:, o, o:]}
+are all +round and -low while \textipa{[\ae, \ae:, A, A:]} are all +low
+and -round.
 
 \begin{table}
   \caption{Finnish Vowels}
-  \begin{tabular}{c|c|c}
-  \multicolumn{2}{l|}{-back}          & +back\\\hline\hline
-  \textipa{i, i:} & \textipa{y, y:}   & \textipa{u, u:}\\ \cline{1-3}
-  \textipa{e, e:} & \textipa{\o, \o:}  & \textipa{o, o:}\\ \cline{1-3}
-                  & \textipa{\ae, \ae:} & \textipa{A, A:}\\ \cline{1-3}\hline\hline
-  +neutral        & \multicolumn{2}{|l}{-neutral} \\
+  \begin{tabular}{c|c|c|c|c}
+       & -round          & \multicolumn{2}{l|}{+round} &  \\\hline\hline
+  -low & \textipa{i, i:} & \textipa{y, y:}             & \textipa{u, u:} \\\cline{2-4}
+       & \textipa{e, e:} & \textipa{\o, \o:}           & \textipa{o, o:} \\\hline
+  +low &                 & \textipa{\ae, \ae:}         & \textipa{A, A:} & -round\\\hline\hline
+                         & \multicolumn{2}{l|}{-back}  & +back \\\hline
   \end{tabular}
   \label{finnish_vowels}
 \end{table}
 
-The Finnish harmony generalization is that all the -neutral vowels in a
-root will share the same back feature with each other and -neutral
-suffix vowels will share the same back feature with the root-final
--neutral vowel (Ringen \& Heinamaki, 1999; Välimaa-Blum, 1986). For
-example, the words in (\ref{finnish_-neutral}) contain only -neutral
-vowels, which are also all either +back or -back. A pound sign
-represents a morpheme boundary.
+The Finnish harmony generalization is that all of the harmonizing vowels
+in a root will share the same back feature with each other and
+harmonizing suffix vowels will share the same back feature with the
+harmonizing root-final vowel (Ringen \& Heinamaki, 1999; Välimaa-Blum,
+1986). Since the same harmony generalization holds for both root and
+suffix vowels the Finnish generalization can also be stated as two
+harmonizing vowls must share the same back feature. For example, the
+words in (\ref{finnish_-neutral}) contain only +round or +low vowels,
+which are also either all +back or all -back. A pound sign represents a
+morpheme boundary.
 
 \begin{exe}
-\ex{-neutral vowels share a back feature value}\label{finnish_-neutral}
+\ex{harmonizing vowels share a back feature value}\label{finnish_-neutral}
 \begin{xlist}
   \ex \textipa{p\o yt\ae} `table' \\
   \ex \textipa{k\ae n$\#$t\ae:} `turn' \\
@@ -682,70 +693,80 @@ represents a morpheme boundary.
   \end{xlist}
 \end{exe}
 
-The surface requirement that -neutral vowels share the same ATR feature
-can also be written as a FSC, which forbids two vowels associated to the
-same -neutral feature from being associated to different back features,
-as in (\ref{fsc.finnish}). The general Finnish FSC does not include
-morpheme boundaries because the same constraint applies within roots and
-across morpheme boundaries. The ordering relation on the back tier in
-(\ref{fsc.finnish}) is omitted because the + or - values of the two back
-features are irrelevant for this constraint, as long as they differ. The
-ordering relation on the melody tier of this FSC is also omitted because
-the vowels can have consonants between them, as in
-(\ref{finnish.poytana}). While the Finnish pattern is captured by
-(\ref{fsc.finnish}), the FSC does not need to refer to the morpheme
-boundary because the same harmony pattern holds within roots as well as
-between root and suffix morphemes.
+The surface requirement that +round and +low vowels share the same back
+feature can also be written as two FSCs, which forbid adjacent vowels
+associated to a +round or +low feature from being associated to
+different back features, as in (\ref{fsc.finnish}). The general Finnish
+FSC does not include morpheme boundaries because the same constraint
+applies within roots and across morpheme boundaries. The ordering
+relation on the back tier in (\ref{fsc.finnish}) is omitted because the
++ or - values of the two back features are irrelevant for this
+constraint, as long as they differ. The ordering relation on the melody
+tier of this FSC is also omitted because the vowels can have consonants
+between them, as in (\ref{finnish.poytana}). While the Finnish pattern
+is captured by (\ref{fsc.finnish}), the FSC does not need to refer to
+the morpheme boundary because the same harmony pattern holds within
+roots as well as between root and suffix morphemes.
 
 \begin{exe}
 \ex \label{fsc.finnish}
   \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  \matrix [matrix of nodes, row sep=2.5em, column sep={2.15em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-* & |(a)| +back & |(f)| -back \\
-  & |(c)| V    & |(h)| V \\
-  & |(e)| -neutral &  \\
+(a) * & & |(a)| +back &            & |(b)| -back & & (b) * & & |(f)| +back & & |(g)| -back \\
+      & & |(c)| V     &            & |(d)| V     & &       & & |(h)| V     & & |(i)| V \\
+      & &             & |(e)| +low &             & &       & &             & & |(j)| +round\\
   };
   \draw (a.south) -- (c.north);
+  \draw (b.south) -- (d.north);
+  \draw (d.south) -- (e.north);
   \draw (f.south) -- (h.north);
-  \draw foreach \x in {c, h} {(\x.south) -- (e.north)};
+  \draw (g.south) -- (i.north);
+  \draw (i.south) -- (j.north);
   \end{tikzpicture}
 \end{exe}
 
 \begin{exe}
 \ex{\textipa{[p\o yt\ae-n\ae]} `table (essive)'}\label{finnish.poytana}
   \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, row sep=4ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  \matrix [matrix of nodes, row sep={3.75em,between origins}, column sep={2.15em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-(a) &          & |(a)| -back    &         &         &           &         &  & \\ 
-    & |(b)| p  & |(c)| \o       & |(d)| y & |(e)| t & |(f)| \ae & |(t)| $\#$ & |(g)| n & |(r)| \ae \\
-    &          & |(h)| -neutral &         &         &           &         &  &  \\          
-(b) * &         & |[red](i)| \textbf{-back} &         &         &                         &               &         & |[red](j)| \textbf{+back} \\
-      & |(k)| p & |(l)| \o                  & |(m)| y & |(n)| t & |[red](o)| \textbf{\ae} & |(u)| $\#$ & |(p)| n & |[red](s)| \textbf{\textipa{A}} \\
-      &         & |[red](q)| \textbf{-neutral} &                &                         &               &         & \\
+(a) &              & |(a)| -back &         &             &           &            &         & \\ 
+    & |(b)| p      & |(c)| \o    & |(d)| y & |(e)| t     & |(f)| \ae & |(g)| $\#$ & |(h)| n & |(i)| \ae \\
+    & |(j)| +round &             &         &|(k)| -round &           &            &         & \\
+    &              & |(l)| -low  &         &              & |(m)| +low &            &         &  \\
+(b) * &               & |[red](n)| \textbf{-back} &         &         &                         &               &         & |[red](o)| \textbf{+back} \\
+      & |(p)| p       & |(q)| \o                  & |(r)| y & |(s)| t      & |[red](t)| \textbf{\ae}  & |(u)| $\#$ & |(v)| n & |[red](w)| \textbf{\textipa{A}} \\
+      & |(x)| +round  &                           &         & |(y)| -round &                          &            &         & \\
+      &         & |(z)| -low                &         &              & |[red](1)| \textbf{+low} &            &         & \\
   };
-  \draw foreach \x in {c, d, f, r} {(a.south) -- (\x.north)};
-  \draw foreach \x in {c, d, f, r} {(\x.south) -- (h.north)};
-  \draw foreach \x in {l, m} {(i.south) -- (\x.north)};
-  \draw[red,thick] (i.south) -- (o.north);
-  \draw[red,thick] (j.south) -- (s.north);
-  \draw foreach \x in {l, m} {(\x.south) -- (q.north)};
-  \draw[red,thick] foreach \x in {o, s} {(\x.south) -- (q.north)};
+  \draw foreach \x in {c, d, f, i} {(a.south) -- (\x.north)};
+  \draw foreach \x in {c, d} {(\x.south) -- (j.north)};
+  \draw foreach \x in {c, d} {(\x.south) -- (l.north)};
+  \draw foreach \x in {f, i} {(\x.south) -- (k.north)};
+  \draw foreach \x in {f, i} {(\x.south) -- (m.north)};
+  \draw foreach \x in {q, r} {(n.south) -- (\x.north)};
+  \draw[thick,red] (n.south) -- (t.north);
+  \draw[thick,red] (o.south) -- (w.north);
+  \draw foreach \x in {q, r} {(\x.south) -- (x.north)};
+  \draw foreach \x in {q, r} {(\x.south) -- (z.north)};
+  \draw foreach \x in {t, w} {(\x.south) -- (y.north)};
+  \draw (t.south) -- (1.north);
+  \draw[thick,red] (w.south) -- (1.north);
   \draw[black,->] (b) -- (c);
   \draw[black,->] (c) -- (d);
   \draw[black,->] (d) -- (e);
   \draw[black,->] (e) -- (f);
-  \draw[black,->] (f) -- (t);
-  \draw[black,->] (t) -- (g);
-  \draw[black,->] (g) -- (r);
-  \draw[black,->] (i) -- (j);
-  \draw[black,->] (k) -- (l);
-  \draw[black,->] (l) -- (m);
-  \draw[black,->] (m) -- (n);
-  \draw[black,->] (n) -- (o);
-  \draw[black,->] (o) -- (u);
-  \draw[black,->] (u) -- (p);
-  \draw[black,->] (p) -- (s);
+  \draw[black,->] (f) -- (g);
+  \draw[black,->] (g) -- (h);
+  \draw[black,->] (h) -- (i);
+  \draw[black,->] (p) -- (q);
+  \draw[black,->] (q) -- (r);
+  \draw[black,->] (r) -- (s);
+  \draw[black,->] (s) -- (t);
+  \draw[black,->] (t) -- (u);
+  \draw[black,->] (u) -- (v);
+  \draw[black,->] (v) -- (w);
   \end{tikzpicture}
 \end{exe}
 
@@ -987,6 +1008,9 @@ Retrieved from
 \hypertarget{ref-Nevins2010}{}
 Nevins, A. (2010). \emph{Locality in vowel harmony}. \emph{Linguistic
 Inquiry Monographs} (Vol. 55). MIT Press.
+
+\hypertarget{ref-vdHulstSmith1986}{}
+Norval Smith, H. vanderHulst \&. (1986). On neutral vowels.
 
 \hypertarget{ref-odden1994}{}
 Odden, D. (1994). Adjacency parameters in phonology. \emph{Language},
