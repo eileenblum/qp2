@@ -333,9 +333,12 @@ The surface requirement that +round and +low vowels share the same back feature 
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep=2.5em, column sep={2.15em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-(a) * & & |(a)| +back &            & |(b)| -back & & (b) * & & |(f)| +back & & |(g)| -back \\
+(a) * & & |(a)| +back &            & |(b)| -back & & (b) * & & |(f)| -back & & |(g)| +back \\
       & & |(c)| V     &            & |(d)| V     & &       & & |(h)| V     & & |(i)| V \\
-      & &             & |(e)| +low &             & &       & &             & & |(j)| +round\\
+      & &             & |(e)| +low &             & &       & & |(j)| +low  & &  \\
+(c) * & & |(1)| +back &  & |(2)| -back  & & (d) * & & |(3)| -back & & |(4)| +back \\
+      & & |(5)| V     &  & |(6)| V      & &       & & |(7)| V     & & |(8)| V \\
+      & &             &  & |(9)| +round & &       & &             & & |(10)| +round \\
   };
   \draw (a.south) -- (c.north);
   \draw (b.south) -- (d.north);
@@ -343,6 +346,16 @@ The surface requirement that +round and +low vowels share the same back feature 
   \draw (f.south) -- (h.north);
   \draw (g.south) -- (i.north);
   \draw (i.south) -- (j.north);
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (f) -- (g);
+  \draw (1.south) -- (5.north);
+  \draw (2.south) -- (6.north);
+  \draw (6.south) -- (9.north);
+  \draw (3.south) -- (7.north);
+  \draw (4.south) -- (8.north);
+  \draw (8.south) -- (10.north);
+  \draw[black,->] (1) -- (2);
+  \draw[black,->] (3) -- (4);
   \end{tikzpicture}
 \end{exe}
 
