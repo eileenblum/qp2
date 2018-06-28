@@ -312,17 +312,17 @@ Native Finnish words demonstrate backness harmony with four transparent front vo
   \label{finnish_vowels}
 \end{table}
 
-The Finnish harmony generalization is that all of the harmonizing vowels in a root will share the same back feature with each other and harmonizing suffix vowels will share the same back feature with the harmonizing root-final vowel [@valimaablum1986; @ringenheinamaki1999]. Since the same harmony generalization holds for both root and suffix vowels the Finnish generalization can also be stated as two harmonizing vowls must share the same back feature.  For example, the words in (\ref{finnish_-neutral}) contain only +round or +low vowels, which are also either all +back or all -back. A pound sign represents a morpheme boundary.
+The Finnish harmony generalization is that all of the harmonizing vowels in a root will share the same back feature with each other and harmonizing suffix vowels will share the same back feature with the harmonizing root-final vowel [@valimaablum1986; @ringenheinamaki1999]. Since the same harmony generalization holds for both root and suffix vowels the Finnish generalization can also be stated as two harmonizing vowels must share the same back feature.  For example, the words in (\ref{finnish_-neutral}) contain only +round or +low vowels, which are also either all +back or all -back. A pound sign represents a morpheme boundary.
 
 \begin{exe}
 \ex{harmonizing vowels share a back feature value}\label{finnish_-neutral}
 \begin{xlist}
   \ex \textipa{p\o yt\ae} `table' \\
-  \ex \textipa{k\ae n$\#$t\ae:} `turn' \\
-  \ex \textipa{tyk\ae$\#$t\ae} `like' \\
+  \ex \textipa{k\ae nt\ae:} `turn' \\
+  \ex \textipa{tyk\ae t\ae} `like' \\
   \ex \textipa{poutA} `fine weather' \\
-  \ex \textipa{mur$\#$tA:} `break' \\
-  \ex \textipa{kokA$\#$tA} `cook' \\
+  \ex \textipa{murtA:} `break' \\
+  \ex \textipa{kokAtA} `cook' \\
   \end{xlist}
 \end{exe}
 
@@ -333,78 +333,61 @@ The surface requirement that +round and +low vowels share the same back feature 
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep=2.5em, column sep={2.15em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-(a) * & & |(a)| +back &            & |(b)| -back & & (b) * & & |(f)| -back & & |(g)| +back \\
-      & & |(c)| V     &            & |(d)| V     & &       & & |(h)| V     & & |(i)| V \\
-      & &             & |(e)| +low &             & &       & & |(j)| +low  & &  \\
-(c) * & & |(1)| +back &  & |(2)| -back  & & (d) * & & |(3)| -back & & |(4)| +back \\
-      & & |(5)| V     &  & |(6)| V      & &       & & |(7)| V     & & |(8)| V \\
-      & &             &  & |(9)| +round & &       & &             & & |(10)| +round \\
+(a) * & & |(a)| +back &            & |(b)| -back & & (b) * & & |(1)| +back &  & |(2)| -back  \\
+      & & |(c)| V     &            & |(d)| V     & &       & & |(5)| V     &  & |(6)| V      \\
+      & &             & |(e)| +low &             & &       & &             &  & |(9)| +round \\
   };
   \draw (a.south) -- (c.north);
   \draw (b.south) -- (d.north);
   \draw (d.south) -- (e.north);
-  \draw (f.south) -- (h.north);
-  \draw (g.south) -- (i.north);
-  \draw (i.south) -- (j.north);
   \draw[black,->] (a) -- (b);
-  \draw[black,->] (f) -- (g);
   \draw (1.south) -- (5.north);
   \draw (2.south) -- (6.north);
   \draw (6.south) -- (9.north);
-  \draw (3.south) -- (7.north);
-  \draw (4.south) -- (8.north);
-  \draw (8.south) -- (10.north);
+  \draw[black,->] (a) -- (b);
   \draw[black,->] (1) -- (2);
-  \draw[black,->] (3) -- (4);
   \end{tikzpicture}
 \end{exe}
 
 \begin{exe}
-\ex{\textipa{[p\o yt\ae-n\ae]} `table (essive)'}\label{finnish.poytana}
+\ex{\textipa{[poutA]} `fine weather'}\label{finnish.pouta}
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.75em,between origins}, column sep={2.15em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-(a) &              & |(a)| -back &         &             &           &            &         & \\ 
-    & |(b)| p      & |(c)| \o    & |(d)| y & |(e)| t     & |(f)| \ae & |(g)| $\#$ & |(h)| n & |(i)| \ae \\
-    & |(j)| +round &             &         &|(k)| -round &           &            &         & \\
-    &              & |(l)| -low  &         &              & |(m)| +low &            &         &  \\
-(b) * &               & |[red](n)| \textbf{-back} &         &         &                         &               &         & |[red](o)| \textbf{+back} \\
-      & |(p)| p       & |(q)| \o                  & |(r)| y & |(s)| t      & |[red](t)| \textbf{\ae}  & |(u)| $\#$ & |(v)| n & |[red](w)| \textbf{\textipa{A}} \\
-      & |(x)| +round  &                           &         & |(y)| -round &                          &            &         & \\
-      &         & |(z)| -low                &         &              & |[red](1)| \textbf{+low} &            &         & \\
+(a) &              & |(a)| +back &         &             &                   & & (b) * &               & |[red](n)| \textbf{+back} &         &         &  |[red](o)| \textbf{-back} \\ 
+    & |(b)| p      & |(c)| o     & |(d)| u & |(e)| t     & |(f)| \textipa{A} & &        & |(p)| p       & |(q)| o                   & |(r)| u  & |(s)| t & |[red](t)| \textbf{\ae}\\
+    & |(j)| +round &             &         &|(k)| -round &                   & &        & |(x)| +round  &                           &         & |(y)| -round &                         &         & \\
+    &              & |(l)| -low  &         &             & |(m)| +low         & &       &               & |(z)| -low                &         &              & |[red](1)| \textbf{+low} \\
   };
-  \draw foreach \x in {c, d, f, i} {(a.south) -- (\x.north)};
+  \draw foreach \x in {c, d, f} {(a.south) -- (\x.north)};
   \draw foreach \x in {c, d} {(\x.south) -- (j.north)};
   \draw foreach \x in {c, d} {(\x.south) -- (l.north)};
-  \draw foreach \x in {f, i} {(\x.south) -- (k.north)};
-  \draw foreach \x in {f, i} {(\x.south) -- (m.north)};
+  \draw (f.south) -- (k.north);
+  \draw (f.south) -- (m.north);
   \draw foreach \x in {q, r} {(n.south) -- (\x.north)};
-  \draw[thick,red] (n.south) -- (t.north);
-  \draw[thick,red] (o.south) -- (w.north);
+  \draw[thick,red] (o.south) -- (t.north);
   \draw foreach \x in {q, r} {(\x.south) -- (x.north)};
   \draw foreach \x in {q, r} {(\x.south) -- (z.north)};
-  \draw foreach \x in {t, w} {(\x.south) -- (y.north)};
-  \draw (t.south) -- (1.north);
-  \draw[thick,red] (w.south) -- (1.north);
+  \draw (t.south) -- (y.north);
+  \draw[thick,red] (t.south) -- (1.north);
   \draw[black,->] (b) -- (c);
   \draw[black,->] (c) -- (d);
   \draw[black,->] (d) -- (e);
   \draw[black,->] (e) -- (f);
-  \draw[black,->] (f) -- (g);
-  \draw[black,->] (g) -- (h);
-  \draw[black,->] (h) -- (i);
+  \draw[black,->] (j) -- (k);
+  \draw[black,->] (l) -- (m);
+  \draw[thick,red,->] (n) -- (o);
   \draw[black,->] (p) -- (q);
   \draw[black,->] (q) -- (r);
   \draw[black,->] (r) -- (s);
   \draw[black,->] (s) -- (t);
-  \draw[black,->] (t) -- (u);
-  \draw[black,->] (u) -- (v);
-  \draw[black,->] (v) -- (w);
+  \draw[black,->] (x) -- (y);
+  \draw[black,->] (z) -- (1);
   \end{tikzpicture}
 \end{exe}
 
-The AR for the grammatical Finnish word \textipa{[p\o yt\ae$\#$n\ae]} `table (essive)', shown in (\ref{finnish.poytana}a), contains a single -back and a single -neutral feature. Both features are associated to each vowel in the word, which demonstrates full back and neutral harmony. The hypothetical Finnish word, \textipa{[p\o yt\ae$\#$nA]} in (\ref{finnish.poytana}b)
-, however, contains the forbidden structure of (\ref{fsc.finnish}) in bold and red because it demonstrates full neutral harmony, but not full back harmony. In (\ref{finnish.poytana}b) the suffix vowel does not harmonize with the root-final vowel because they are associated to different back features. 
+The AR for the grammatical Finnish word \textipa{[poutA]} `fine weather', shown in (\ref{finnish.pouta}a), contains a single -back and a single -neutral feature. Both features are associated to each vowel in the word, which demonstrates full back and neutral harmony. The hypothetical Finnish word, \textipa{[pout\ae]} in (\ref{finnish.pouta}b)
+, however, contains the forbidden structure of (\ref{fsc.finnish}) in bold and red because it demonstrates full neutral harmony, but not full back harmony. In (\ref{finnish.pouta}b) the suffix vowel does not harmonize with the root-final vowel because they are associated to different back features. 
 
 ## Turkish
 
