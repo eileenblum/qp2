@@ -387,8 +387,8 @@ The surface requirement that +round and +low vowels share the same back feature 
   \end{tikzpicture}
 \end{exe}
 
-The AR for the grammatical Finnish word \textipa{[poutA]} `fine weather', shown in (\ref{finnish.pouta}a), contains a single -back and a single -neutral feature. Both features are associated to each vowel in the word, which demonstrates full back and neutral harmony. The hypothetical Finnish word, \textipa{[pout\ae]} in (\ref{finnish.pouta}b)
-, however, contains the forbidden structure of (\ref{fsc.finnish}) in bold and red because it demonstrates full neutral harmony, but not full back harmony. In (\ref{finnish.pouta}b) the suffix vowel does not harmonize with the root-final vowel because they are associated to different back features. 
+The AR for the grammatical Finnish word \textipa{[poutA]} `fine weather', shown in (\ref{finnish.pouta}a), contains a single +back feature, which demonstrates full back harmony. The hypothetical Finnish word, \textipa{[pout\ae]} in (\ref{finnish.pouta}b)
+, however, contains the forbidden structure of (\ref{fsc.finnish}) in bold and red. In (\ref{finnish.pouta}b) the suffix vowel does not harmonize with the root-final vowel because they are associated to different back features. 
 
 ## Turkish
 
