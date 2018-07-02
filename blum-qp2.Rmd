@@ -298,7 +298,7 @@ The AR for the grammatical Akan word [obeijii] 'he came and removed it' is shown
 
 ## Transparent vowels
 
-Finnish provides an example of backness harmony with four transparent vowels. @valimaablum1986 describes full backness harmony in both roots and suffixes, but @ringenheinamaki1999 found that only suffix vowels share a +back feature with root-final vowels.  The Finnish vowel inventory in Table \ref{finnish_vowels} consists of 16 vowels with contrastive length and three main featural distinctions: $\pm$ back, $\pm$ low, and $\pm$ round [@valimaablum1986; @ringenheinamaki1999]. The four vowels transparent to backness harmony, \textipa{[i, i:, e, e:]}, are all -back, -round, and -low. Of the harmonizing vowels \textipa{[y, y:, u, u:, \o, \o:, o, o:]} are  all +round and -low while \textipa{[\ae, \ae:, A, A:]} are all +low and -round.
+Finnish provides an example of backness harmony with four transparent vowels. @valimaablum1986 describes full backness harmony in both roots and suffixes, but @ringenheinamaki1999 found that only suffix vowels share a +back feature with root-final vowels.  The Finnish vowel inventory in Table \ref{finnish_vowels} consists of 16 vowels with contrastive length and three main featural distinctions: $\pm$ back, $\pm$ low, and $\pm$ round [@valimaablum1986; @ringenheinamaki1999]. The four vowels transparent to backness harmony, \textipa{[i, i:, e, e:]}, are all [-back, -round, -low]. Of the harmonizing vowels \textipa{[y, y:, u, u:, \o, \o:, o, o:]} are  all +round and -low while \textipa{[\ae, \ae:, A, A:]} are all +low and -round. The difference between harmonizing and transparent Finnish vowels is characterized by low and round feature values. Transparent vowels are all [-low, -round] and thus harmonizing vowels have the opposite value for the low and/or round feature.
 
 \begin{table}
   \caption{Finnish Vowels}
@@ -312,7 +312,7 @@ Finnish provides an example of backness harmony with four transparent vowels. @v
   \label{finnish_vowels}
 \end{table}
 
-The Finnish harmony generalization is that all of the harmonizing vowels in a root will share the same back feature with each other and harmonizing suffix vowels will share the same back feature with the harmonizing root-final vowel [@valimaablum1986; @ringenheinamaki1999; @vdHulst2017; @Nevins2010]. Since the same harmony generalization holds for both root and suffix vowels the Finnish generalization can also be stated as two harmonizing vowels must share the same back feature.  For example, the words in (\ref{finnish_-neutral}) contain only +round or +low vowels, which are also either all +back or all -back. 
+The Finnish harmony generalization is that all of the harmonizing vowels in a root will share the same back feature with each other and harmonizing suffix vowels will share the same back feature with the harmonizing root-final vowel [@valimaablum1986; @ringenheinamaki1999; @vdHulst2017; @Nevins2010]. Since the same harmony generalization holds for both root and suffix vowels the Finnish generalization can also be stated as two harmonizing vowels must share the same back feature. For example, the words in (\ref{finnish_-neutral}) contain only +round or +low vowels, which are also either all +back or all -back. 
 
 \begin{exe}
 \ex{harmonizing vowels share a back feature value}\label{finnish_-neutral}
@@ -326,7 +326,22 @@ The Finnish harmony generalization is that all of the harmonizing vowels in a ro
   \end{xlist}
 \end{exe}
 
-The surface requirement that +round and +low vowels share the same back feature can also be written as two FSCs, which forbid adjacent vowels associated to a +round or +low feature from being associated to different back features, as in (\ref{fsc.finnish}). The general Finnish FSC does not include morpheme boundaries because the same constraint applies within roots and across morpheme boundaries. The ordering relation on the melody tier of this FSC is omitted because the vowels can have consonants between them, as in (\ref{finnish.pouta}). While the Finnish pattern is captured by (\ref{fsc.finnish}), the FSCs do not need to refer to the morpheme boundary because the same harmony pattern holds within roots as well as between root and suffix morphemes.
+<!-- transparent vowel examples -->
+Transparent vowels, however, do not block or undergo harmony so in the Finnish words in (\ref{finnish_trans}) +back harmony appears to skip over or ignore the [-back, -round, -low] vowels \textipa{[i, i:, e, e:]}.
+
+\begin{exe}
+\ex{back harmony skips over transparent vowels}\label{finnish_trans}
+\begin{xlist}
+  \ex \textipa{ruvetA} `start' \\
+  \ex \textipa{tuoliA} `chair' \\
+  \ex \textipa{lukeA} `read (inf.)' \\
+  \ex \textipa{kAuneus} `beauty' \\
+  \ex \textipa{nAivius} `naiveness' \\
+  \ex \textipa{kotikAs} `cozy' \\
+  \end{xlist}
+\end{exe}
+
+ The surface requirement that +round and +low vowels share the same back feature can also be written using FSCs. The two FSCs in (\ref{fsc.finnish}) forbid adjacent vowels associated to a +round or +low feature from being associated to different back features.  The ordering relation on the melody tier of the FSCs is omitted because the vowels can have consonants between them, as in (\ref{finnish.pouta}). 
 
 \begin{exe}
 \ex \label{fsc.finnish}
@@ -390,6 +405,56 @@ The surface requirement that +round and +low vowels share the same back feature 
 The AR for the grammatical Finnish word \textipa{[poutA]} `fine weather', shown in (\ref{finnish.pouta}a), contains a single +back feature, which demonstrates full back harmony. The hypothetical Finnish word, \textipa{[pout\ae]} in (\ref{finnish.pouta}b)
 , however, contains the forbidden structure of (\ref{fsc.finnish}) in bold and red. In (\ref{finnish.pouta}b) the suffix vowel does not harmonize with the root-final vowel because they are associated to different back features. 
 
+Crucially, the behavior of the transparent vowels with respect to vowel harmony in Finnish is captrued by the two FSCs in (\ref{fsc.finnish}) without the reference to underspecification of back features. For example, the words in (\ref{finnish_trans}) all contain vowels with -back features that follow +back vowels, but because the -back vowels are also [-low, -round] the words are grammatical. In addition, constraints with back features in the opposite order do not hold because the grammatical Finnish words in (\ref{finnish_trans}) also contain +back harmonizing vowels that follow the transparent vowels. So, the same two FSCs generate Finnish back harmony with transparent vowels, shown in (\ref{finnish.ruveta}), in both roots and suffixes.
+
+\begin{exe}
+\ex{\textipa{\textipa{[ruvetA]}} `start'}\label{finnish.ruveta}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.75em,between origins}, column sep={2.15em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+(a) &         & |(a)| +back &         & |(b)| -back &            & |(c)| +back       & & (b) * &          &         & |[red](n)| \textbf{+back}           &          & |[red](o)| \textbf{-back}           &         & |(p)| +back \\ 
+    & |(d)| r & |(e)| u     & |(f)| v & |(g)| e     & |(h)| t    & |(i)| \textipa{A} & &       &          & |(q)| r & |[red](r)| \textbf{u} & |(s)| v  & |[red](t)| \textbf{y} & |(u)| t & |(v)| \textipa{A}\\
+    & |(j)| -low &             &         &             &              & |(k)| +low &      &       &          & |(w)| -low   &                       &          &                           & |(x)| +low & \\
+    &            & |(l)| +round &         &            & |(m)| -round &       &           &       &          &              & |[red](y)| \textbf{+round}          &          &                           &            & |(z)| -round \\
+  };
+  \draw (a.south) -- (e.north);
+  \draw (b.south) -- (g.north);
+  \draw (c.south) -- (i.north);
+  \draw[thick,red] (n.south) -- (r.north);
+  \draw[thick,red] (o.south) -- (t.north);
+  \draw (p.south) -- (v.north);
+  \draw foreach \x in {e, g} {(\x.south) -- (j.north)};
+  \draw (e.south) -- (l.north);
+  \draw (i.south) -- (k.north);
+  \draw foreach \x in {g, i} {(\x.south) -- (m.north)};
+  \draw foreach \x in {r, t} {(\x.south) -- (w.north)};
+  \draw (r.south) -- (y.north);
+  \draw[thick,red] (t.south) -- (y.north);
+  \draw foreach \x in {x, z} {(v.south) -- (\x.north)};
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (b) -- (c);
+  \draw[thick,red,->] (n) -- (o);
+  \draw[black,->] (o) -- (p);
+  \draw[black,->] (d) --(e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (f) -- (g);
+  \draw[black,->] (g) -- (h);
+  \draw[black,->] (h) -- (i);
+  \draw[black,->] (q) -- (r);
+  \draw[black,->] (r) -- (s);
+  \draw[black,->] (s) -- (t);
+  \draw[black,->] (t) -- (u);
+  \draw[black,->] (u) --(v);
+  \draw[black,->] (j) -- (k);
+  \draw[black,->] (w) -- (x);
+  \draw[black,->] (l) -- (m);
+  \draw[black,->] (y) -- (z);
+  \end{tikzpicture}
+\end{exe}
+
+<!-- transparent vowels: -back, -low, or -round, so generalization holds only for those. only care about +- back when +low, +round. only 2 constraints hold. don't have to make transparent vowels do anything special: no underspecification-->
+
+# Morphologically-conditioned harmony
 ## Turkish
 
 Native Turkish words demonstrate two separate harmony patterns: back and round harmony. In Turkish, a suffix vowel shares its back feature with the root-final vowel, but it is debated whether or not Turkish also utilizes back harmony within roots. In addition, a +high suffix vowel shares its round feature with the root-final vowel. The vowel inventory of Turkish in Table \ref{turkish_vowels} consists of eight vowels with three main featural distinctions: $\pm$ high, $\pm$ back, $\pm$ round.  In Turkish the +high -back vowels are [i, ü], the +high +back vowels are \textipa{[1, u]}, the -high -back vowels are [e, ö], and the -high +back vowels are [a, o].
