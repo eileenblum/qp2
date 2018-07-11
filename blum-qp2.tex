@@ -1,5 +1,5 @@
-\documentclass[floatsintext,man]{apa6}
-
+\documentclass[,doc,floatsintext]{apa6}
+\usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -9,152 +9,133 @@
 \else % if luatex or xelatex
   \ifxetex
     \usepackage{mathspec}
-    \usepackage{xltxtra,xunicode}
   \else
     \usepackage{fontspec}
   \fi
-  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-  \newcommand{\euro}{€}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
-\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={On the locality of vowel harmony over multi-tiered autosegmental representations},
+            pdfauthor={Eileen Blum},
+            pdfkeywords={keywords},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
 
-% Table formatting
-\usepackage{longtable, booktabs}
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{On the locality of vowel harmony over multi-tiered autosegmental
+representations}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Eileen Blum\textsuperscript{1}}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \date{}
+  \predate{}\postdate{}
+
+\shorttitle{Locality of vh over multi-tiered ARs}
+\authornote{
+
+Correspondence concerning this article should be addressed to Eileen Blum, 18 Seminary Place, New Brunswick, NJ 08901. E-mail: eileen.blum@rutgers.edu}
+\affiliation{
+\vspace{0.5cm}
+\textsuperscript{1} Rutgers University}
+\keywords{keywords\newline\indent Word count: X}
+\usepackage{csquotes}
+\usepackage{upgreek}
+\captionsetup{font=singlespacing,justification=justified}
+
+\usepackage{longtable}
 \usepackage{lscape}
-% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
-\usepackage{multirow}		% Table styling
-\usepackage{tabularx}		% Control Column width
-\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
-\usepackage{threeparttablex}            % Lets threeparttable work with longtable
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage[flushleft]{threeparttable}
+\usepackage{threeparttablex}
 
-% Create new environments so endfloat can handle them
-% \newenvironment{ltable}
-%   {\begin{landscape}\begin{center}\begin{threeparttable}}
-%   {\end{threeparttable}\end{center}\end{landscape}}
+\newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
 
-\newenvironment{lltable}
-  {\begin{landscape}\begin{center}\begin{ThreePartTable}}
-  {\end{ThreePartTable}\end{center}\end{landscape}}
-
-
-
-
-% The following enables adjusting longtable caption width to table width
-% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
 \makeatletter
 \newcommand\LastLTentrywidth{1em}
 \newlength\longtablewidth
 \setlength{\longtablewidth}{1in}
-\newcommand\getlongtablewidth{%
- \begingroup
-  \ifcsname LT@\roman{LT@tables}\endcsname
-  \global\longtablewidth=0pt
-  \renewcommand\LT@entry[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}%
-  \@nameuse{LT@\roman{LT@tables}}%
-  \fi
-\endgroup}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
 
-\ifxetex
-  \usepackage[setpagesize=false, % page size defined by xetex
-              unicode=false, % unicode breaks when used with xetex
-              xetex]{hyperref}
-\else
-  \usepackage[unicode=true]{hyperref}
-\fi
-\hypersetup{breaklinks=true,
-            pdfauthor={},
-            pdftitle={On the locality of vowel harmony over multi-tiered autosegmental representations},
-            colorlinks=true,
-            citecolor=blue,
-            urlcolor=blue,
-            linkcolor=black,
-            pdfborder={0 0 0}}
-\urlstyle{same}  % don't use monospace font for urls
-
-\setlength{\parindent}{0pt}
-%\setlength{\parskip}{0pt plus 0pt minus 0pt}
-
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
-
-
-% Manuscript styling
-\captionsetup{font=singlespacing,justification=justified}
-\usepackage{csquotes}
-\usepackage{upgreek}
-
-
-
-\usepackage{tikz} % Variable definition to generate author note
-
-% fix for \tightlist problem in pandoc 1.14
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
-% Essential manuscript parts
-  \title{On the locality of vowel harmony over multi-tiered autosegmental
-representations}
-
-  \shorttitle{Locality of vh over multi-tiered ARs}
-
-
-  \author{Eileen Blum\textsuperscript{1}}
-
-  % \def\affdep{{""}}%
-  % \def\affcity{{""}}%
-
-  \affiliation{
-    \vspace{0.5cm}
-          \textsuperscript{1} Rutgers University  }
-
-  \authornote{
-    Correspondence concerning this article should be addressed to Eileen
-    Blum, 18 Seminary Place, New Brunswick, NJ 08901. E-mail:
-    \href{mailto:eileen.blum@rutgers.edu}{\nolinkurl{eileen.blum@rutgers.edu}}
-  }
-
-
-  \keywords{keywords \\
-
-    \indent Word count: X
-  }
-
-
-
-
-  \usepackage{tipa}
-  \usepackage{gb4e}
-  \noautomath
-  \usepackage{tikz}
-  \usetikzlibrary{matrix}
-  \tikzset{marked/.style={draw=none, fill=none}}
-  \usepackage{mathptmx}
-  \usepackage{moresize}
+\usepackage{tipa}
+\usepackage{gb4e}
+\noautomath
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\tikzset{marked/.style={draw=none, fill=none}}
+\usepackage{mathptmx}
+\usepackage{moresize}
 
 \usepackage{amsthm}
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}
-\newtheorem{corollary}{Corollary}
-\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{proposition}{Proposition}[section]
 \theoremstyle{definition}
-\newtheorem{example}{Example}
+\newtheorem{example}{Example}[section]
 \theoremstyle{definition}
-\newtheorem{exercise}{Exercise}
+\newtheorem{exercise}{Exercise}[section]
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 \newtheorem*{solution}{Solution}
 \begin{document}
-
 \maketitle
-
-\setcounter{secnumdepth}{0}
-
-
 
 \section{Introduction}\label{introduction}
 
@@ -604,7 +585,7 @@ exemplifies this pattern and is shown in (\ref{ex.akan+low}).
     \ex p\textipa{I}r\textipa{3}ko  `pig'                                        \\
     \ex obisa\textipa{I} `he asked'                                              \\
     \ex m\textipa{I}k\textipa{O}k\textipa{3}ri  `I go and weight it'   \\
-    \ex okog\textsuperscript{w}\textsuperscript{j}ar\textipa{I}\textraiseglotstop `he goes and washes' \\
+    \ex okog\textsuperscript{w}ar\textipa{I}\textraiseglotstop `he goes and washes' \\
   \end{xlist}
 \end{exe}
 
@@ -1039,6 +1020,100 @@ red because it does not demonstrate full round harmony; the +high suffix
 vowel is associated to a different round feature than the root-final
 vowel.
 
+\section{Sour Grapes}\label{sour-grapes}
+
+Another phenomenon commonly discussed in autosegmental spreading
+literature is an unattested, but logically possible, pattern called sour
+grapes in which the presence of a single blocking segment prevents any
+spreading within the word (Lamont, 2018; McCarthy, 2011). Following
+Lamont (2018), this section will evaluate the expressive power needed to
+generate an unattested sour grapes pattern over multi-tiered ARs.
+
+In principle, a word in a hypothetical language with sour grapes
+(L\textsubscript{sg}) could have any number of syllables, but as long as
+the \enquote{blocking} vowel occurs somewhere within the word the
+harmonizing feature (\(\pm\)F) will not be shared between all vowels on
+the surface. In other words, no word will have full F harmony and a
+\enquote{blocking} vowel. If all harmonizing vowels are also associated
+to a single feature on a different tier (-G, for example) then a
+\enquote{blocking} vowel would be one that is associated to a feature
+with the opposite value on that tier (+G). The AR in (\ref{sgnofh})
+shows two examples of full F harmony patterns that would not be found in
+L\textsubscript{sg} and (\ref{sgexar}) shows an AR without full F
+harmony that could be found in L\textsubscript{sg}. Ellipses in place of
+a V represent the possibility for any number of vowels to occur in the
+position, all associated to the same features.
+
+\begin{exe}
+\ex{Full F harmony with +G vowel not found in L$_s$$_g$}\label{sgnofh}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{ 
+(a) & |(a)| +F &           &          &                    & & (b) & |(b)| -F &                      & \\
+    & |(c)| V  & |(d)| ... & |(e)| V  & $\notin$ L$_s$$_g$ & &     & |(f)| V  & |(g)| ... & |(h)| V  & $\notin$ L$_s$$_g$ \\
+    & |(i)| -G &           & |(j)| +G &                    & &     & |(k)| -G &           & |(l)| +G & \\
+};
+  \draw foreach \x in {c, d, e} {(a.south) -- (\x.north)};
+  \draw foreach \x in {c, d} {(\x.south) -- (i.north)};
+  \draw (e.south) -- (j.north);
+  \draw foreach \x in {f, g, h} {(b.south) -- (\x.north)};
+  \draw foreach \x in {f, g} {(\x.south) -- (k.north)};
+  \draw (h.south) -- (l.north);
+  \draw[black,->] (i) -- (j);
+  \draw[black,->] (k) -- (l);
+  \end{tikzpicture}
+\end{exe}
+
+\begin{exe}
+\ex{Sour Grapes}\label{sgexar}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{ 
+|(a)| +F &           & |(b)| -F &           &          & \\
+|(c)| V  & |(d)| ... & |(e)| V  & |(f)| ... & |(g)| V  & $\in$ L$_s$$_g$ \\
+|(h)| -G &           &          &           & |(i)| +G & \\
+};
+  \draw foreach \x in {c, d} {(a.south) -- (\x.north)};
+  \draw foreach \x in {c, d} {(\x.south) -- (h.north)};
+  \draw foreach \x in {e, f, g} {(b.south) -- (\x.north)};
+  \draw foreach \x in {c, d, e, f} {(\x.south) -- (h.north)};
+  \draw (g.south) -- (i.north);
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (h) -- (i);
+  \end{tikzpicture}
+\end{exe}
+
+Two FSCs can captures the sour grapes pattern exemplified by
+(\ref{sgnofh}) and (\ref{sgexar}). Together the FSCs forbid two vowels
+from sharing a single F feature if they also share a -G feature that
+precedes a +G feature associated to a third vowel, which shares the
+single F feature. The NCC crucially prevents any two non-adjacent vowels
+from being associated to the same F feature if a vowel between them is
+associated to a different F feature. While the vowels are not ordered on
+the melody tier in (\ref{sg.fsc}) because consonants can occur between
+them, the NCC prevents any vowels from intervening that are associated
+to different F features.
+
+\begin{exe}
+\ex{Sour Grapes FSCs}\label{sg.fsc}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{ 
+(a) * & |(a)| +F &           &          & & (b) * & |(b)| -F &         & \\
+      & |(c)| V  & |(d)| V & |(e)| V    & &       & |(f)| V  & |(g)| V & |(h)| V \\
+      & |(i)| -G &           & |(j)| +G & &       & |(k)| -G &         & |(l)| +G \\
+};
+  \draw foreach \x in {c, d, e} {(a.south) -- (\x.north)};
+  \draw foreach \x in {c, d} {(\x.south) -- (i.north)};
+  \draw (e.south) -- (j.north);
+  \draw foreach \x in {f, g, h} {(b.south) -- (\x.north)};
+  \draw foreach \x in {f, g} {(\x.south) -- (k.north)};
+  \draw (h.south) -- (l.north);
+  \draw[black,->] (i) -- (j);
+  \draw[black,->] (k) -- (l);
+  \end{tikzpicture}
+\end{exe}
+
 \newpage
 
 \section{References}\label{references}
@@ -1091,6 +1166,9 @@ Jardine, A., \& Heinz, J. (2015). A concatenation operation to derive
 autosegmental graphs. In \emph{Proceedings of the 14th annual meeting on
 the mathematics of language (mol 2015)} (pp. 139--151). Chicago, USA:
 Association for Computational Linguistics.
+
+\hypertarget{ref-lamont2018}{}
+Lamont, A. (2018). ms. University of Massachusetts Amherst.
 
 \hypertarget{ref-leben1973}{}
 Leben, W. (1973). \emph{Suprasegmental phonology} (PhD thesis).
@@ -1183,10 +1261,6 @@ Inquiry}, \emph{45}(3), 501--523.
 \hypertarget{ref-walker2014}{}
 Walker, R. (2014b). Surface correspondence and discrete harmony
 triggers. In \emph{Proceedings of the annual meetings on phonology}.
-
-
-
-
 
 
 \end{document}

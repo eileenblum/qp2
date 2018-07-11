@@ -24,8 +24,9 @@ tablelist         : no
 footnotelist      : no
 lineno            : no
 mask              : no
+numbersections    : true
 
-class             : "man"
+class             : "doc"
 output            : papaja::apa6_pdf
 header-includes:
   - \usepackage{tipa}
@@ -263,7 +264,7 @@ The AR for the grammatical Akan word [obeijii] 'he came and removed it' is shown
     \ex p\textipa{I}r\textipa{3}ko  `pig'                                        \\
     \ex obisa\textipa{I} `he asked'                                              \\
     \ex m\textipa{I}k\textipa{O}k\textipa{3}ri  `I go and weight it'   \\
-    \ex okog\textsuperscript{w}\textsuperscript{j}ar\textipa{I}\textraiseglotstop `he goes and washes' \\
+    \ex okog\textsuperscript{w}ar\textipa{I}\textraiseglotstop `he goes and washes' \\
   \end{xlist}
 \end{exe}
 
@@ -579,9 +580,75 @@ The AR for the grammatical Turkish word [\textipa{köy\LARGE+}ün] `village (Gen
 <!-- expressivity relates to number of contrasts?
 relation from strings to ARs when alphabet changes?
 for now focus on:
-1. Finnnish
 2. sour grapes
 3. basic non-morpheme boundary Turkish analysis-->
+
+# Sour Grapes
+
+Another phenomenon commonly discussed in autosegmental spreading literature is an unattested, but logically possible, pattern called sour grapes in which the presence of a single blocking segment prevents any spreading within the word [@mccarthy2011; @lamont2018]. Following @lamont2018, this section will evaluate the expressive power needed to generate an unattested sour grapes pattern over multi-tiered ARs.
+
+  In principle, a word in a hypothetical language with sour grapes (L~sg~) could have any number of syllables, but as long as the "blocking" vowel occurs somewhere within the word the harmonizing feature ($\pm$F) will not be shared between all vowels on the surface. In other words, no word will have full F harmony and a "blocking" vowel. If all harmonizing vowels are also associated to a single feature on a different tier (-G, for example) then a "blocking" vowel would be one that is associated to a feature with the opposite value on that tier (+G). The AR in (\ref{sgnofh}) shows two examples of full F harmony patterns that would not be found in L~sg~ and (\ref{sgexar}) shows an AR without full F harmony that could be found in L~sg~. Ellipses in place of a V represent the possibility for any number of vowels to occur in the position, all associated to the same features.
+
+\begin{exe}
+\ex{Full F harmony with +G vowel not found in L$_s$$_g$}\label{sgnofh}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{ 
+(a) & |(a)| +F &           &          &                    & & (b) & |(b)| -F &                      & \\
+    & |(c)| V  & |(d)| ... & |(e)| V  & $\notin$ L$_s$$_g$ & &     & |(f)| V  & |(g)| ... & |(h)| V  & $\notin$ L$_s$$_g$ \\
+    & |(i)| -G &           & |(j)| +G &                    & &     & |(k)| -G &           & |(l)| +G & \\
+};
+  \draw foreach \x in {c, d, e} {(a.south) -- (\x.north)};
+  \draw foreach \x in {c, d} {(\x.south) -- (i.north)};
+  \draw (e.south) -- (j.north);
+  \draw foreach \x in {f, g, h} {(b.south) -- (\x.north)};
+  \draw foreach \x in {f, g} {(\x.south) -- (k.north)};
+  \draw (h.south) -- (l.north);
+  \draw[black,->] (i) -- (j);
+  \draw[black,->] (k) -- (l);
+  \end{tikzpicture}
+\end{exe}
+
+\begin{exe}
+\ex{Sour Grapes}\label{sgexar}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{ 
+|(a)| +F &           & |(b)| -F &           &          & \\
+|(c)| V  & |(d)| ... & |(e)| V  & |(f)| ... & |(g)| V  & $\in$ L$_s$$_g$ \\
+|(h)| -G &           &          &           & |(i)| +G & \\
+};
+  \draw foreach \x in {c, d} {(a.south) -- (\x.north)};
+  \draw foreach \x in {c, d} {(\x.south) -- (h.north)};
+  \draw foreach \x in {e, f, g} {(b.south) -- (\x.north)};
+  \draw foreach \x in {c, d, e, f} {(\x.south) -- (h.north)};
+  \draw (g.south) -- (i.north);
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (h) -- (i);
+  \end{tikzpicture}
+\end{exe}
+
+  Two FSCs can captures the sour grapes pattern exemplified by (\ref{sgnofh}) and (\ref{sgexar}). Together the FSCs forbid two vowels from sharing a single F feature if they also share a -G feature that precedes a +G feature associated to a third vowel, which shares the single F feature. The NCC crucially prevents any two non-adjacent vowels from being associated to the same F feature if a vowel between them is associated to a different F feature. While the vowels are not ordered on the melody tier in (\ref{sg.fsc}) because consonants can occur between them, the NCC prevents any vowels from intervening that are associated to different F features.
+  
+\begin{exe}
+\ex{Sour Grapes FSCs}\label{sg.fsc}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{ 
+(a) * & |(a)| +F &           &          & & (b) * & |(b)| -F &         & \\
+      & |(c)| V  & |(d)| V & |(e)| V    & &       & |(f)| V  & |(g)| V & |(h)| V \\
+      & |(i)| -G &           & |(j)| +G & &       & |(k)| -G &         & |(l)| +G \\
+};
+  \draw foreach \x in {c, d, e} {(a.south) -- (\x.north)};
+  \draw foreach \x in {c, d} {(\x.south) -- (i.north)};
+  \draw (e.south) -- (j.north);
+  \draw foreach \x in {f, g, h} {(b.south) -- (\x.north)};
+  \draw foreach \x in {f, g} {(\x.south) -- (k.north)};
+  \draw (h.south) -- (l.north);
+  \draw[black,->] (i) -- (j);
+  \draw[black,->] (k) -- (l);
+  \end{tikzpicture}
+\end{exe}
 
 \newpage
 
