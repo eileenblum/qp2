@@ -1028,7 +1028,9 @@ literature is an unattested, but logically possible, pattern called sour
 grapes in which the presence of a single blocking segment prevents any
 spreading within the word (Lamont, 2018; McCarthy, 2011). Following
 Lamont (2018), this section will evaluate the expressive power needed to
-generate an unattested sour grapes pattern over multi-tiered ARs.
+generate an unattested sour grapes pattern over multi-tiered ARs. It
+will be shown that sour grapes cannot be described by FSCs over
+multi-tiered ARs.
 
 In principle, a word in a hypothetical language with sour grapes
 (L\textsubscript{SG}) could have any number of syllables, but as long as
@@ -1042,9 +1044,7 @@ full F and -G harmony, shown in (\ref{sgexar}a), as well as words with
 different F features and a +G vowel, shown in (\ref{sgexar}b).
 L\textsubscript{SG} also distinguishes (\ref{sgexar}a) and
 (\ref{sgexar}b) from (\ref{sgexar}c), which contains different F
-features, but no +G vowel. In the ARs below, the superscript `n'
-represents the possible number of vocalic elements that can occur in a
-given position with the same featural associations.
+features, but no +G vowel.
 
 \begin{exe}
 \ex{Sour Grapes}\label{sgexar}
@@ -1076,6 +1076,19 @@ given position with the same featural associations.
   \draw[black,->] (6) -- (7);
   \end{tikzpicture}
 \end{exe}
+
+In (\ref{sgexar}), the superscript `n' represents the possible number of
+vowels that can occur in a given position with the same featural
+associations. So a word like (\ref{sgexar}a) can have any number of
+vowels that are associated to both -F and -G before a +G vowel. However,
+in order to capture the (\ref{sgexar}a) pattern, a grammar must be able
+to search over any distance to find a +G vowel and determine the F
+features for vowels an arbitrary distance away. A negative constraint
+that could rule out (\ref{sgexar}c) would have to either count the
+number of vowels that precede the +F vowel to determine the distance at
+which a vowel can no longer be associated to -G or an existential
+quantifier is required to say that some +F vowel exists, which cannot be
+associated to -G.
 
 \newpage
 
