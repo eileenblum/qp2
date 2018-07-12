@@ -588,7 +588,7 @@ for now focus on:
 
 Another phenomenon commonly discussed in autosegmental spreading literature is an unattested, but logically possible, pattern called sour grapes in which the presence of a single blocking segment prevents any spreading within the word [@mccarthy2011; @lamont2018]. Following @lamont2018, this section will evaluate the expressive power needed to generate an unattested sour grapes pattern over multi-tiered ARs. It will be shown that sour grapes cannot be described by FSCs over multi-tiered ARs.
 
-  In principle, a word in a hypothetical language with sour grapes (L~SG~) could have any number of syllables, but as long as the "blocking" vowel occurs somewhere within the word the harmonizing feature ($\pm$F) will not be shared between all vowels on the surface. If all harmonizing vowels are also associated to a single feature on a different tier (-G, for example) then a "blocking" vowel would be one that is associated to a feature with the opposite value on that tier (+G). So, L~SG~ contains words with full F and -G harmony, shown in (\ref{sgexar}a), as well as words with different F features and a +G vowel, shown in (\ref{sgexar}b). L~SG~ also distinguishes (\ref{sgexar}a) and (\ref{sgexar}b) from (\ref{sgexar}c), which contains different F features, but no +G vowel. 
+  In principle, a word in a hypothetical language with sour grapes (L~SG~) could have any number of syllables, but as long as the "blocking" vowel occurs somewhere within the word the harmonizing feature ($\pm$F) will not be shared between all vowels on the surface. If all harmonizing vowels are also associated to a single feature on a different tier (-G, for example) then a "blocking" vowel would be one that is associated to a feature with the opposite value on that tier (+G). So, L~SG~ contains words with full F and -G harmony, shown in (\ref{sgexar}a), as well as words with different F features and a +G vowel, shown in (\ref{sgexar}b). In (\ref{sgexar}), the superscript `n' represents the possible number of vowels that can occur in a given position with the same featural associations.
 
 \begin{exe}
 \ex{Sour Grapes}\label{sgexar}
@@ -621,7 +621,7 @@ Another phenomenon commonly discussed in autosegmental spreading literature is a
   \end{tikzpicture}
 \end{exe}
   
-In (\ref{sgexar}), the superscript `n' represents the possible number of vowels that can occur in a given position with the same featural associations. So a word like (\ref{sgexar}a) can have any number of vowels that are associated to both -F and -G before a +G vowel. However, in order to capture the (\ref{sgexar}a) pattern, a grammar must be able to search over any distance to find a +G vowel and determine the F features for vowels an arbitrary distance away. A negative constraint that could rule out (\ref{sgexar}c) would have to either count the number of vowels that precede the +F vowel to determine the distance at which a vowel can no longer be associated to -G or an existential quantifier is required to say that some +F vowel exists, which cannot be associated to -G. 
+  A grammar that generates L~SG~ would distinguish (\ref{sgexar}a) and (\ref{sgexar}b) from (\ref{sgexar}c), which contains different F features, but no +G vowel. So a word like (\ref{sgexar}a) can have any number of vowels that are associated to both -F and -G before a +G vowel. An ASL^g^ grammar, however, does not distinguish (\ref{sgexar}a) and (\ref{sgexar}b) from (\ref{sgexar}c). 
 
 \newpage
 
