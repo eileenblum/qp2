@@ -225,7 +225,7 @@ The surface requirement that adjacent -low vowels share the same ATR feature can
 \end{exe}
 
 \begin{exe}
-\ex{[obejii] `he came and removed it'}\label{akan.obeijii}
+\ex{[obejii] `he came and removed it'}\label{akan.obeijii} \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep=4ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
   {
@@ -260,7 +260,7 @@ The AR for the grammatical Akan word [obeijii] 'he came and removed it' is shown
   However, in traditional vowel harmony terms the presence of a +low vowel blocks the rightward spread of ATR, some examples are shown in (\ref{akan_+low}). Translating this to the static surface representations assumed here, two -low vowels must be associated to the same ATR feature, but if a +low vowel intervenes they can be associated to different ATR features. The representation of (\ref{akan_+low}a) exemplifies this pattern and is shown in (\ref{ex.akan+low}). 
 
 \begin{exe}
-  \ex{Vowels on either side of +low can have different ATR features}\label{akan_+low} 
+  \ex{Vowels on either side of +low can have different ATR features}\label{akan_+low} \\
   \begin{xlist}
     \ex p\textipa{I}r\textipa{3}ko  `pig'                                        \\
     \ex obisa\textipa{I} `he asked'                                              \\
@@ -270,7 +270,7 @@ The AR for the grammatical Akan word [obeijii] 'he came and removed it' is shown
 \end{exe}
 
 \begin{exe}
-\ex{[p\textipa{I}r\textipa{3}ko] `pig'}\label{ex.akan+low} 
+\ex{[p\textipa{I}r\textipa{3}ko] `pig'}\label{ex.akan+low} \\
 \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, 
           row sep=2.5ex, column sep=2.25ex,
@@ -319,7 +319,7 @@ Finnish provides an example of backness harmony with four transparent vowels. Th
 The Finnish harmony generalization is that all of the harmonizing vowels in a root will share the same back feature with each other and harmonizing suffix vowels will share the same back feature with the harmonizing root-final vowel [@valimaablum1986; @ringenheinamaki1999; @vdHulst2017; @Nevins2010]. Since the same harmony generalization holds for both root and suffix vowels the Finnish generalization can also be stated as two harmonizing vowels must share the same back feature. For example, the words in (\ref{finnish_-neutral}) contain only +round or +low vowels, which are also either all +back or all -back. 
 
 \begin{exe}
-\ex{harmonizing vowels share a back feature value}\label{finnish_-neutral}
+\ex{harmonizing vowels share a back feature value}\label{finnish_-neutral} \\
 \begin{xlist}
   \ex \textipa{p\o yt\ae} `table' \\
   \ex \textipa{k\ae nt\ae:} `turn' \\
@@ -372,7 +372,7 @@ Transparent vowels, however, do not block or undergo harmony so in the Finnish w
 The ARs in (\ref{finnish.pouta}) illustrate how the Finnish FSCs rule out ungrammatical disharmonic words. The AR for the grammatical Finnish word \textipa{[poutA]} `fine weather', shown in (\ref{finnish.pouta}a), contains both a +round and a +low non-initial vowel as well as a single +back feature, which demonstrates full back harmony. The hypothetical Finnish word, \textipa{[pout\ae]} in (\ref{finnish.pouta}b), however, contains the forbidden structure of (\ref{fsc.finnish}) in bold and red. In (\ref{finnish.pouta}b) the final vowel does not harmonize with the penultimate vowel because they are associated to different back features. 
 
 \begin{exe}
-\ex{\textipa{[poutA]} `fine weather'}\label{finnish.pouta}
+\ex{\textipa{[poutA]} `fine weather'}\label{finnish.pouta} \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
@@ -411,7 +411,7 @@ The ARs in (\ref{finnish.pouta}) illustrate how the Finnish FSCs rule out ungram
 Crucially, the behavior of the transparent vowels with respect to vowel harmony in Finnish is captured by the two FSCs in (\ref{fsc.finnish}) without reference to underspecification of back features. For example, the words in (\ref{finnish_trans}) all contain vowels with -back features that follow +back vowels, but because the -back vowels are also [-low, -round] the words are grammatical. The transparent vowels are associated to all the same features as the harmonizing vowels and their so-called transparency results from the interaction of the -back features with -low and -round features, as shown in (\ref{finnish.ruveta}). Because the Finnish FSCs only forbid associations to certain back features when vowels are also either +low or +round, the [-back, -low, -round] vowels are able to occur anywhere within a word and do not affect the back feature values of other vowels.
 
 \begin{exe}
-\ex{\textipa{\textipa{[ruvetA]}} `start'}\label{finnish.ruveta}
+\ex{\textipa{\textipa{[ruvetA]}} `start'}\label{finnish.ruveta} \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
@@ -480,7 +480,7 @@ The Turkish back harmony generalization is that all suffix vowels share the same
 
 <!-- contrast with some disharmonic roots? -->
 \begin{exe}
-\ex{suffix vowels share a back feature with root-final vowels}\label{turkish_back}
+\ex{suffix vowels share a back feature with root-final vowels}\label{turkish_back} 
 \begin{xlist}
   \ex \textipa{ip\LARGE+}ler `rope (Nom.pl)'
   \ex \textipa{köy\LARGE+}\textipa{ün} `village (Gen.sg)'
@@ -507,7 +507,7 @@ A straightforward pattern of backness harmony like in Turkish can also be writte
 \end{exe}
 
 \begin{exe}
-\ex{\textipa{ip\LARGE+}ler `rope (Nom.pl)'}\label{turkish.ipler}
+\ex{\textipa{ip\LARGE+}ler `rope (Nom.pl)'}\label{turkish.ipler} \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
@@ -548,7 +548,7 @@ Turkish round harmony can also be written as an FSC, which forbids a suffix vowe
 \end{exe}
 
 \begin{exe}
-\ex{\textipa{köy\LARGE+}ün `village (Gen.sg)'}\label{turkish.koyun}
+\ex{\textipa{köy\LARGE+}ün `village (Gen.sg)'}\label{turkish.koyun} \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
@@ -591,15 +591,15 @@ Another phenomenon commonly discussed in autosegmental spreading literature is a
   In principle, a word in a hypothetical language with sour grapes (L~SG~) could have any number of syllables, but as long as a "blocking" vowel occurs somewhere within the word the harmonizing feature ($\pm$F) will not be shared between all vowels on the surface. If all harmonizing vowels are also associated to a single feature on a different tier (-G, for example) then a "blocking" vowel would be one that is associated to a feature with the opposite value on that tier (+G). So, L~SG~ contains words with full F and -G harmony, shown in (\ref{sgexar}a), as well as words with different F features and a +G vowel, shown in (\ref{sgexar}b). In (\ref{sgexar}), the superscript `n' represents any possible number of vowels that can occur in a given position with the same featural associations.
 
 \begin{exe}
-\ex{Sour Grapes}\label{sgexar}
+\ex{Sour Grapes}\label{sgexar} \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3em,between origins}, nodes={text height=1em, text depth=0.5em}]
 { 
 (a) & |(1)| +F & |(2)| -F    & |(3)| +F &                & & (b) & |(4)| +F &              &         & \\
-    & |(a)| V  & |(b)| V$^n$ & |(c)| V  & $\in$ L$_s$$_g$ & &     & |(f)| V  & |(g)| V$^n$ & |(h)| V & $\in$ L$_s$$_g$ \\
+    & |(a)| V  & |(b)| V$^n$ & |(c)| V  & $\in$ L$_S$$_G$ & &     & |(f)| V  & |(g)| V$^n$ & |(h)| V & $\in$ L$_S$$_G$ \\
     & |(d)| -G &             & |(e)| +G &                & &     & |(i)| -G  &             &        & \\
 (c) & |(5)| +F & |(6)| -F    & |(7)| +F & \\
-    & |(j)| V  & |(k)| V$^n$ & |(l)| V  & $\notin$ L$_s$$_g$ \\
+    & |(j)| V  & |(k)| V$^n$ & |(l)| V  & $\notin$ L$_S$$_G$ \\
     & |(m)| -G \\
 };
   \draw (1.south) -- (a.north);
