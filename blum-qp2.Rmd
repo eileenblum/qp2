@@ -296,7 +296,7 @@ The AR for the grammatical Akan word [obeijii] 'he came and removed it' is shown
   \end{tikzpicture}
 \end{exe}
 
-  Crucially, the AR in (\ref{ex.akan+low}) does not contain the FSC from (\ref{fsc.akana}). While the AR for [p\textipa{Ir3}ko] 'pig' does contain two vowels associated to a -low feature and two different ATR features, the presence of a blocking [\textipa{3}] vowel associated to a  +low feature  causes the surrounding vowels to be associated to two separate -low features in order to satisfy FS and the NCC. Because the forbidden structure is not present [p\textipa{Ir3}ko] 'pig' is grammatical.
+\noindent Crucially, the AR in (\ref{ex.akan+low}) does not contain the FSC from (\ref{fsc.akana}). While the AR for [p\textipa{Ir3}ko] 'pig' does contain two vowels associated to a -low feature and two different ATR features, the presence of a blocking [\textipa{3}] vowel associated to a  +low feature  causes the surrounding vowels to be associated to two separate -low features in order to satisfy FS and the NCC. Because the forbidden structure is not present [p\textipa{Ir3}ko] 'pig' is grammatical.
 
   In summary, the vowel harmony pattern with blocking vowels in Akan can be captured using the FSC in (\ref{fsc.akana}), which does not refer to adjacency on any tier. Akan vowel harmony could thus be considered local because the FSC that captures the pattern need only refer to the associations between vowels and features. The next section outlines a vowel harmony pattern with the other type of  neutral vowel, called transparent.
 
@@ -455,7 +455,7 @@ Crucially, the behavior of the transparent vowels with respect to vowel harmony 
   \end{tikzpicture}
 \end{exe}
 
-  The same two FSCs in (\ref{fsc.finnish}) generate Finnish back harmony with transparent vowels in both roots and suffixes. In addition, FSCs with a -back succeeded by a +back feature do not generate the Finnish pattern because the grammatical Finnish words in (\ref{finnish_trans}) also contain +back harmonizing vowels that follow the transparent vowels.
+\noindent The same two FSCs in (\ref{fsc.finnish}) generate Finnish back harmony with transparent vowels in both roots and suffixes. In addition, FSCs with a -back succeeded by a +back feature do not generate the Finnish pattern because the grammatical Finnish words in (\ref{finnish_trans}) also contain +back harmonizing vowels that follow the transparent vowels.
 <!-- transparent vowels: -back, -low, or -round, so generalization holds only for those. only care about +- back when +low, +round. only 2 constraints hold. don't have to make transparent vowels do anything special: no underspecification-->
 
  In summary, the vowel harmony pattern with transparent vowels in Finnish can be captured using the two FSCs in (\ref{fsc.finnish}). These FSCs refer to adjacency on the back tier, which also interacts with both the round and low feature tiers. Finnish vowel harmony could thus be considered local because the FSCs that capture the pattern refer to the associations between vowels and features and the ordering between features. The next section discusses the interaction of vowel harmony with morphology.
@@ -538,7 +538,7 @@ A straightforward pattern of backness harmony, like in Turkish, can also be writ
   \end{tikzpicture}
 \end{exe}
 
-The Turkish word [\textipa{ip\LARGE+}ler] `rope (Nom.pl)' illustrates full back harmony, as shown in (\ref{turkish.ipler}a). The hypothetical word [\textipa{ip\LARGE+}lar], on the other hand, is ungrammatical because the root and suffix vowels are associated to different back features and so the AR in (\ref{turkish.ipler}b) contains the forbidden substructure of (\ref{fsc.turkishback}b) in bold and red.
+\noindent The Turkish word [\textipa{ip\LARGE+}ler] `rope (Nom.pl)' illustrates full back harmony, as shown in (\ref{turkish.ipler}a). The hypothetical word [\textipa{ip\LARGE+}lar], on the other hand, is ungrammatical because the root and suffix vowels are associated to different back features and so the AR in (\ref{turkish.ipler}b) contains the forbidden substructure of (\ref{fsc.turkishback}b) in bold and red.
 
 Turkish round harmony can also be written as an FSC, which forbids a suffix vowel that is associated to a +high feature from also being associated to a different round feature from the root-final vowel, as in (\ref{fsc.turkishround}).
 
@@ -599,7 +599,7 @@ Turkish round harmony can also be written as an FSC, which forbids a suffix vowe
   \end{tikzpicture}
 \end{exe}
 
-The AR for the grammatical Turkish word [\textipa{köy\LARGE+}ün] `village (Gen.sg)' shown in (\ref{turkish.koyun}a) contains a -high root-final vowel and a +high suffix vowel. Both vowels are associated to a single +round feature, which demonstrates full round harmony. The hypothetical Turkish word [köy-in] in (\ref{turkish.koyun}b), on the other hand, contains the forbidden structure of (\ref{fsc.turkishround}) in bold and red because it does not demonstrate full round harmony; the +high suffix vowel is associated to a different round feature than the root-final vowel.
+\noindent The AR for the grammatical Turkish word [\textipa{köy\LARGE+}ün] `village (Gen.sg)' shown in (\ref{turkish.koyun}a) contains a -high root-final vowel and a +high suffix vowel. Both vowels are associated to a single +round feature, which demonstrates full round harmony. The hypothetical Turkish word [köy-in] in (\ref{turkish.koyun}b), on the other hand, contains the forbidden structure of (\ref{fsc.turkishround}) in bold and red because it does not demonstrate full round harmony; the +high suffix vowel is associated to a different round feature than the root-final vowel.
 
 <!-- expressivity relates to number of contrasts?
 relation from strings to ARs when alphabet changes?
@@ -613,7 +613,71 @@ Turkish vowel harmony can also be considered local because both its back and rou
 
 # Sour Grapes
 
-Another phenomenon commonly discussed in autosegmental spreading literature is an unattested, but logically possible, pattern called sour grapes in which the presence of a single blocking segment prevents any spreading within the word [@mccarthy2011; @lamont2018]. Following @lamont2018, this section will evaluate the expressive power needed to generate an unattested sour grapes pattern over multi-tiered ARs. It will be shown that sour grapes cannot be described by FSCs over multi-tiered ARs.
+Another phenomenon often discussed in autosegmental spreading literature is the unattested, but logically possible pattern called sour grapes [@mccarthy2011; @lamont2018; @padgett1995]. Sour grapes spreading is a pattern in which a feature, such as nasality in @lamont2018, spreads throughout a word; but, if the word contains a blocking segment, like low vowels in Akan, no spreading occurs at all. Sour grapes blockers could thus be considered to block spreading from any distance. @lamont2018 illustrates what a sour grapes pattern would look like with nasal spreading below.
+
+\begin{exe}
+\ex{Long distance blocking of local spreading, e.g. with nasal harmony (copied from Lamont (2018))}\label{nsg} 
+\begin{xlist}
+  \ex /wawa/ $\mapsto$ [wawa]
+  \ex /mawa/ $\mapsto$ \textipa{[m\~a\~w\~a]}
+  \ex /awamawa/ $\mapsto$ \textipa{[awam\~a\~w\~a]}
+  \ex /mawasa/ $\mapsto$ [mawasa]
+  \ex /mawamawasa/ $\mapsto$ \textipa{[m\~a\~w\~amawasa]}
+  \ex /mawasamawamawasamawamawasamawa/ $\mapsto$ \textipa{[mawasam\~a\~w\~amawasam\~a\~w\~amawasm\~a\~w\~a]}
+\end{xlist}
+\end{exe}
+
+\noindent In (\ref{nsg}a-c) nasality spreads from an [m] onto each segment to the right of it. In (\ref{nsg} d-f) an [s] is introduced, which prevents nasality from spreading at all. In (\ref{nsg}e-f) it becomes clear that [s] only blocks nasal spreading to its left, but does not affect the rightward spread of nasality from [m] to the right of [s].
+
+By representing nasality as two primitive autosegments (N for nasal and O for oral) and two autosegmental tiers, just like with tone, @lamont2018 further shows that the nasal sour grapes pattern must be generated by a grammar that is more expressive than ASL^g^. The nasal sour grapes pattern does not meet the requirements for any of the subregular classes of grammars that ASL^g^ cuts across and so @lamont2018 posits that sour grapes must be generated by a Regular grammar.
+
+## Sour grapes in vowel harmony
+
+A parallel to the nasal sour grapes pattern can be drawn using the Akan vowel harmony pattern discussed in section 2.1. In Akan, an ATR feature is said to spread from an underlyingly associated vowel onto all -low vowels to the right. For example, the word \textipa{O}b\textipa{E}j\textipa{E}\textipa{I} `he came and did it', shown in (\ref{sgak}a) and (\ref{akan.sg}a), is grammatical in Akan. However, +low vowels block Akan vowel harmony, so an Akan-like sour grapes word would have a +low vowel and the ATR feature would not spread, as in (\ref{sgak}b) and (\ref{akan.sg}b). In (\ref{akan.sg}) dashed lines represent an association via spreading and solid lines represent an underlying association.
+
+\begin{exe}
+\ex{Sour grapes with ATR harmony}\label{sgak} 
+\begin{xlist}
+  \ex /\textipa{O}bejei/ $\mapsto$ [\textipa{O}b\textipa{E}j\textipa{E}\textipa{I}] `he came and did it'
+  \ex /\textipa{O}bejea/ $\mapsto$ [\textipa{O}bejea]
+\end{xlist}
+\end{exe}
+
+\begin{exe}
+\ex{Akan sour grapes surface ARs}\label{akan.sg} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.75em,between origins}, column sep={2.5em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+(a) & |(a)| -ATR        &           &                   &           &                   &                        & (b) & |(b)| -ATR        &           & |(f)| +ATR &   &         & \\
+    & |(1)| \textipa{O} & |(co1)| b & |(2)| \textipa{E} & |(co2)| j & |(3)| \textipa{E} & |(4)| \textipa{I} &     & |(5)| \textipa{O} & |(co3)| b & |(6)| e    & |(co4)| j & |(7)| e & |(8)| a \\
+    & |(c)| -low        &           &                   &           &                   &                        &     & |(d)| -low        &           &            &           &         & |(e)| +low \\
+  };
+  \draw (a.south) -- (1.north);
+  \draw[dashed] foreach \x in {2, 3, 4} {(a.south) -- (\x.north)};
+  \draw (1.south) -- (c.north);
+  \draw foreach \x in {2, 3, 4} {(\x.south) -- (c.north)};
+  \draw foreach \x in {6, 7, 8} {(f.south) -- (\x.north)};
+  \draw foreach \x in {5, 6, 7} {(\x.south) -- (d.north)};
+  \draw (b.south) -- (5.north);
+  \draw (8.south) -- (e.north);
+  \draw[black,->] (b) -- (f);
+  \draw[black,->] (1) -- (co1);
+  \draw[black,->] (co1) -- (2);
+  \draw[black,->] (2) -- (co2);
+  \draw[black,->] (co2) -- (3);
+  \draw[black,->] (3) -- (4);
+  \draw[black,->] (5) -- (co3);
+  \draw[black,->] (co3) -- (6);
+  \draw[black,->] (6) -- (co4);
+  \draw[black,->] (co4) -- (7);
+  \draw[black,->] (7) -- (8);
+  \draw[black,->] (d) -- (e);
+  \end{tikzpicture}
+\end{exe}
+
+\noindent A hypothetical AR of 
+
+Following @lamont2018, this section will evaluate the expressive power needed to generate an unattested sour grapes pattern over multi-tiered ARs. It will be shown that the expressive power of multi-tiered ARs is significantly increased by enriching the representation because a sour grapes vowel harmony pattern can be described by FSCs over multi-tiered ARs if word boundaries are added to the set of representations allowed on feature tiers.
 
   In principle, a word in a hypothetical language with sour grapes (L~SG~) could have any number of syllables, but as long as a "blocking" vowel occurs somewhere within the word the harmonizing feature ($\pm$F) will not be shared between all vowels on the surface. If all harmonizing vowels are also associated to a single feature on a different tier (-G, for example) then a "blocking" vowel would be one that is associated to a feature with the opposite value on that tier (+G). So, L~SG~ contains words with full F and -G harmony, shown in (\ref{sgexar}a), as well as words with different F features and a +G vowel, shown in (\ref{sgexar}b). In (\ref{sgexar}), the superscript `n' represents any possible number of vowels that can occur in a given position with the same featural associations.
 
