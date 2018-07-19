@@ -179,7 +179,7 @@ In languages that exhibit vowel harmony patterns, vowels are described as either
 ## Blocking vowels
   An example of vowels that block harmony is found with ATR harmony in Akan [@Clements1976]. The Akan vowel inventory, in Table \ref{akan_vowels}, consists of ten vowels with two main featural distinctions: $\pm$ ATR and $\pm$ low. There are two +low vowels, [\textipa{3}] and [a], +ATR and -ATR, respectively. All other vowels are considered -low and distinguished by ATR such that the +ATR vowels are [i, e, u, o] and the -ATR vowels are [\textipa{I, E, U, O}]. 
  
-\begin{table}
+\begin{table}[h]
   \caption{Akan Vowels}
   \begin{tabular}{c|c|c}
        & +ATR        & -ATR       \\\hline\hline
@@ -304,7 +304,7 @@ The AR for the grammatical Akan word [obeijii] 'he came and removed it' is shown
 
 Finnish provides an example of backness harmony with four transparent vowels. The Finnish vowel inventory in Table \ref{finnish_vowels} consists of 16 vowels with contrastive length and three main featural distinctions: $\pm$ back, $\pm$ low, and $\pm$ round [@valimaablum1986; @ringenheinamaki1999]. The four vowels transparent to backness harmony, \textipa{[i, i:, e, e:]}, are all [-back, -round, -low]. Of the harmonizing vowels \textipa{[y, y:, u, u:, \o, \o:, o, o:]} are  all +round and -low while \textipa{[\ae, \ae:, A, A:]} are all +low and -round. The +back vowels are \textipa{[u, u:, o, o:, A, A:]} and the -back vowels are \textipa{[i, i:, e, e:, y, y:, \o, \o:, \ae, \ae:]}.  The difference between harmonizing and transparent Finnish vowels is characterized by low and round feature values. Transparent vowels are all [-low, -round] and thus harmonizing vowels have a positive value for the low and/or round feature.
 
-\begin{table}
+\begin{table}[h]
   \caption{Finnish Vowels}
   \begin{tabular}{c|c|c|c|c}
        & -round          & \multicolumn{2}{l|}{+round} &  \\\hline\hline
@@ -458,14 +458,14 @@ Crucially, the behavior of the transparent vowels with respect to vowel harmony 
   The same two FSCs in (\ref{fsc.finnish}) generate Finnish back harmony with transparent vowels in both roots and suffixes. In addition, FSCs with a -back succeeded by a +back feature do not generate the Finnish pattern because the grammatical Finnish words in (\ref{finnish_trans}) also contain +back harmonizing vowels that follow the transparent vowels.
 <!-- transparent vowels: -back, -low, or -round, so generalization holds only for those. only care about +- back when +low, +round. only 2 constraints hold. don't have to make transparent vowels do anything special: no underspecification-->
 
- In summary, the vowel harmony pattern with transparent vowels in Finnish can be captured using the two FSCs in (\ref{fsc.finnish}). These FSCs refer to adjacency on the back tier, which also interacts with both the round and low feature tiers. Finnish vowel harmony could thus be considered local because the FSCs that capture the pattern refer to the associations between vowels and features and the ordering between features. The next section outlines another vowel harmony pattern that is conditioned by morphology.
+ In summary, the vowel harmony pattern with transparent vowels in Finnish can be captured using the two FSCs in (\ref{fsc.finnish}). These FSCs refer to adjacency on the back tier, which also interacts with both the round and low feature tiers. Finnish vowel harmony could thus be considered local because the FSCs that capture the pattern refer to the associations between vowels and features and the ordering between features. The next section discusses the interaction of vowel harmony with morphology.
 
 # Morphologically-conditioned harmony
 ## Turkish
 
 Native Turkish words demonstrate two separate harmony patterns: back and round harmony. In Turkish, a suffix vowel shares its back feature with the root-final vowel, but it is debated whether or not Turkish also utilizes back harmony within roots. In addition, a +high suffix vowel shares its round feature with the root-final vowel. The vowel inventory of Turkish in Table \ref{turkish_vowels} consists of eight vowels with three main featural distinctions: $\pm$ high, $\pm$ back, $\pm$ round.  In Turkish the +high -back vowels are [i, ü], the +high +back vowels are \textipa{[1, u]}, the -high -back vowels are [e, ö], and the -high +back vowels are [a, o].
 
-\begin{table}
+\begin{table}[h]
   \caption{Turkish Vowels}
   \begin{tabular}{cc|c|cc|c|c|cc}
         & & \multicolumn{2}{|l}{-back}  &        & \multicolumn{2}{|l}{+back} &             & \\\cline{1-7}\cline{1-7}
@@ -476,7 +476,7 @@ Native Turkish words demonstrate two separate harmony patterns: back and round h
   \label{turkish_vowels}
 \end{table}
 
-The Turkish back harmony generalization is that all suffix vowels share the same back feature as the root-final vowel and the round harmony generalization is that a high suffix vowel shares the same round feature as the root-final vowel [@Clements1976; @padgett2002; @vdHulst2017; @Nevins2010; @crothersshibatani1980]. For example, the words in (\ref{turkish_back}) contain suffix vowels that have the same back feature as the preceding root-final vowel. In addition, the high suffix vowels in (\ref{turkish_back}b-e) have the same round feature as the root-final vowel. A large plus sign `\textipa{\LARGE+}' represents a morpheme boundary.
+The Turkish back harmony generalization is that all suffix vowels share the same back feature as the root-final vowel and the round harmony generalization is that a high suffix vowel shares the same round feature as the root-final vowel [@Clements1976; @padgett2002; @vdHulst2017; @Nevins2010; @crothersshibatani1980]. For example, the words in (\ref{turkish_back}) contain suffix vowels that have the same back feature as the preceding root-final vowel. In addition, the high suffix vowels in (\ref{turkish_back}b-e) have the same round feature as the root-final vowel. Unlike in Finnish, Turkish non-final root vowels and suffix vowels do not necessarily share the same features on the surface, which makes it necessary to distinguish morphemes in ARs. Throughout this section, root and suffix morphemes will be distinguished by their position relative to a morpheme boundary, i.e. roots are on the left and suffixes on the right. In (\ref{turkish_back}), for example, a morpheme boundary is represented by a large plus sign `\textipa{\LARGE+}'. 
 
 <!-- contrast with some disharmonic roots? -->
 \begin{exe}
@@ -491,18 +491,24 @@ The Turkish back harmony generalization is that all suffix vowels share the same
 \end{xlist}
 \end{exe}
 
-A straightforward pattern of backness harmony like in Turkish can also be written as an FSC that forbids vowels on either side of a morpheme boundary from being associated to different back features, as in (\ref{fsc.turkishback}). No ordering relation is included on the back tier because it forbids a root-final and suffix-initial vowel from being associated to different back features regardless of which feature each associates to. The melody tier also does not include an adjacency ordering relation because the vowels can be separated by one or more consonants and are necessarily separated by a morpheme boundary.
+A straightforward pattern of backness harmony, like in Turkish, can also be written as an FSC that forbids two vowels from being associated to different back features on either side of a morpheme boundary, as in (\ref{fsc.turkishback}). The melody tier does not include a successor ordering relation because the vowels can be separated from one another and from the morpheme boundary by one or more consonants. In the FSC in (\ref{fsc.turkishback}a), the +back vowel and the -back vowel must also be identifiable as the root and suffix vowels, respectively. The successor ordering relation on the back tier ensures that the +back vowel is to the left and the -back vowel is to the right. In addition, the morpheme boundary must be represented on the back tier in order to distinguish the root feature, and the vowels by association, from the suffix feature. The same reasoning holds for the FSC in (\ref{fsc.turkishback}b), but the root-final vowel is associated to a -back and the suffix vowel is associated to a +back feature.
 
 \begin{exe}
 \ex \label{fsc.turkishback}
   \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-* & |(a)| +back &         & |(f)| -back \\
-  & |(c)| V     & \LARGE+ & |(h)| V \\
+(a) * & |(a)| +back & |(b)| \LARGE+ & |(c)| -back & & (b) * & |(1)| -back & |(2)| \LARGE+ & |(3)| +back \\
+      & |(d)| V     & |(e)|         & |(f)| V     & &       & |(4)| V     & |(5)|         & |(6)| V \\
   };
-  \draw (a.south) -- (c.north);
-  \draw (f.south) -- (h.north);
+  \draw (a.south) -- (d.north);
+  \draw (c.south) -- (f.north);
+  \draw (1.south) -- (4.north);
+  \draw (3.south) -- (6.north);
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (1) -- (2);
+  \draw[black,->] (2) -- (3);
   \end{tikzpicture}
 \end{exe}
 
@@ -511,8 +517,8 @@ A straightforward pattern of backness harmony like in Turkish can also be writte
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-(a) & |(a)| -back &              &               &         &         &         & (b) * & |[red](h)| \textbf{-back} &         &         &         & |[red](i)| \textbf{+back} & \\ 
-    & |(b)| i     & |(c)| p      & |(d)| \LARGE+ & |(e)| l & |(f)| e & |(g)| r &       & |[red](j)| \textbf{i}                   & |(k)| p & |[red](l)| \textbf{\LARGE+} & |(m)| l & |[red](n)| \textbf{a} & |(o)| r \\
+(a) & |(a)| -back &              &               &         &         &         & (b) * & |[red](h)| \textbf{-back} &         & |[red](1)| \textbf{\LARGE+} &         & |[red](i)| \textbf{+back} & \\ 
+    & |(b)| i     & |(c)| p      & |(d)| \LARGE+ & |(e)| l & |(f)| e & |(g)| r &       & |[red](j)| \textbf{i}     & |(k)| p & |(l)| \LARGE+               & |(m)| l & |[red](n)| \textbf{a} & |(o)| r \\
   };
   \draw foreach \x in {b, f} {(a.south) -- (\x.north)};
   \draw[red,thick] (h.south) -- (j.north);
@@ -527,34 +533,45 @@ A straightforward pattern of backness harmony like in Turkish can also be writte
   \draw[black,->] (l) -- (m);
   \draw[black,->] (m) -- (n);
   \draw[black,->] (n) -- (o);
+  \draw[red,thick,->] (h) -- (1);
+  \draw[red,thick,->] (1) -- (i);
   \end{tikzpicture}
 \end{exe}
 
-Turkish round harmony can also be written as an FSC, which forbids a suffix vowel that is associated to a +high feature from also being associated to a different round feature from the root-final vowel, as in (\ref{fsc.turkishround}). No ordering relation is included on the round tier because the + or - value of the round features is irrelevant, as long as they differ.
+The Turkish word [\textipa{ip\LARGE+}ler] `rope (Nom.pl)' illustrates full back harmony, as shown in (\ref{turkish.ipler}a). The hypothetical word [\textipa{ip\LARGE+}lar], on the other hand, is ungrammatical because the root and suffix vowels are associated to different back features and so the AR in (\ref{turkish.ipler}b) contains the forbidden substructure of (\ref{fsc.turkishback}b) in bold and red.
+
+Turkish round harmony can also be written as an FSC, which forbids a suffix vowel that is associated to a +high feature from also being associated to a different round feature from the root-final vowel, as in (\ref{fsc.turkishround}).
 
 \begin{exe}
 \ex \label{fsc.turkishround}
   \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.10em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-* &              &         & |(a)| +high \\
-  & |(b)| V      & \LARGE+ & |(c)| V \\
-  & |(d)| +round &         & |(e)| -round \\
+(a) * &              &               & |(a)| +high  & & (b) * &              &               & |(1)| +high \\
+      & |(b)| V      &               & |(c)| V      & &       & |(2)| V      &               & |(3)| V \\
+      & |(d)| +round & |(f)| \LARGE+ & |(e)| -round & &       & |(4)| -round & |(5)| \LARGE+ & |(6)| +round \\
   };
   \draw (a.south) -- (c.north);
   \draw (b.south) -- (d.north);
   \draw (c.south) -- (e.north);
+  \draw (2.south) -- (4.north);
+  \draw (1.south) -- (3.north);
+  \draw (3.south) -- (6.north);
+  \draw[black,->] (d) -- (f);
+  \draw[black,->] (f) -- (e);
+  \draw[black,->] (4) -- (5);
+  \draw[black,->] (5) -- (6);
   \end{tikzpicture}
 \end{exe}
 
 \begin{exe}
 \ex{\textipa{köy\LARGE+}ün `village (Gen.sg)'}\label{turkish.koyun} \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-(a) &         & |(a)| -high  &         &                & |(g)| +high &         & & (b) *   &          & |(h)| -high                &         &                             & |[red](i)| \textbf{+high} & \\
-    & |(b)| k & |(c)| ö      & |(d)| y & |(s)| \LARGE+ & |(e)| ü      & |(f)| n & &         & |(j)| k & |[red](k)| \textbf{ö}      & |(l)| y & |[red](m)| \textbf{\LARGE+} & |[red](n)| \textbf{i} & |(o)| n \\
-    &         & |(p)| +round &         &                &             &         & &         & |[red](q)| \textbf{+round} &         &                             & |[red](r)| \textbf{-round} & \\         
+(a) &         & |(a)| -high  &         & |(1)| \LARGE+ & |(g)| +high &         & (b) *   &          & |(h)| -high                &         & |(3)| \LARGE+ & |[red](i)| \textbf{+high} & \\
+    & |(b)| k & |(c)| ö      & |(d)| y & |(s)| \LARGE+ & |(e)| ü      & |(f)| n &         & |(j)| k & |[red](k)| \textbf{ö}      & |(l)| y & |(m)| \LARGE+              & |[red](n)| \textbf{i} & |(o)| n \\
+    &         & |(p)| +round &         &                &             &         &         &        & |[red](q)| \textbf{+round} &         & |[red](2)| \textbf{\LARGE+} & |[red](r)| \textbf{-round} \\         
   };
   \draw (a.south) -- (c.north);
   \draw (g.south) -- (e.north);
@@ -563,6 +580,8 @@ Turkish round harmony can also be written as an FSC, which forbids a suffix vowe
   \draw[red,thick] (i.south) -- (n.north);
   \draw[red,thick] (k.south) -- (q.north);
   \draw[red,thick] (n.south) -- (r.north);
+  \draw[black,->] (a) -- (1);
+  \draw[black,->] (1) -- (g);
   \draw[black,->] (b) -- (c);
   \draw[black,->] (c) -- (d);
   \draw[black,->] (d) -- (s);
@@ -573,16 +592,24 @@ Turkish round harmony can also be written as an FSC, which forbids a suffix vowe
   \draw[black,->] (l) -- (m);
   \draw[black,->] (m) -- (n);
   \draw[black,->] (n) -- (o);
+  \draw[red,thick,->] (q) -- (2);
+  \draw[red,thick,->] (2) -- (r);
+  \draw[black,->] (h) -- (3);
+  \draw[black,->] (3) -- (i);
   \end{tikzpicture}
 \end{exe}
 
-The AR for the grammatical Turkish word [\textipa{köy\LARGE+}ün] `village (Gen.sg)', shown in (\ref{turkish.koyun}a), contains a -high root-final vowel and a +high suffix vowel. Both vowels are associated to a single +round feature, which demonstrates full round harmony. The hypothetical Turkish word, [köy-in] in (\ref{turkish.koyun}b), contains the forbidden structure of (\ref{fsc.turkishround}) in bold and red because it does not demonstrate full round harmony; the +high suffix vowel is associated to a different round feature than the root-final vowel.
+The AR for the grammatical Turkish word [\textipa{köy\LARGE+}ün] `village (Gen.sg)' shown in (\ref{turkish.koyun}a) contains a -high root-final vowel and a +high suffix vowel. Both vowels are associated to a single +round feature, which demonstrates full round harmony. The hypothetical Turkish word [köy-in] in (\ref{turkish.koyun}b), on the other hand, contains the forbidden structure of (\ref{fsc.turkishround}) in bold and red because it does not demonstrate full round harmony; the +high suffix vowel is associated to a different round feature than the root-final vowel.
 
 <!-- expressivity relates to number of contrasts?
 relation from strings to ARs when alphabet changes?
 for now focus on:
 2. sour grapes
 3. basic non-morpheme boundary Turkish analysis-->
+
+In summary, Turkish demonstrates the necessity of adding a morpheme boundary `\textipa{\LARGE+}' to the set of representations that can occur on a feature tier. Because all root and suffix vowels do not necessarily have to share the same features on the surface it is necessary to distinguish them from one another. Identifying whether a vowel is part of a root or a suffix is accomplished by ordering the vowels relative to a morpheme boundary. However, since vowels are also ordered with respect to consonants, it is necessary to include an ordering relation on feature tiers so that the FSCs are connected. The morpheme boundaries are projected onto each feature tier so that vowel features are ordered relative to the boundary and can thus be distinguished as belonging to a root or a suffix. In this way, the vowels are indirectly ordered relataive to each other via the ordering between their features in addition to their association to those features. 
+
+Turkish vowel harmony can also be considered local because both its back and round harmony patterns are captured by the connected FSCs in (\ref{fsc.turkishback}) and (\ref{fsc.turkishround}). These FSCs refer to the associations between vowels and features as well as the ordering relation between features and a morpheme boundary.
 
 # Sour Grapes
 
