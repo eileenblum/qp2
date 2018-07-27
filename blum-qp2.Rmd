@@ -88,11 +88,13 @@ A significant body of work in computational phonology shows that phonological ge
   \end{tikzpicture}
 \end{exe}
 
+  
+
   The goal for this project is to extend the work of @jardinelocaltone to determine whether vowel harmony patterns are local over ARs with more than two tiers, as in (\ref{fsc.ex}). This qualifying paper evaluates whether or not the restrictions on attested vowel harmony patterns can be captured using FSCs that contain elements of more than one feature tier. 
 
 ### Representational assumptions
 
-  Use of ARs requires discussion of at least some of the basic representational assumptions held throughout this paper. The basic assumptions include @Clements1976's Well-Formedness Condition, which includes stipulations of *Full Specification* (FS), the *No Crossing Constraint* (NCC) [@Goldsmith1976; @sagey1986], and the *Obligatory Contour Principle* (OCP) [@leben1973]. Examples of structures that violate each of these assumptions are shown in (\ref{akan.ex2})-(\ref{akan.ex4}) below. 
+  Use of ARs requires discussion of at least some of the basic representational assumptions held throughout this paper. The basic assumptions are taken from @Clements1976's Well-Formedness Condition, which includes stipulations of *Full Specification* (FS), the *No Crossing Constraint* (NCC) [@Goldsmith1976; @sagey1986], and the *Obligatory Contour Principle* (OCP) [@leben1973]. Examples of structures that violate each of these assumptions are shown in (\ref{akan.ex2})-(\ref{akan.ex4}) below. 
 
 \begin{exe}
 \ex \label{akan.ex2} Violates FS
@@ -154,8 +156,26 @@ Second, the NCC states that association lines between the segmental tier and a f
   
   Lastly, the OCP stipulates that adjacent featural elements must be distinct. The representation in (\ref{akan.ex4}) violates the OCP because on both the ATR and low feature tiers there are two identical adjacent features, -ATR and -low respectively. The OCP in conjunction with FS results in representations where multiple adjacent vowels are associated to a single feature rather than having multiple adjacent iterations of the same feature each associated to a single vowel. An example representation of an Akan word that satisfies all of the AR properties discussed here is shown in (\ref{akan.ex}).
   
+  Both the NCC and the OCP have also been derived via a concatenation operation ($\circ$) that merges autosegmental "graph primitives"[@jardineheinz2015 p.1]. An autosegmental graph primitive consists of an element on the segmental tier, the elements on each feature tier and the associations between the featural and segmental tiers. The concatenation operation combines a finite set of adjacent graph primitives to generate a fully specified AR. For example, the AR in (\ref{akan.ex}) is derived from the set of graph primitives in (\ref{concat.ex}). Each primitive in (\ref{concat.ex}) is concatenated with a single adjacent primitive. If two adjacent primitives share an identical feature those two features are merged into one feature with two associations, as in (\ref{akan.ex}). The merging of identical adjacent features essentially prevents surface ARs from having multiple iterations of a feature and crossed associations, thus satisfying both the OCP and the NCC. However, if two segmental elements are associated to the exact same feature and a different element intervenes then both iterations of that feature will occur in the surface AR because only adjacent primitive elements are concatenated and can thus be merged; examples can be found in section 3.1.
+  
 \begin{exe}
-\ex \label{akan.ex} Satisfies FS, NCC, and OCP
+\ex \label{concat.ex} Concatenation of adjacent autosegmental graph primitives \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+  &                                     & |(a)| -ATR &                                     & |(b)| -ATR \\
+t & \node {}; \draw(0, 0) circle (3pt); & |(1)| i    & \node {}; \draw(0, 0) circle (3pt); & |(2)| e \\
+  &                                     & |(c)| -low &                                     & |(d)| -low \\
+  };
+  \draw (a.south) -- (1.north);
+  \draw (1.south) -- (c.north);
+  \draw (b.south) -- (2.north);
+  \draw (2.south) -- (d.north);
+  \end{tikzpicture}
+\end{exe}
+
+\begin{exe}
+\ex \label{akan.ex} Satisfies FS, NCC, and OCP \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
   {
@@ -170,7 +190,7 @@ Second, the NCC states that association lines between the segmental tier and a f
   \end{tikzpicture}
 \end{exe}
 
-  Again, the initial consonant cannot be associated to a vowel feature so, while it is ordered with respect to the vowels, FS does not require the consonant to be associated to any element on either feature tier. The AR of *tie* satisfies FS because each vowel is associated to a feature on each of the featural tiers and all features are associated to at least one vowel. The AR of *tie* also satisfies both the NCC and the OCP because there is only one of each feature. The features are represented on separate tiers so association lines cannot cross and there is nothing else on those tiers that could violate the OCP. In addition, (\ref{akan.ex2})-(\ref{akan.ex}) illustrate that, unlike the usual notation, this paper will be adding a representation of the successor ordering relation on each tier using arrows. 
+  Again, the initial consonant in (\ref{akan.ex}) cannot be associated to a vowel feature so, while it is ordered with respect to the vowels, FS does not require the consonant to be associated to any element on either feature tier. The AR of *tie* satisfies FS because each vowel is associated to a feature on each of the featural tiers and all features are associated to at least one vowel. The AR of *tie* also satisfies both the NCC and the OCP because there is only one of each feature. The features are represented on separate tiers so association lines cannot cross and there is nothing else on those tiers that could violate the OCP. In addition, (\ref{akan.ex2})-(\ref{akan.ex}) illustrate that, unlike the usual notation, this paper will be adding a representation of the successor ordering relation on each tier using arrows.
 
 # Neutral vowels
 
