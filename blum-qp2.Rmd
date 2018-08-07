@@ -220,11 +220,11 @@ In languages that exhibit vowel harmony patterns, vowels are described as either
 \begin{exe}
 \ex{-low vowels share an ATR feature value}\label{akan_-low}
 \begin{xlist}
-  \ex tie `listen'                                             \\
-  \ex obejii `he came and removed it' \\
-  \ex \textipa{O}b\textipa{E}j\textipa{E}\textipa{I} `he came and did it' \\
-  \ex wubenum\textraiseglotstop   `you will suck it'             \\
-  \ex w\textipa{U}b\textipa{E}n\textipa{U}m\textraiseglotstop   `you will drink it' \\
+  \ex tie `listen'
+  \ex obejii `he came and removed it'
+  \ex \textipa{O}b\textipa{E}j\textipa{E}\textipa{I}  `he came and did it'
+  \ex wubenum\textraiseglotstop `you will suck it'
+  \ex w\textipa{U}b\textipa{E}n\textipa{U}m\textraiseglotstop `you will drink it'
   \end{xlist}
 \end{exe}
 
@@ -281,12 +281,12 @@ The AR for the grammatical Akan word [obeijii] 'he came and removed it' is shown
   However, in traditional vowel harmony terms the presence of a +low vowel blocks the rightward spread of ATR, some examples are shown in (\ref{akan_+low}). Translating this to the static surface representations assumed here, two -low vowels must be associated to the same ATR feature, but if a +low vowel intervenes they can be associated to different ATR features. The representation of (\ref{akan_+low}a) exemplifies this pattern and is shown in (\ref{ex.akan+low}). 
 
 \begin{exe}
-  \ex{Vowels on either side of +low can have different ATR features}\label{akan_+low} \\
+  \ex{Vowels on either side of +low can have different ATR features}\label{akan_+low}
   \begin{xlist}
-    \ex p\textipa{I}r\textipa{3}ko  `pig'                                        \\
-    \ex obisa\textipa{I} `he asked'                                              \\
-    \ex m\textipa{I}k\textipa{O}k\textipa{3}ri  `I go and weight it'   \\
-    \ex okog\textsuperscript{w}ar\textipa{I}\textraiseglotstop `he goes and washes' \\
+    \ex p\textipa{I}r\textipa{3}ko  `pig'
+    \ex obisa\textipa{I} `he asked'
+    \ex m\textipa{I}k\textipa{O}k\textipa{3}ri  `I go and weight it'
+    \ex okog\textsuperscript{w}ar\textipa{I}\textraiseglotstop `he goes and washes'
   \end{xlist}
 \end{exe}
 
@@ -340,14 +340,14 @@ Finnish provides an example of backness harmony with four transparent vowels. Th
 The Finnish harmony generalization is that all of the harmonizing vowels in a root will share the same back feature with each other and harmonizing suffix vowels will share the same back feature with the harmonizing root-final vowel [@valimaablum1986; @ringenheinamaki1999; @vdHulst2017; @Nevins2010]. Since the same harmony generalization holds for both root and suffix vowels the Finnish generalization can also be stated as two harmonizing vowels must share the same back feature. For example, the words in (\ref{finnish_-neutral}) contain only +round or +low vowels, which are also either all +back or all -back. 
 
 \begin{exe}
-\ex{harmonizing vowels share a back feature value}\label{finnish_-neutral} \\
+\ex{harmonizing vowels share a back feature value}\label{finnish_-neutral}
 \begin{xlist}
-  \ex \textipa{p\o yt\ae} `table' \\
-  \ex \textipa{k\ae nt\ae:} `turn' \\
-  \ex \textipa{tyk\ae t\ae} `like' \\
-  \ex \textipa{poutA} `fine weather' \\
-  \ex \textipa{murtA:} `break' \\
-  \ex \textipa{kokAtA} `cook' \\
+  \ex \textipa{p\o yt\ae} `table'
+  \ex \textipa{k\ae nt\ae:} `turn'
+  \ex \textipa{tyk\ae t\ae} `like'
+  \ex \textipa{poutA} `fine weather'
+  \ex \textipa{murtA:} `break'
+  \ex \textipa{kokAtA} `cook'
   \end{xlist}
 \end{exe}
 
@@ -357,12 +357,12 @@ Transparent vowels, however, do not block or undergo harmony so in the Finnish w
 \begin{exe}
 \ex{back harmony skips over transparent vowels}\label{finnish_trans}
 \begin{xlist}
-  \ex \textipa{ruvetA} `start' \\
-  \ex \textipa{tuoliA} `chair' \\
-  \ex \textipa{lukeA} `read (inf.)' \\
-  \ex \textipa{kAuneus} `beauty' \\
-  \ex \textipa{nAivius} `naiveness' \\
-  \ex \textipa{kotikAs} `cozy' \\
+  \ex \textipa{ruvetA} `start'
+  \ex \textipa{tuoliA} `chair'
+  \ex \textipa{lukeA} `read (inf.)'
+  \ex \textipa{kAuneus} `beauty'
+  \ex \textipa{nAivius} `naiveness'
+  \ex \textipa{kotikAs} `cozy'
   \end{xlist}
 \end{exe}
 
