@@ -446,7 +446,7 @@ iterations of that feature will occur in the surface AR because only
 adjacent primitive elements are concatenated and can thus be merged.
 This qualifying paper will show that an intervening element can be a
 vowel associated to the same feature with a different explain that a
-domaun boundary primitive must also include that boundary on feature
+domain boundary primitive must also include that boundary on feature
 tiers.
 
 \begin{exe}
@@ -1120,10 +1120,10 @@ The analysis presented above captures both the Turkish back and round
 harmony patterns with FSCs in which morpheme boundaries are represented
 on all feature tiers. One critique of such an analsysis could be that
 morpheme boundaries can only be represented on the segmental tier and
-not on feature tiers. Such an analysis would not capture the Turkish
-harmony patterns, however, because disharmonic roots are grammatical.
-For example, if the morpheme boundary is removed from the feature tiers,
-then the FSCs in (\ref{fsc.turkishback}) would look like those in
+not on feature tiers. Such an analysis would correctly rule out
+disharmonic suffixes, but not disharmonic roots in Turkish. For example,
+if the morpheme boundary is removed from the feature tiers, then the
+FSCs in (\ref{fsc.turkishback}) would look like those in
 (\ref{fsc.turkish.nomorph}).
 
 \begin{exe}
@@ -1138,24 +1138,94 @@ then the FSCs in (\ref{fsc.turkishback}) would look like those in
   \end{tikzpicture}
 \end{exe}
 
-A grammatical Turkish root like {[}tatil{]} `vacation', however, would
-violate (\ref{fsc.turkish.nomorph}a). Removing the morpheme boundary
-from the back feature tier in (\ref{fsc.turkish.nomorph}a) would rule
-out (\ref{turkish.tatil}a), which contains the forbidden structure shown
-in bold and red. While (\ref{turkish.tatil}b) also violates the
-hypothetical FSC in (\ref{fsc.turkish.nomorph}a), including a morpheme
-boundary on the back tier prevents (\ref{turkish.tatil}b) from violating
-the FSC posited in (\ref{fsc.turkishback}a) for Turkish back harmony
-because the two different back features are on the same side of the
-morpheme boundary.
+On the surface, all Turkish suffix vowels are associated to the same
+back feature as root-final vowels and the FSCs in
+(\ref{fsc.turkish.nomorph}) forbid any two adjacent back features from
+having different values. In a grammatical Turkish word with two suffix
+vowels, like {[}\textipa{k1z\LARGE+}\textipa{lar1n}{]} `girls (gen.)',
+both suffix vowels are associated to the same back feature on the
+surface, as shown in the AR (\ref{turkish.dishsuf}a).
+
+\begin{exe}
+\ex \label{turkish.dishsuf}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+    {
+(a) &         & |(a)| +back       &         &               &         & |(c)| +back &         &                  & \\
+    & |(1)| k & |(2)| \textipa{1} & |(3)| z & |(4)| \LARGE+ & |(5)| l & |(6)| a     & |(7)| r & |(8)| \textipa{1} & |(9)| n \\
+(b) & *        & |(d)| +back        &          &                &          & |[red](f)| \textbf{+back} &          &|[red](g)| \textbf{-back} & \\
+    & |(10)| k & |(11)| \textipa{1} & |(12)| z & |(13)| \LARGE+ & |(14)| l & |(15)| a                 & |(16)| r & |(17)| i   & |(18)| n \\
+(c) & *        & |(h)| +back        &          &                &          & |[red](j)| \textbf{-back} &          &|[red](k)| \textbf{+back} & \\
+    & |(19)| k & |(20)| \textipa{1} & |(21)| z & |(22)| \LARGE+ & |(23)| l & |(24)| e                 & |(25)| r & |(26)| \textipa{1}   & |(27)| n \\
+  };
+  \draw (a.south) -- (2.north);
+  \draw foreach \x in {6, 8} {(c.south) -- (\x.north)};
+  \draw (d.south) -- (11.north);
+  \draw (f.south) -- (15.north);
+  \draw (g.south) -- (17.north);
+  \draw (h.south) -- (20.north);
+  \draw (j.south) -- (24.north);
+  \draw (k.south) -- (26.north);
+  \draw[black,->] (a) -- (c);
+  \draw[black,->] (1) -- (2);
+  \draw[black,->] (2) -- (3);
+  \draw[black,->] (3) -- (4);
+  \draw[black,->] (4) -- (5);
+  \draw[black,->] (5) -- (6);
+  \draw[black,->] (6) -- (7);
+  \draw[black,->] (7) -- (8);
+  \draw[black,->] (8) -- (9);
+  \draw[black,->] (d) -- (f);
+  \draw[thick,red,->] (f) -- (g);
+  \draw[black,->] (10) -- (11);
+  \draw[black,->] (11) -- (12);
+  \draw[black,->] (12) -- (13);
+  \draw[black,->] (13) -- (14);
+  \draw[black,->] (14) -- (15);
+  \draw[black,->] (15) -- (16);
+  \draw[black,->] (16) -- (17);
+  \draw[black,->] (17) -- (18);
+  \draw[black,->] (h) -- (j);
+  \draw[thick,red,->] (j) -- (k);
+  \draw[black,->] (19) -- (20);
+  \draw[black,->] (20) -- (21);
+  \draw[black,->] (21) -- (22);
+  \draw[black,->] (22) -- (23);
+  \draw[black,->] (23) -- (24);
+  \draw[black,->] (24) -- (25);
+  \draw[black,->] (25) -- (26);
+  \draw[black,->] (26) -- (27);
+  \end{tikzpicture}
+\end{exe}
+
+\noindent The ARs in (\ref{turkish.dishsuf}b) and
+(\ref{turkish.dishsuf}c), on the other hand, violate the FSCs in
+(\ref{fsc.turkish.nomorph}a) and (\ref{fsc.turkish.nomorph}b),
+respectively. In (\ref{turkish.dishsuf}b) the suffix vowel closest to
+the morpheme boundary is associated to a +back feature that is adjacent
+to a -back feature, shown in bold and red. Similarly, in
+(\ref{turkish.dishsuf}c) the suffix vowel closest to the morpheme
+boundary is associated to a -back vowel that is adjacent to a +back
+vowel, shown in bold and red. Thus the FSCs in
+(\ref{fsc.turkish.nomorph}), without morpheme boundaries on feature
+tiers, do capture the suffix harmony pattern in Turkish.
+
+However, Turkish also has grammatical words with disharmonic roots and
+the FSCs in (\ref{fsc.turkish.nomorph}) do not discriminate between root
+and suffix vowel features. A grammatical Turkish root like {[}tatil{]}
+`vacation' would violate (\ref{fsc.turkish.nomorph}a) because it
+contains the forbidden structure shown in bold and red in
+(\ref{turkish.tatil}a).
 
 \begin{exe}
 \ex{[tatil] `vacation'} \label{turkish.tatil} \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-(a)     & |[red](1)| \textbf{+back} &         & |[red](2)| \textbf{-back} &         & (b)     & |(3)|  +back &         & |(4)| -back &         |(5)| \LARGE+ \\ 
-|(a)| t & |(b)| a                   & |(c)| t & |(d)| i                   & |(e)| l & |(f)| t & |(g)| a      & |(h)| t & |(i)| i     & |(j)| l & |(k)| \LARGE+ \\
+(a)     & |[red](1)| \textbf{+back} &         & |[red](2)| \textbf{-back} &         &               & \\ 
+|(a)| t & |(b)| a                   & |(c)| t & |(d)| i                   & |(e)| l & |(6)| \LARGE+ & \\
+(b)     & |(3)|  +back &         & |(4)| -back &         |(5)| \LARGE+ \\
+|(f)| t & |(g)| a      & |(h)| t & |(i)| i     & |(j)| l & |(k)| \LARGE+ \\
   };
   \draw (1.south) -- (b.north);
   \draw (2.south) -- (d.north);
@@ -1168,6 +1238,7 @@ morpheme boundary.
   \draw[black,->] (b) -- (c);
   \draw[black,->] (c) -- (d);
   \draw[black,->] (d) -- (e);
+  \draw[black,->] (e) -- (6);
   \draw[black,->] (f) -- (g);
   \draw[black,->] (g) -- (h);
   \draw[black,->] (h) -- (i);
@@ -1175,6 +1246,16 @@ morpheme boundary.
   \draw[black,->] (j) -- (k);
   \end{tikzpicture}
 \end{exe}
+
+\noindent The AR in (\ref{turkish.tatil}b) also violates
+(\ref{fsc.turkish.nomorph}a), which thus forbids a grammatical Turkish
+root. So the FSCs in (\ref{fsc.turkish.nomorph}) are able to capture the
+Turkish suffix harmony pattern without representing morpheme boundaries
+on a feature tier, but they are not able to capture disharmonic roots in
+Turkish. Including the morpheme boundary on the feature tier
+distinguishes the two back features as root features, such that
+(\ref{turkish.tatil}b) does not violate the FSCs posited for Turkish in
+(\ref{fsc.turkishback}).
 
 In summary, Turkish demonstrates the necessity of adding a morpheme
 boundary `\textipa{\LARGE+}' to the set of representations that can
