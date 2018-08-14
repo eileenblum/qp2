@@ -157,7 +157,7 @@ Second, the NCC states that association lines between the segmental tier and a f
   
   Lastly, the OCP stipulates that adjacent featural elements must be distinct. The representation in (\ref{akan.ex4}) violates the OCP because on both the ATR and low feature tiers there are two identical adjacent features, -ATR and -low respectively. The OCP in conjunction with FS results in representations where multiple adjacent vowels are associated to a single feature rather than having multiple adjacent iterations of the same feature each associated to a single vowel. An example representation of an Akan word that satisfies all of the AR properties discussed here is shown in (\ref{akan.ex}).
   
-  Both the NCC and the OCP have also been derived via a concatenation operation ($\circ$) that merges autosegmental "graph primitives"[@jardineheinz2015 p.1]. An autosegmental graph primitive consists of an element on the segmental tier, the elements on each feature tier and the associations between the featural and segmental tiers. The concatenation operation combines a finite set of adjacent graph primitives to generate a fully specified AR. For example, the AR in (\ref{akan.ex}) is derived from the set of graph primitives in (\ref{concat.ex}). Each primitive in (\ref{concat.ex}) is concatenated with a single adjacent primitive. If two adjacent primitives share an identical feature those two features are merged into one feature with two associations, as in (\ref{akan.ex}). The merging of identical adjacent features essentially prevents surface ARs from having multiple iterations of a feature and crossed associations, thus satisfying both the OCP and the NCC. However, if two segmental elements are associated to the exact same feature and a different element intervenes then both iterations of that feature will occur in the surface AR because only adjacent primitive elements are concatenated and can thus be merged. This qualifying paper will show that an intervening element can be a vowel associated to the same feature with a different explain that a domain boundary primitive must also include that boundary on feature tiers.
+  Both the NCC and the OCP have also been derived via a concatenation operation ($\circ$) that merges autosegmental "graph primitives"[@jardineheinz2015 p.1]. An autosegmental graph primitive consists of an element on the segmental tier, the elements on each feature tier and the associations between the featural and segmental tiers. The concatenation operation combines a finite set of adjacent graph primitives to generate a fully specified AR. For example, the AR in (\ref{akan.ex}) is derived from the set of graph primitives in (\ref{concat.ex}). Each primitive in (\ref{concat.ex}) is concatenated with a single adjacent primitive. If two adjacent primitives share an identical feature those two features are merged into one feature with two associations, as in (\ref{akan.ex}). The merging of identical adjacent features essentially prevents surface ARs from having multiple iterations of a feature and crossed associations, thus satisfying both the OCP and the NCC. However, if two segmental elements are associated to the exact same feature and a different element intervenes then both iterations of that feature will occur in the surface AR because only adjacent primitive elements are concatenated and can thus be merged. This qualifying paper will show that an intervening element can be a vowel associated to the same feature with a different value or a domain boundary. It will further show that a domain boundary primitive may include that boundary on both segmental and feature tiers.
   
 \begin{exe}
 \ex \label{concat.ex} Concatenation of adjacent autosegmental graph primitives \\
@@ -366,31 +366,37 @@ Transparent vowels, however, do not block or undergo harmony so in the Finnish w
   \end{xlist}
 \end{exe}
 
- The surface requirement that +round and +low vowels share the same back feature can also be stated negatively as a constraint that forbids either a +round or a +low vowel from being associated to a different preceeding back feature. Together, the two FSCs in (\ref{fsc.finnish}) generate this negative constraint and the Finnish vowel harmony pattern. The ordering relation on the segmental tier of the FSCs is omitted because the vowels can have consonants between them, as in (\ref{finnish.pouta}). The ordering relation on the back tier, however, is crucial in order to allow transparency of certain -back vowels.
-
+ The surface requirement that +round and +low vowels share the same back feature can also be stated negatively as a constraint that forbids either a +round or a +low vowel from being associated to a different preceeding back feature. Together, the four FSCs in (\ref{fsc.finnish}) generate this negative constraint and the Finnish vowel harmony pattern. The ordering relation on the segmental tier of the FSCs is omitted because the vowels can have consonants between them, as in (\ref{finnish.pouta}). The ordering relation on the back tier, however, is crucial in order to allow transparency of certain -back vowels.
 \begin{exe}
 \ex \label{fsc.finnish}
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-(a) * & & |(a)| +back &            & |(b)| -back & & (b) * & & |(1)| +back &  & |(2)| -back  \\
-      & & |(c)| V     &            & |(d)| V     & &       & & |(5)| V     &  & |(6)| V      \\
-      & &             & |(e)| +low &             & &       & &             &  & \\
-      & &             &            &             & &       & &             &  & |(9)| +round \\
+(a)  & * & |(a)| +back &            & |(b)| -back & & (b) & * & |(1)| +back &  & |(2)| -back  \\
+     & &               &            & |(d)| V     & &       &   &             &  & |(6)| V      \\
+     & &               & |(e)| +low &             & &       &   &             &  & \\
+     & &               &            &             & &       &   &             &  & |(9)| +round \\
+(c)  & *          & |(f)| -back & & |(g)| +back & & (d)  & * & |(10)| -back  & & |(11)| +back \\
+     &            & |(h)| V     & &             & &      &   & |(12)| V      & & \\
+     & |(j)| +low &             & &             & &      &   &               & & \\
+     &            &             & &             & &      &   & |(14)| +round & & \\
   };
-  \draw (a.south) -- (c.north);
   \draw (b.south) -- (d.north);
   \draw (d.south) -- (e.north);
   \draw[black,->] (a) -- (b);
-  \draw (1.south) -- (5.north);
   \draw (2.south) -- (6.north);
   \draw (6.south) -- (9.north);
   \draw[black,->] (a) -- (b);
   \draw[black,->] (1) -- (2);
+  \draw (f.south) -- (h.north);
+  \draw (h.south) -- (j.north);
+  \draw[black,->] (f) -- (g);
+  \draw (10.south) -- (12.north);
+  \draw (12.south) -- (14.north);
+  \draw[black,->] (10) -- (11);
   \end{tikzpicture}
 \end{exe}
-
-The ARs in (\ref{finnish.pouta}) illustrate how the Finnish FSCs rule out ungrammatical disharmonic words. The AR for the grammatical Finnish word \textipa{[poutA]} `fine weather', shown in (\ref{finnish.pouta}a), contains both a +round and a +low non-initial vowel as well as a single +back feature, which demonstrates full back harmony. The hypothetical Finnish word, \textipa{[pout\ae]} in (\ref{finnish.pouta}b), however, contains the forbidden structure of (\ref{fsc.finnish}) in bold and red. In (\ref{finnish.pouta}b) the final vowel does not harmonize with the penultimate vowel because they are associated to different back features. 
+  The ARs in (\ref{finnish.pouta}) illustrate how the Finnish FSCs rule out ungrammatical disharmonic words. The AR for the grammatical Finnish word \textipa{[poutA]} `fine weather', shown in (\ref{finnish.pouta}a), contains both a +round and a +low non-initial vowel as well as a single +back feature, which demonstrates full back harmony. The hypothetical Finnish word, \textipa{[pout\ae]} in (\ref{finnish.pouta}b), however, contains the forbidden structure of (\ref{fsc.finnish}a) in bold and red. In (\ref{finnish.pouta}b) the final vowel does not harmonize with the penultimate vowel because they are associated to different back features. 
 
 \begin{exe}
 \ex{\textipa{[poutA]} `fine weather'}\label{finnish.pouta} \\
@@ -398,7 +404,7 @@ The ARs in (\ref{finnish.pouta}) illustrate how the Finnish FSCs rule out ungram
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
 (a) &            & |(a)| +back &         &             &                   & & (b) * &               & |[red](n)| \textbf{+back} &                        &         &  |[red](o)| \textbf{-back} \\ 
-    & |(b)| p    & |(c)| o     & |(d)| u & |(e)| t    & |(f)| \textipa{A} & &        & |(p)| p       & |(q)| o                   & |[red](r)| \textbf{u}  & |(s)| t                  & |[red](t)| \textbf{\ae}\\
+    & |(b)| p    & |(c)| o     & |(d)| u & |(e)| t    & |(f)| \textipa{A} & &        & |(p)| p       & |(q)| o                   & |(r)| u  & |(s)| t                  & |[red](t)| \textbf{\ae}\\
     & |(l)| -low &             &         & |(m)| +low &                   & &        & |(z)| -low    &                           &                        & |[red](1)| \textbf{+low} & \\
     &              & |(j)| +round  &         &             & |(k)| -round & &       &               & |(x)| +round     &                        &          & |(y)| -round             & \\
   };
@@ -480,6 +486,8 @@ Crucially, the behavior of the transparent vowels with respect to vowel harmony 
 <!-- transparent vowels: -back, -low, or -round, so generalization holds only for those. only care about +- back when +low, +round. only 2 constraints hold. don't have to make transparent vowels do anything special: no underspecification-->
 
  In summary, the vowel harmony pattern with transparent vowels in Finnish can be captured using the two FSCs in (\ref{fsc.finnish}). These FSCs refer to adjacency on the back tier, which also interacts with both the round and low feature tiers. Finnish vowel harmony could thus be considered local because the FSCs that capture the pattern refer to the associations between vowels and features and the ordering between features. The next section discusses the interaction of vowel harmony with morphology.
+
+## Long-distance nature of OCP
 
 # Morphologically-conditioned harmony
 ## Turkish
@@ -651,29 +659,40 @@ The analysis presented above captures both the Turkish back and round harmony pa
   \end{tikzpicture}
 \end{exe} 
 
-  On the surface, all Turkish suffix vowels are associated to the same back feature as root-final vowels and the FSCs in (\ref{fsc.turkish.nomorph}) forbid any two adjacent back features from having different values. In a grammatical Turkish word with two suffix vowels, like [\textipa{k1z\LARGE+}\textipa{lar1n}] `girls (gen.)', both suffix vowels are associated to the same back feature on the surface, as shown in the AR (\ref{turkish.dishsuf}a).
-  
+  On the surface, all Turkish suffix vowels are associated to the same back feature as root-final vowels and the FSCs in (\ref{fsc.turkish.nomorph}) forbid any two adjacent back features from having different values. In a grammatical Turkish word with two suffix vowels, like [\textipa{k1z\LARGE+}\textipa{lar}\textipa{\LARGE+}\textipa{1n}] `girls (gen.)', both suffix vowels are associated to the same back feature on the surface, as shown in the AR (\ref{turkish.dishsuf}a). The word [\textipa{k1z\LARGE+}\textipa{lar}\textipa{\LARGE+}\textipa{1n}] contains the root [\textipa{k1z}] followed by two suffixes: [lar] and [\textipa{1n}]. The representation of these three morphemes is derived via concatenation of autosegmental graph primitives that include consonants, vowels associated to back features, or morpheme boundaries on the segmental tier, as shown in (\ref{turkish.dprim}). The grammatical AR in (\ref{turkish.dishsuf}a) thus demonstrates that all suffix vowels are associated to the same back feature even when multiple suffixes are present. 
+
+\begin{exe}
+\ex \label{turkish.dprim} Concatenation of Turkish graph primitives \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep=2.5ex, column sep={2em,between origins}, nodes={text height=1em, text depth=0.5em}]
+  {
+(a)     &                                     & |(a)| +back       &                                         &         &                                     &                         &                                    &         &                                     & |(b)| +back &                                      &         &                                     &                          &                                      & |(c)| +back       &                                     & \\
+|(1)| k & \node {}; \draw(0, 0) circle (3pt); & |(2)| \textipa{1} & \node {}; \draw(0, 0) circle (3pt); & |(3)| z & \node {}; \draw(0, 0) circle (3pt); & |(4)| \textipa{\LARGE+} & \node {}; \draw(0, 0) circle (3pt); & |(5)| l & \node {}; \draw(0, 0) circle (3pt); & |(6)| a     & \node {}; \draw(0, 0) circle (3pt); & |(7)| r & \node {}; \draw(0, 0) circle (3pt); & |(pl)| \textipa{\LARGE+} & \node {}; \draw(0, 0) circle (3pt); & |(8)| \textipa{1} & \node {}; \draw(0, 0) circle (3pt); & |(9)| n \\
+  };
+  \draw (a.south) -- (2.north);
+  \draw (b.south) -- (6.north);
+  \draw (c.south) -- (8.north);
+  \end{tikzpicture}
+\end{exe}
+
 \begin{exe}
 \ex \label{turkish.dishsuf}
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}] 
     {
-(a) &         & |(a)| +back       &         &               &         & |(c)| +back &         &                  & \\
-    & |(1)| k & |(2)| \textipa{1} & |(3)| z & |(4)| \LARGE+ & |(5)| l & |(6)| a     & |(7)| r & |(8)| \textipa{1} & |(9)| n \\
-(b) & *        & |(d)| +back        &          &                &          & |[red](f)| \textbf{+back} &          &|[red](g)| \textbf{-back} & \\
+(a) &         & |(a)| +back       &         &               &         &         &         &                  & \\
+    & |(1)| k & |(2)| \textipa{1} & |(3)| z & |(4)| \LARGE+ & |(5)| l & |(6)| a & |(7)| r & |(8)| \textipa{1} & |(9)| n \\
+(b) & *        & |[red](d)| \textbf{+back}        &          &                &          &            &          &|[red](g)| \textbf{-back} & \\
     & |(10)| k & |(11)| \textipa{1} & |(12)| z & |(13)| \LARGE+ & |(14)| l & |(15)| a                 & |(16)| r & |(17)| i   & |(18)| n \\
 (c) & *        & |(h)| +back        &          &                &          & |[red](j)| \textbf{-back} &          &|[red](k)| \textbf{+back} & \\
     & |(19)| k & |(20)| \textipa{1} & |(21)| z & |(22)| \LARGE+ & |(23)| l & |(24)| e                 & |(25)| r & |(26)| \textipa{1}   & |(27)| n \\
   };
-  \draw (a.south) -- (2.north);
-  \draw foreach \x in {6, 8} {(c.south) -- (\x.north)};
-  \draw (d.south) -- (11.north);
-  \draw (f.south) -- (15.north);
+  \draw foreach \x in {2, 6, 8} {(a.south) -- (\x.north)};
+  \draw foreach \x in {11, 15} {(d.south) -- (\x.north)};
   \draw (g.south) -- (17.north);
   \draw (h.south) -- (20.north);
   \draw (j.south) -- (24.north);
   \draw (k.south) -- (26.north);
-  \draw[black,->] (a) -- (c);
   \draw[black,->] (1) -- (2);
   \draw[black,->] (2) -- (3);
   \draw[black,->] (3) -- (4);
@@ -682,8 +701,7 @@ The analysis presented above captures both the Turkish back and round harmony pa
   \draw[black,->] (6) -- (7);
   \draw[black,->] (7) -- (8);
   \draw[black,->] (8) -- (9);
-  \draw[black,->] (d) -- (f);
-  \draw[thick,red,->] (f) -- (g);
+  \draw[thick,red,->] (d) -- (g);
   \draw[black,->] (10) -- (11);
   \draw[black,->] (11) -- (12);
   \draw[black,->] (12) -- (13);
@@ -707,7 +725,7 @@ The analysis presented above captures both the Turkish back and round harmony pa
 
 \noindent The ARs in (\ref{turkish.dishsuf}b) and (\ref{turkish.dishsuf}c), on the other hand, violate the FSCs in (\ref{fsc.turkish.nomorph}a) and (\ref{fsc.turkish.nomorph}b), respectively. In (\ref{turkish.dishsuf}b) the suffix vowel closest to the morpheme boundary is associated to a +back feature that is adjacent to a -back feature, shown in bold and red. Similarly, in (\ref{turkish.dishsuf}c) the suffix vowel closest to the morpheme boundary is associated to a -back vowel that is adjacent to a +back vowel, shown in bold and red. Thus the FSCs in (\ref{fsc.turkish.nomorph}), without morpheme boundaries on feature tiers, do capture the suffix harmony pattern in Turkish.
 
-  However, Turkish also has grammatical words with disharmonic roots and the FSCs in (\ref{fsc.turkish.nomorph}) do not discriminate between root and suffix vowel features. A grammatical Turkish root like [tatil] `vacation' would violate (\ref{fsc.turkish.nomorph}a) because it contains the forbidden structure shown in bold and red in (\ref{turkish.tatil}a). <!-- Previous analysis captures Turkish with morpheme boundary on feature tiers
+  However, Turkish also has grammatical words with disharmonic roots. The FSCs in (\ref{fsc.turkish.nomorph}) do not discriminate between root and suffix vowel features because there is no morpheme boundary on the feature tier. A grammatical Turkish root like [tatil] `vacation' would violate (\ref{fsc.turkish.nomorph}a) when its AR is derived using the graph primitive that includes morpheme boundaries only on the segmental tier because the AR contains the forbidden structure shown in bold and red in (\ref{turkish.tatil}a). <!-- Previous analysis captures Turkish with morpheme boundary on feature tiers
 Here is why can't get Turkish without morpheme boundary on feature tier
 disharmonic roots-->
 
@@ -741,9 +759,11 @@ disharmonic roots-->
   \end{tikzpicture}
 \end{exe}
 
-\noindent The AR in (\ref{turkish.tatil}b) also violates (\ref{fsc.turkish.nomorph}a), which thus forbids a grammatical Turkish root. So the FSCs in (\ref{fsc.turkish.nomorph}) are able to capture the Turkish suffix harmony pattern without representing morpheme boundaries on a feature tier, but they are not able to capture disharmonic roots in Turkish. Including the morpheme boundary on the feature tier distinguishes the two back features as root features, such that (\ref{turkish.tatil}b) does not violate the FSCs posited for Turkish in (\ref{fsc.turkishback}). 
+  The AR in (\ref{turkish.tatil}b) introduces a new graph primitive that includes the morpheme boundary on both the segmental and back tiers. It also violates (\ref{fsc.turkish.nomorph}a), which thus forbids a grammatical Turkish root. So the FSCs in (\ref{fsc.turkish.nomorph}) are able to capture the Turkish suffix harmony pattern with morpheme boundaries represented only on the segmental tier, but they are not able to capture disharmonic roots in Turkish. Enriching the representation to include a morpheme boundary in the set of representations that can occur on the feature tier increases the expressive power of the AR such that the two back features are distinguished as root features in (\ref{turkish.tatil}b). Including the morpheme boundary on the back tier thus prevents (\ref{turkish.tatil}b) from violating the FSCs posited for Turkish in (\ref{fsc.turkishback}). 
 
 In summary, Turkish demonstrates the necessity of adding a morpheme boundary `\textipa{\LARGE+}' to the set of representations that can occur on a feature tier. Because all root and suffix vowels do not necessarily have to share the same features on the surface it is necessary to distinguish them from one another. Identifying whether a vowel is part of a root or a suffix is accomplished by ordering the vowels relative to a morpheme boundary. However, since vowels are also ordered with respect to consonants, it is necessary to include an ordering relation on feature tiers so that the FSCs are connected. The morpheme boundaries are projected onto each feature tier so that vowel features are ordered relative to the boundary and can thus be distinguished as belonging to a root or a suffix. In this way, the vowels are indirectly ordered relataive to each other via the ordering between their features in addition to their association to those features. Turkish vowel harmony can be considered local because both its back and round harmony patterns are captured by the connected FSCs in (\ref{fsc.turkishback}) and (\ref{fsc.turkishround}). These FSCs refer to the associations between vowels and features as well as the ordering relation between features and a morpheme boundary.
+
+## Why Morpheme Boundary on Back tier
 
 # Sour Grapes
 
