@@ -174,6 +174,7 @@ t & \node {}; \draw(0, 0) circle (3pt); & |(1)| i    & \node {}; \draw(0, 0) cir
   \draw (2.south) -- (d.north);
   \end{tikzpicture}
 \end{exe}
+\newpage
 
 \begin{exe}
 \ex \label{akan.ex} Satisfies FS, NCC, and OCP \\
@@ -397,6 +398,7 @@ Transparent vowels, however, do not block or undergo harmony so in the Finnish w
   \end{tikzpicture}
 \end{exe}
   The ARs in (\ref{finnish.pouta}) illustrate how the Finnish FSCs rule out ungrammatical disharmonic words. The AR for the grammatical Finnish word \textipa{[poutA]} `fine weather', shown in (\ref{finnish.pouta}a), contains both a +round and a +low non-initial vowel as well as a single +back feature, which demonstrates full back harmony. The hypothetical Finnish word, \textipa{[pout\ae]} in (\ref{finnish.pouta}b), however, contains the forbidden structure of (\ref{fsc.finnish}a) in bold and red. In (\ref{finnish.pouta}b) the final vowel does not harmonize with the penultimate vowel because they are associated to different back features. 
+\newpage
 
 \begin{exe}
 \ex{\textipa{[poutA]} `fine weather'}\label{finnish.pouta} \\
@@ -485,9 +487,11 @@ Crucially, the behavior of the transparent vowels with respect to vowel harmony 
 \noindent The same two FSCs in (\ref{fsc.finnish}) generate Finnish back harmony with transparent vowels in both roots and suffixes. In addition, FSCs with a -back succeeded by a +back feature do not generate the Finnish pattern because the grammatical Finnish words in (\ref{finnish_trans}) also contain +back harmonizing vowels that follow the transparent vowels.
 <!-- transparent vowels: -back, -low, or -round, so generalization holds only for those. only care about +- back when +low, +round. only 2 constraints hold. don't have to make transparent vowels do anything special: no underspecification-->
 
- In summary, the vowel harmony pattern with transparent vowels in Finnish can be captured using the two FSCs in (\ref{fsc.finnish}). These FSCs refer to adjacency on the back tier, which also interacts with both the round and low feature tiers. Finnish vowel harmony could thus be considered local because the FSCs that capture the pattern refer to the associations between vowels and features and the ordering between features. The next section discusses the interaction of vowel harmony with morphology.
+ In summary, the vowel harmony pattern with transparent vowels in Finnish can be captured using the two FSCs in (\ref{fsc.finnish}). These FSCs refer to adjacency on the back tier, which also interacts with both the round and low feature tiers. Finnish vowel harmony could thus be considered local because the FSCs that capture the pattern refer to the associations between vowels and features and the ordering between features. 
 
-## Long-distance nature of OCP
+## Spreading via OCP
+
+  Previous analyses of vowel harmony assumed that all vowel harmony patterns result from a single assimilation mechanism: feature spreading. However, in Finnish spreading makes elements at any distance local, but this locality is not necessarily related to vowel harmony. The analysis of Finnish provided above demonstrates that spreading creates local structures on the surface by connecting elements at any distance via the OCP. If one assumes the surface ARs used here and that they are derived by the concatenation of primitives, the OCP can hold over any distance. Identical features are merged so that multiple vowels can be associated to a single feature and different features on a tier are connected by adjacency. While spreading does the long-distance work to make surface ARs local, in the next section it will be shown that spreading is not necessarily the only possible assimilation mechanism. 
 
 # Morphologically-conditioned harmony
 ## Turkish
@@ -506,9 +510,10 @@ Native Turkish words demonstrate two separate harmony patterns: back and round h
 \end{table}
 
 The Turkish back harmony generalization is that all suffix vowels share the same back feature as the root-final vowel and the round harmony generalization is that a high suffix vowel shares the same round feature as the root-final vowel [@Clements1976; @padgett2002; @vdHulst2017; @Nevins2010; @crothersshibatani1980]. For example, the words in (\ref{turkish_back}) contain suffix vowels that have the same back feature as the preceding root-final vowel. In addition, the high suffix vowels in (\ref{turkish_back}b-e) have the same round feature as the root-final vowel. Unlike in Finnish, Turkish non-final root vowels and suffix vowels do not necessarily share the same features on the surface, which makes it necessary to distinguish morphemes in ARs. Throughout this section, root and suffix morphemes will be distinguished by their position relative to a morpheme boundary, i.e. roots are on the left and suffixes on the right. In (\ref{turkish_back}), for example, a morpheme boundary is represented by a large plus sign `\textipa{\LARGE+}'. 
-
+\newpage
 <!-- include some disharmonic roots? to show contrast
 +back -back vowel adjacent in root, but not across morpheme boundary-->
+
 \begin{exe}
 \ex{Suffix vowels share a back feature with root-final vowels}\label{turkish_back} 
 \begin{xlist}
@@ -761,10 +766,12 @@ disharmonic roots-->
 
   The AR in (\ref{turkish.tatil}b) introduces a new graph primitive that includes the morpheme boundary on both the segmental and back tiers. It also violates (\ref{fsc.turkish.nomorph}a), which thus forbids a grammatical Turkish root. So the FSCs in (\ref{fsc.turkish.nomorph}) are able to capture the Turkish suffix harmony pattern with morpheme boundaries represented only on the segmental tier, but they are not able to capture disharmonic roots in Turkish. Enriching the representation to include a morpheme boundary in the set of representations that can occur on the feature tier increases the expressive power of the AR such that the two back features are distinguished as root features in (\ref{turkish.tatil}b). Including the morpheme boundary on the back tier thus prevents (\ref{turkish.tatil}b) from violating the FSCs posited for Turkish in (\ref{fsc.turkishback}). 
 
-In summary, Turkish demonstrates the necessity of adding a morpheme boundary `\textipa{\LARGE+}' to the set of representations that can occur on a feature tier. Because all root and suffix vowels do not necessarily have to share the same features on the surface it is necessary to distinguish them from one another. Identifying whether a vowel is part of a root or a suffix is accomplished by ordering the vowels relative to a morpheme boundary. However, since vowels are also ordered with respect to consonants, it is necessary to include an ordering relation on feature tiers so that the FSCs are connected. The morpheme boundaries are projected onto each feature tier so that vowel features are ordered relative to the boundary and can thus be distinguished as belonging to a root or a suffix. In this way, the vowels are indirectly ordered relataive to each other via the ordering between their features in addition to their association to those features. Turkish vowel harmony can be considered local because both its back and round harmony patterns are captured by the connected FSCs in (\ref{fsc.turkishback}) and (\ref{fsc.turkishround}). These FSCs refer to the associations between vowels and features as well as the ordering relation between features and a morpheme boundary.
+  In summary, Turkish demonstrates the necessity of adding a morpheme boundary `\textipa{\LARGE+}' to the set of representations that can occur on a feature tier. Because all root and suffix vowels do not necessarily have to share the same features on the surface it is necessary to distinguish them from one another. Identifying whether a vowel is part of a root or a suffix is accomplished by ordering the vowels relative to a morpheme boundary. However, since vowels are also ordered with respect to consonants, it is necessary to include an ordering relation on feature tiers so that the FSCs are connected. The morpheme boundaries are projected onto each feature tier so that vowel features are ordered relative to the boundary and can thus be distinguished as belonging to a root or a suffix. In this way, the vowels are indirectly ordered relataive to each other via the ordering between their features in addition to their association to those features. Turkish vowel harmony can be considered local because both its back and round harmony patterns are captured by the connected FSCs in (\ref{fsc.turkishback}) and (\ref{fsc.turkishround}). These FSCs refer to the associations between vowels and features as well as the ordering relation between features and a morpheme boundary.
 
-## Why Morpheme Boundary on Back tier
+## Agreement vs. Spreading
 
+  Unlike Finnish, Turkish has suffix vowel harmony, but not root harmony so the morphological domain of harmony must be restricted. The analysis above adds a morpheme boundary to the set of representations that occur on both the feature and segmental tiers. Including a primitive with morpheme boundaries on both tiers increases the expressive power of ARs such that the possible domain of feature spreading is restricted by adjacency to a single morpheme, but feature assimilation between morphemes still occurs. In Turkish, assimilation is thus more likely due to agreement between root-final and suffix vowel features rather the spreading that occured in Finnish. So, two different assimilation mechanism have been discovered to generate vowel harmony patterns and both can be captured using FSCs.
+  
 # Sour Grapes
 
 Another phenomenon often discussed in autosegmental spreading literature is the unattested, but logically possible pattern called sour grapes [@mccarthy2011; @lamont2018; @padgett1995]. Sour grapes spreading is a pattern in which a feature, such as nasality in @lamont2018, spreads throughout a word; but, if the word contains a blocking segment, like low vowels in Akan, no spreading occurs at all. Sour grapes blockers could thus be considered to block spreading from any distance. @lamont2018 illustrates what a sour grapes pattern would look like with nasal spreading below.
