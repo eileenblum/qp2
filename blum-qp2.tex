@@ -500,90 +500,70 @@ arrows.
 Vowel harmony has previously been analyzed as an assimilatory process
 that results in multiple vowels being associated to the same feature on
 the surface. Such assimilation can result from the spreading of vowel
-features throughout a word or the agreement between non-adjacent vowels.
-This qualifying paper will show that both spreading and agreement each
-generate vowel harmony patterns on the surface, but all such patterns
+features throughout a word or agreement between non-adjacent vowels.
+This qualifying paper will show that both spreading and agreement
+generate vowel harmony patterns on the surface, and all such patterns
 are captured by a uniform theory of markedness constraints. In the vowel
 harmony literature, the term \enquote{spreading} has generally referred
-to an assimilatory process that transforms underspecified underlying ARs
-into harmonizing surface ARs. On the surface, the result of a spreading
-process over ARs is a structure in which a single feature is associated
-to multiple elements on the segmental tier, as in (\ref{spread}a). In
-this paper, the term \enquote{spreading} will refer to the resulting
-multiple association of features rather than the process that derives
-such structures. Similarly, \enquote{agreement} is used here to refer to
-surface ARs with non-adjacent identical features, as in (\ref{agree}a).
+to an assimilatory process that transforms underlying ARs with
+underspecified vowels into surface ARs in which at least some vowels are
+associated to a single feature. On the surface, the result of a
+spreading process over ARs is a structure in which a single feature is
+associated to multiple vowels on the segmental tier, as in
+(\ref{akan.ex}) above. The surface result of an agreement process over
+ARs is a structure in which two non-adjacent vowel features on the same
+tier have identical binary values, as in the simplified AR of a Finnish
+word in (\ref{agree}a). In this paper, the term \enquote{spreading} will
+refer to the resulting multiple association of features rather than the
+process that derives such structures. Similarly, \enquote{agreement} is
+used here to refer to surface ARs with non-adjacent identical features,
+as in (\ref{agree}a).
 
 \begin{exe}
-\ex Spreading \label{spread}\\
-  \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}]
-  {
-(a) & |(a)| +F &         &         & & (b) & |(A)| +F &                                     & |(B)| +F &                                     & |(C)| +F \\
-    & |(1)| V  & |(2)| V & |(3)| V & &     & |(4)| V  & \node {}; \draw(0, 0) circle (3pt); & |(5)| V  & \node {}; \draw(0, 0) circle (3pt); & |(6)| V \\
-    & |(b)| +G &         &         & &     & |(D)| +G &                                     & |(E)| +G &                                     & |(F)| +G \\
-  };
-  \draw foreach \x in {1, 2, 3} {(a.south) -- (\x.north)};
-  \draw foreach \x in {1, 2, 3} {(\x.south) -- (b.north)};
-  \draw (A.south) -- (4.north);
-  \draw (B.south) -- (5.north);
-  \draw (C.south) -- (6.north);
-  \draw (4.south) -- (D.north);
-  \draw (5.south) -- (E.north);
-  \draw (6.south) -- (F.north);
-  \draw[black,->] (1) -- (2);
-  \draw[black,->] (2) -- (3);
-  \end{tikzpicture}
-  
 \ex Agreement \label{agree}\\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}]
   {
-(a) & |(a)| +F & |(b)| -F & |(c)| +F & & (b) & |(A)| +F &                                     & |(B)| -F &                                     & |(C)| +F \\
-    & |(1)| V  & |(2)| V  & |(3)| V  & &     & |(4)| V  & \node {}; \draw(0, 0) circle (3pt); & |(5)| V  & \node {}; \draw(0, 0) circle (3pt); & |(6)| V \\
-    & |(d)| +G & |(e)| -G & |(f)| +G & &     & |(D)| +G &                                     & |(E)| -G &                                     & |(F)| +F \\
+(a)      & |(a)| +back &          & |(b)| -back &          & |(c)| +back & \\
+|(c1)| r & |(1)| u     & |(c2)| v & |(2)| e     & |(c3)| t & |(3)| a     &  \\
+(b)      &                                     & |(A)| +back &                                     &          &                                     & |(B)| -back &                                     &          &                                     & |(C)| +back \\
+|(C1)| r & \node {}; \draw(0, 0) circle (3pt); & |(4)| u     & \node {}; \draw(0, 0) circle (3pt); & |(C2)| v & \node {}; \draw(0, 0) circle (3pt); & |(5)| e     & \node {}; \draw(0, 0) circle (3pt); & |(C3)| t & \node {}; \draw(0, 0) circle (3pt); & |(6)| a \\
   };
   \draw (a.south) -- (1.north);
   \draw (b.south) -- (2.north);
   \draw (c.south) -- (3.north);
-  \draw (1.south) -- (d.north);
-  \draw (2.south) -- (e.north);
-  \draw (3.south) -- (f.north);
   \draw (A.south) -- (4.north);
   \draw (B.south) -- (5.north);
   \draw (C.south) -- (6.north);
-  \draw (4.south) -- (D.north);
-  \draw (5.south) -- (E.north);
-  \draw (6.south) -- (F.north);
   \draw[black,->] (a) -- (b);
   \draw[black,->] (b) -- (c);
-  \draw[black,->] (1) -- (2);
-  \draw[black,->] (2) -- (3);
-  \draw[black,->] (d) -- (e);
-  \draw[black,->] (e) -- (f);
+  \draw[black,->] (c1) -- (1);
+  \draw[black,->] (1) -- (c2);
+  \draw[black,->] (c2) -- (2);
+  \draw[black,->] (2) -- (c3);
+  \draw[black,->] (c3) -- (3);
   \end{tikzpicture}
 \end{exe}
 
 \noindent On the surface, both spreading and agreement are derived via
-the concatenation operation, as shown in (\ref{spread}b) and
-(\ref{agree}b), respectively. In (\ref{spread}), adjacent identical
-features are merged to create multiple association. In (\ref{agree}),
-multiple iterations of a +F and +G feature are possible when a primitive
-with a -F and -G feature intervenes between two primitives with +F and
-+G features because each primitive is only concatenated with the
-primitive directly adjacent to it.
+the concatenation operation, as shown in (\ref{concat.ex}) and
+(\ref{agree}b), respectively. In (\ref{concat.ex}), adjacent identical
+features are merged to generate multiple association. In (\ref{agree}b),
+multiple iterations of a +back feature are possible when a primitive
+with a -back feature intervenes between two primitives with +back
+features. The AR in (\ref{agree}b) is possible because each primitive is
+only concatenated to a single primitive that is directly adjacent to it.
+Both the spreading and agreement ARs satisfy FS, the NCC, and the OCP.
 
 It will be shown that vowel feature assimilation patterns that result
 from both spreading and agreement are local because they are generated
 by FSCs. FSCs are markedness constraints that represent the phonotactic
 restrictions of a language and can further demonstrate the expressive
 power of a particular representation. This paper will use FSCs to
-capture both spreading and agreement surface patterns and to show that
-enriching the representation with morphological and word boundaries
-increases its expressive power. Thus vowel harmony can be considered a
-single set of patterns despite being derived by different assimilation
-processes because all surface vowel harmony patterns are generated by a
-single theory of markedness.
+capture both spreading and agreement surface patterns. Thus vowel
+harmony can be considered a single set of patterns despite being derived
+by different assimilatory processes because all surface vowel harmony
+patterns are generated by a single theory of markedness.
 
 \section{Neutral vowels}\label{neutral-vowels}
 
