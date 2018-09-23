@@ -1440,8 +1440,8 @@ suffixes are present.
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
   {
-  (b) &         & |(a)| +back       &         &               &         &         &         &                  & \\
-      & |(1)| k & |(2)| \textipa{1} & |(3)| z & |(4)| \LARGE+ & |(5)| l & |(6)| a & |(7)| r & |(8)| \textipa{1} & |(9)| n \\
+  (b) &         & |(a)| +back       &         &               &         &         &         &                        &                   & \\
+      & |(1)| k & |(2)| \textipa{1} & |(3)| z & |(4)| \LARGE+ & |(5)| l & |(6)| a & |(7)| r & |(pl)| \LARGE+ & |(8)| \textipa{1} & |(9)| n \\
   };
   \draw foreach \x in {2, 6, 8} {(a.south) -- (\x.north)};
   \draw[black,->] (1) -- (2);
@@ -1450,7 +1450,8 @@ suffixes are present.
   \draw[black,->] (4) -- (5);
   \draw[black,->] (5) -- (6);
   \draw[black,->] (6) -- (7);
-  \draw[black,->] (7) -- (8);
+  \draw[black,->] (7) -- (pl);
+  \draw[black,->] (pl) -- (8);
   \draw[black,->] (8) -- (9);
   \end{tikzpicture}
 \end{exe}
@@ -1461,10 +1462,10 @@ suffixes are present.
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}] 
     {
 
-(a) & *        & |[red](d)| \textbf{+back}        &          &                &          &            &          &|[red](g)| \textbf{-back} & \\
-    & |(10)| k & |(11)| \textipa{1} & |(12)| z & |(13)| \LARGE+ & |(14)| l & |(15)| a                 & |(16)| r & |(17)| i   & |(18)| n \\
-(b) & *        & |(h)| +back        &          &                &          & |[red](j)| \textbf{-back} &          & |[red](k)| \textbf{+back} & \\
-    & |(19)| k & |(20)| \textipa{1} & |(21)| z & |(22)| \LARGE+ & |(23)| l & |(24)| e                              & |(25)| r & |(26)| \textipa{1}        & |(27)| n \\
+(a) & *        & |[red](d)| \textbf{+back}        &          &                &          &            &          &                          & |[red](g)| \textbf{-back} & \\
+    & |(10)| k & |(11)| \textipa{1} & |(12)| z & |(13)| \LARGE+ & |(14)| l & |(15)| a                 & |(16)| r & |(pl)| \LARGE+           & |(17)| i                  & |(18)| n \\
+(b) & *        & |(h)| +back        &          &                &          & |[red](j)| \textbf{-back} &          &                 & |[red](k)| \textbf{+back} & \\
+    & |(19)| k & |(20)| \textipa{1} & |(21)| z & |(22)| \LARGE+ & |(23)| l & |(24)| e                              & |(25)| r & |(pl2)| \LARGE+ & |(26)| \textipa{1}        & |(27)| n \\
   };
   \draw foreach \x in {11, 15} {(d.south) -- (\x.north)};
   \draw (g.south) -- (17.north);
@@ -1478,7 +1479,8 @@ suffixes are present.
   \draw[black,->] (13) -- (14);
   \draw[black,->] (14) -- (15);
   \draw[black,->] (15) -- (16);
-  \draw[black,->] (16) -- (17);
+  \draw[black,->] (16) -- (pl);
+  \draw[black,->] (pl) -- (17);
   \draw[black,->] (17) -- (18);
   \draw[black,->] (h) -- (j);
   \draw[thick,red,->] (j) -- (k);
@@ -1488,7 +1490,8 @@ suffixes are present.
   \draw[black,->] (22) -- (23);
   \draw[black,->] (23) -- (24);
   \draw[black,->] (24) -- (25);
-  \draw[black,->] (25) -- (26);
+  \draw[black,->] (25) -- (pl2);
+  \draw[black,->] (pl2) -- (26);
   \draw[black,->] (26) -- (27);
   \end{tikzpicture}
 \end{exe}
@@ -1516,54 +1519,108 @@ However, Turkish also has grammatical words with disharmonic roots. The
 FSCs in (\ref{fsc.turkish.nomorph}) do not discriminate between root and
 suffix vowel features because there is no morpheme boundary on the
 feature tier. A grammatical Turkish root like {[}tatil{]} `vacation'
-would violate (\ref{fsc.turkish.nomorph}a) when its AR is derived using
-the graph primitive that includes morpheme boundaries only on the
-segmental tier because the AR contains the forbidden structure shown in
-bold and red in (\ref{turkish.tatil}a).
+would violate (\ref{fsc.turkish.nomorph}a) because the AR contains the
+forbidden structure shown in bold and red in (\ref{turkish.tatil}).
 
 \begin{exe}
 \ex{[tatil] `vacation'} \label{turkish.tatil} \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-(a)     & |[red](1)| \textbf{+back} &         & |[red](2)| \textbf{-back} &         &               & \\ 
-|(a)| t & |(b)| a                   & |(c)| t & |(d)| i                   & |(e)| l & |(6)| \LARGE+ & \\
-(b)     & |(3)|  +back &         & |(4)| -back &         |(5)| \LARGE+ \\
-|(f)| t & |(g)| a      & |(h)| t & |(i)| i     & |(j)| l & |(k)| \LARGE+ \\
+        & |[red](1)| \textbf{+back} &         & |[red](2)| \textbf{-back} &         &               & \\ 
+|(a)| t & |(b)| a                   & |(c)| t & |(d)| i                   & |(e)| l & \\
   };
   \draw (1.south) -- (b.north);
   \draw (2.south) -- (d.north);
-  \draw (3.south) -- (g.north);
-  \draw (4.south) -- (i.north);
   \draw[red,thick,->] (1) -- (2);
-  \draw[black,->] (3) -- (4);
-  \draw[black,->] (4) -- (5);
   \draw[black,->] (a) -- (b);
   \draw[black,->] (b) -- (c);
   \draw[black,->] (c) -- (d);
   \draw[black,->] (d) -- (e);
-  \draw[black,->] (e) -- (6);
-  \draw[black,->] (f) -- (g);
-  \draw[black,->] (g) -- (h);
-  \draw[black,->] (h) -- (i);
-  \draw[black,->] (i) -- (j);
-  \draw[black,->] (j) -- (k);
   \end{tikzpicture}
 \end{exe}
 
-The AR in (\ref{turkish.tatil}b) introduces a new graph primitive that
-includes the morpheme boundary on both the segmental and back tiers and
-it violates (\ref{fsc.turkish.nomorph}a), which thus forbids a
-grammatical Turkish root. So the FSCs in (\ref{fsc.turkish.nomorph}) are
-able to capture the Turkish suffix harmony pattern with morpheme
-boundaries represented only on the segmental tier, but they are not able
-to capture disharmonic roots in Turkish. Enriching the representation to
-include a morpheme boundary in the set of representations that can occur
-on the feature tier increases the expressive power of the AR such that
-the two back features are distinguished as root features in
-(\ref{turkish.tatil}b). Including the morpheme boundary on the back tier
-thus prevents (\ref{turkish.tatil}b) from violating the FSCs posited for
-Turkish in (\ref{fsc.turkishback}).
+\noindent While the AR in (\ref{turkish.tatil}) does violate the
+hypothetical FSC in (\ref{fsc.turkish.nomorph}a), it is grammatical
+because it does not violate the FSC posited to account for Turkish in
+(\ref{fsc.turkishback}a). The Turkish FSC in (\ref{fsc.turkishback}a)
+contains a morpheme boundary on the back feature tier that intervenes
+between the two back features, but a disharmonic root like
+(\ref{turkish.tatil}) contains two different back features in the same
+morpheme.
+
+Adding a morpheme boundary to the feature tier allows the FSCs in
+(\ref{fsc.turkishback}), repeated below in (\ref{turkish.final}), to
+rule out words with disharmonic suffixes while still allowing words with
+disharmonic roots. As shown below in
+(\ref{turkish.final})-(\ref{kizlarin}), both {[}tatil{]} and
+{[}\textipa{k1z\LARGE+}\textipa{lar}\textipa{\LARGE+}\textipa{1n}{]} are
+captured by the same set of FSCs. The AR in (\ref{kizlarin}) further
+demonstrates that vowel feature assimilation in Turkish is due to
+agreement rather than spreading because the morpheme boundaries are
+represented on both tiers.
+
+\begin{exe}
+\ex Turkish FSCs \label{turkish.final}\\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+(a) * & |(a)| +back & |(b)| \LARGE+ & |(c)| -back & & (b) * & |(1)| -back & |(2)| \LARGE+ & |(3)| +back \\
+  };
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (1) -- (2);
+  \draw[black,->] (2) -- (3);
+  \end{tikzpicture}
+  
+\ex {[tatil] `vacation'} \label{tatil} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+        & |(1)| +back &         & |(2)| -back &         &               & \\ 
+|(a)| t & |(b)| a                   & |(c)| t & |(d)| i                   & |(e)| l & \\
+  };
+  \draw (1.south) -- (b.north);
+  \draw (2.south) -- (d.north);
+  \draw[black,->] (1) -- (2);
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (e);
+  \end{tikzpicture}
+  
+\ex {[\textipa{k1z\LARGE+}\textipa{lar}\textipa{\LARGE+}\textipa{1n}] `girls (gen.)'} \label{kizlarin} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
+  {
+        & |(a)| +back       &         & |(b)| \LARGE+ &         & |(c)| +back &         & |(d)| \LARGE+ & |(e)| +back       & \\
+|(1)| k & |(2)| \textipa{1} & |(3)| z & |(4)| \LARGE+ & |(5)| l & |(6)| a     & |(7)| r & |(pl)| \LARGE+ & |(8)| \textipa{1} & |(9)| n \\
+  };
+  \draw (a.south) -- (2.north);
+  \draw (c.south) -- (6.north);
+  \draw (e.south) -- (8.north);
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (e);
+  \draw[black,->] (1) -- (2);
+  \draw[black,->] (2) -- (3);
+  \draw[black,->] (3) -- (4);
+  \draw[black,->] (4) -- (5);
+  \draw[black,->] (5) -- (6);
+  \draw[black,->] (6) -- (7);
+  \draw[black,->] (7) -- (pl);
+  \draw[black,->] (pl) -- (8);
+  \draw[black,->] (8) -- (9);
+  \end{tikzpicture}
+\end{exe}
+
+\noindent Again, the Turkish FSCs posited in this section are repeated
+in (\ref{turkish.final}) above. Including morpheme boundaries on both
+segmental and feature tiers allows these two FSCs to capture all of the
+Turkish vowel harmony patterns discussed so far including words with
+disharmonic roots, shown in (\ref{tatil}), and words with multiple
+suffixes, shown in (\ref{kizlarin}).
 
 In summary, Turkish demonstrates the necessity of adding a morpheme
 boundary `\textipa{\LARGE+}' to the set of representations that can
@@ -1576,15 +1633,14 @@ ordered with respect to consonants, it is necessary to include an
 ordering relation on feature tiers so that the FSCs are connected. The
 morpheme boundaries are projected onto each feature tier so that vowel
 features are ordered relative to the boundary and can be distinguished
-as belonging to a root or a suffix and grammatical disharmonic roots are
-generated. In this way, the vowels are indirectly ordered relataive to
-each other via the ordering between their features in addition to their
-association to those features. Turkish vowel harmony can be considered
-local because both its back and round harmony patterns are captured by
-the connected FSCs in (\ref{fsc.turkishback}) and
-(\ref{fsc.turkishround}), respectively, which refer to the associations
-between vowels and features as well as the ordering relation between
-features and a morpheme boundary.
+as belonging to a root or a suffix. In this way, the vowels are
+indirectly ordered relataive to each other via the ordering between
+their features in addition to their association to those features.
+Turkish vowel harmony can be considered local because both its back and
+round harmony patterns are captured by the connected FSCs in
+(\ref{fsc.turkishback}) and (\ref{fsc.turkishround}), respectively,
+which refer to the associations between vowels and features as well as
+the ordering relation between features and a morpheme boundary.
 
 \subsubsection{Locality of Agreement}\label{locality-of-agreement}
 
@@ -1604,8 +1660,8 @@ assimilation between morphemes still occurs.
   {
 (a) & |(a)| -back &              & |(3)| \LARGE+ &         & |(2)| -back &  \\ 
     & |(b)| i     & |(c)| p      & |(d)| \LARGE+ & |(e)| l & |(f)| e     & |(g)| r & \\
-(b) & |(4)| -back &                                     & |(5)| \LARGE+ &                                         &         &                                     & |(6)| -back &                                     & \\
-    & |(h)| i     & \node {}; \draw(0, 0) circle (3pt); & |(i)| \LARGE+ & \node {}; \draw(0, 0) circle (3pt); & |(j)| l & \node {}; \draw(0, 0) circle (3pt); & |(k)| e     & \node {}; \draw(0, 0) circle (3pt); & |(l)| r \\
+(b) & |(4)| -back &                                     &         &                                        & |(5)| \LARGE+ &                                     &         &                                          & |(6)| -back &                                     & \\
+    & |(h)| i     & \node {}; \draw(0, 0) circle (3pt); & |(p)| p & \node {}; \draw(0, 0) circle (3pt); & |(i)| \LARGE+ & \node {}; \draw(0, 0) circle (3pt); & |(j)| l & \node {}; \draw(0, 0) circle (3pt); & |(k)| e     & \node {}; \draw(0, 0) circle (3pt); & |(l)| r \\
   };
   \draw (a.south) -- (b.north);
   \draw (2.south) -- (f.north);
