@@ -1717,13 +1717,13 @@ are distinct.
 
 So far, vowel harmony has been shown to result from two different local
 assimilation mechanisms. Spreading in Akan is local because it
-associates multiple vocalic elements to a single feature, thus
-connecting distant elements, and utilizes adjacency on feature tiers.
+associates multiple vocalic elements to a single feature--- thus
+connecting distant vowels ---and utilizes adjacency on feature tiers.
 Agreement in both Finnish and Turkish also demonstrates the local nature
 of vowel harmony assimilation. Computation over agreement ARs is local
-because assimilation occurs over a finite distance, constrained by
-adjacency on the feature tiers. While assimilation is possible over any
-distance on the segmental tier, the adjacency of features to a morpheme
+because assimilation occurs over a finite distance--- constrained by the
+adjacency of concatenated primitives. While assimilation is possible
+over any distance on the segmental tier, the adjacency of features to a
 boundary restricts the expressive power of multi-tiered vowel harmony
 ARs. The next section outlines a specific example of how enriching the
 representation with boundaries on feature tiers affects the expressive
@@ -1735,8 +1735,8 @@ A phenomenon often discussed in autosegmental spreading literature is
 the unattested, but logically possible pattern called sour grapes
 (Lamont, 2018; McCarthy, 2011; Padgett, 1995). Sour grapes spreading is
 described as a pattern in which a feature spreads throughout a word;
-but, if the word contains a blocking segment, like low vowels in Akan,
-no spreading occurs at all. Sour grapes blockers could thus be
+but, if the word contains a blocking segment--- like low vowels in Akan
+---no spreading occurs at all. Sour grapes blockers could thus be
 considered to block spreading from any distance. Lamont (2018)
 illustrates what a sour grapes pattern would look like with nasal
 spreading below. \newpage
@@ -1766,11 +1766,16 @@ a more expressive Regular grammar.
 
 Following Lamont (2018), this section will evaluate the expressive power
 needed to generate an unattested sour grapes pattern over multi-tiered
-ARs. It will be shown that the expressive power of multi-tiered ARs is
-significantly restricted by enriching the representation because a sour
-grapes vowel harmony pattern can be described by FSCs over multi-tiered
-ARs if word boundaries are added to the set of representations allowed
-on feature tiers.
+ARs of vowel harmony. A goal shared by all of generative phonology is to
+distinguish attested patterns from logically possible, but unattested
+ones. The remaining section will show that the expressive power of
+multi-tiered ARs is significantly increased by enriching the
+representation because a sour grapes vowel harmony pattern can be
+described by FSCs over multi-tiered ARs only if word boundaries are
+included in the set of representations allowed on feature tiers. The
+problem remains of distinguishing attested patterns--- like Turkish
+which requires domain boundaries on feature tiers ---from unattested
+patterns, like sour grapes.
 
 \subsection{Sour grapes in vowel
 harmony}\label{sour-grapes-in-vowel-harmony}
@@ -1802,9 +1807,9 @@ an underlying association that is also present on the surface.
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.75em,between origins}, column sep={2.5em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-(a) & |(a)| -ATR        &           &                   &           &                   &                        & (b) & |(b)| -ATR        &           & |(f)| +ATR &   &         & \\
-    & |(1)| \textipa{O} & |(co1)| b & |(2)| \textipa{E} & |(co2)| j & |(3)| \textipa{E} & |(4)| \textipa{I} &     & |(5)| \textipa{O} & |(co3)| b & |(6)| e    & |(co4)| j & |(7)| e & |(8)| a \\
-    & |(c)| -low        &           &                   &           &                   &                        &     & |(d)| -low        &           &            &           &         & |(e)| +low \\
+(a) $\surd$ & |(a)| -ATR        &           &                   &           &                   &                        & (b) * & |(b)| -ATR        &           & |(f)| +ATR &   &         & \\
+            & |(1)| \textipa{O} & |(co1)| b & |(2)| \textipa{E} & |(co2)| j & |(3)| \textipa{E} & |(4)| \textipa{I} &     & |(5)| \textipa{O} & |(co3)| b & |(6)| e    & |(co4)| j & |(7)| e & |(8)| a \\
+            & |(c)| -low        &           &                   &           &                   &                        &     & |(d)| -low        &           &            &           &         & |(e)| +low \\
   };
   \draw (a.south) -- (1.north);
   \draw[dashed] foreach \x in {2, 3, 4} {(a.south) -- (\x.north)};
@@ -1888,6 +1893,127 @@ present.
   \end{tikzpicture}
 \end{exe}
 
+In other words, the L\textsubscript{SG} vowel harmony pattern requires
+either one feature on both the ATR and low tiers or multiple features on
+both tiers. In order to rule out a possible AR like (\ref{sgexar}c), a
+FSC would have to forbid a substructure with more than one ATR feature,
+but only a single low feature. Referring to the number of features
+present in the AR of a word requires reference to word boundaries, much
+like how morpheme boundaries were necessary to capture the
+morpheme-specific harmony pattern of Turkish. Word boundaries will be
+represented using the \textipa{\LARGE$\sharp$} symbol. As with Turkish,
+the argument could be made that word boundaries are represented only on
+the segmental tier, as shown in (\ref{sg.bound}).
+
+\begin{exe}
+\ex{Word boundaries only represented on the segmental tier}\label{sg.bound} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{
+                     & |(b)| -ATR        &         & |(c)| +ATR &         &         &            &\\
+|(1)| \LARGE$\sharp$ & |(2)| \textipa{O} & |(3)| b & |(4)| e    & |(5)| j & |(6)| e & |(7)| a    & |(8)| \LARGE$\sharp$ \\
+                     & |(f)| -low        &         &            &         &         & |(g)| +low &\\
+};
+  \draw (b.south) -- (2.north);
+  \draw (2.south) -- (f.north);
+  \draw foreach \x in {4, 6, 7} {(c.south) -- (\x.north)};
+  \draw foreach \x in {2, 4, 6} {(\x.south) -- (f.north)};
+  \draw (7.south) -- (g.north);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (1) -- (2);
+  \draw[black,->] (2) -- (3);
+  \draw[black,->] (3) -- (4);
+  \draw[black,->] (4) -- (5);
+  \draw[black,->] (5) -- (6);
+  \draw[black,->] (6) -- (7);
+  \draw[black,->] (7) -- (8);
+  \draw[black,->] (f) -- (g);
+    \end{tikzpicture}
+    
+  \ex{Ungrammatical $L_{SG}$ word also generated} \label{sg.1low} \\
+    \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{
+                     & |(b)| -ATR        &         & |(c)| +ATR &         &         &         &\\
+|(1)| \LARGE$\sharp$ & |(2)| \textipa{O} & |(3)| b & |(4)| e    & |(5)| j & |(6)| e & |(7)| i & |(8)| \LARGE$\sharp$ \\
+                     & |(f)| -low        &         &            &         &         &         &\\
+};
+  \draw (b.south) -- (2.north);
+  \draw foreach \x in {4, 6, 7} {(c.south) -- (\x.north)};
+  \draw foreach \x in {2, 4, 6, 7} {(\x.south) -- (f.north)};
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (1) -- (2);
+  \draw[black,->] (2) -- (3);
+  \draw[black,->] (3) -- (4);
+  \draw[black,->] (4) -- (5);
+  \draw[black,->] (5) -- (6);
+  \draw[black,->] (6) -- (7);
+  \draw[black,->] (7) -- (8);
+  \end{tikzpicture}
+\end{exe}
+
+\noindent While the AR in (\ref{sg.bound}) would be grammatical in
+L\textsubscript{SG}, including word boundaries only on the segmental
+tier also generates the ungrammatical structure in (\ref{sg.1low}). In
+order to distinguish (\ref{sg.bound}) from (\ref{sg.1low}) an FSC must
+mark (\ref{sg.1low})--- and not (\ref{sg.bound}) ---as ungrammatical.
+The only difference between these two ARs is that (\ref{sg.1low})
+contains a single feature on the low tier that is associated to the
+final vowel, while the final vowel in (\ref{sg.bound}) is associated to
+a different low feature than the other vowels. So, it is necessary to
+make reference to the number of features within a word and to do so---
+without counting features or introducing an existential quantifier
+---requires representing a domain restriction on feature tiers. If a
+feature is adjacent to a word boundary on both sides then it is the only
+feature present on that tier within the word. The FSC in (\ref{sg.fsc})
+utilizes a word boundary on the low tier to forbid an AR with only a
+single low feature and more than one ATR feature, which rules out the
+ungrammatical AR in (\ref{sg.forbid}) because it contains the forbidden
+substructure in bold and red. \newpage
+
+\begin{exe}
+\ex{Sour Grapes FSC}\label{sg.fsc} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{
+$\ast$               & |(a)| +ATR & |(b)| -ATR \\
+                     & |(1)| V    & \\
+|(e)| \LARGE$\sharp$ & |(c)| -low & |(d)| \LARGE$\sharp$\\
+};
+\draw (a.south) -- (1.north);
+\draw (1.south) -- (c.north);
+\draw[black,->] (a) -- (b);
+\draw[black,->] (c) -- (d);
+\draw[black,->] (e) -- (c);
+    \end{tikzpicture}
+
+  \ex{Ungrammatical $L_{SG}$ word also generated} \label{sg.forbid} \\
+    \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{
+|(a)| \LARGE$\sharp$ & |[red](b)| \textbf{-ATR}        &         & |[red](c)| \textbf{+ATR} &         &         &         & |(d)| \LARGE$\sharp$\\
+|(1)| \LARGE$\sharp$ & |[red](2)| \textbf{\textipa{O}} & |(3)| b & |(4)| e    & |(5)| j & |(6)| e & |(7)| i & |(8)| \LARGE$\sharp$ \\
+|[red](e)| \textbf{\LARGE$\sharp$} & |[red](f)| \textbf{-low}        &         &            &         &         &         & |[red](g)| \textbf{\LARGE$\sharp$}\\
+};
+  \draw[thick,red] (b.south) -- (2.north);
+  \draw[thick,red] (2.south) -- (f.north);
+  \draw foreach \x in {4, 6, 7} {(c.south) -- (\x.north)};
+  \draw foreach \x in {4, 6} {(\x.south) -- (f.north)};
+  \draw[black,->] (a) -- (b);
+  \draw[thick,red,->] (b) -- (c);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (1) -- (2);
+  \draw[black,->] (2) -- (3);
+  \draw[black,->] (3) -- (4);
+  \draw[black,->] (4) -- (5);
+  \draw[black,->] (5) -- (6);
+  \draw[black,->] (6) -- (7);
+  \draw[black,->] (7) -- (8);
+  \draw[thick,red,->] (e) -- (f);
+  \draw[thick,red,->] (f) -- (g);
+  \end{tikzpicture}
+\end{exe}
+
 So far, vowel harmony patterns with neutral vowels have been captured
 using FSCs over multi-tiered ARs in which a feature on one tier can
 affect what features are possible on another tier as long as they are
@@ -1902,7 +2028,17 @@ requires the presence of +low in the AR using existential
 quantification. Whether counting vowels in a word or using existential
 quantification, such positive or negative constraints would make the
 grammar that generates L\textsubscript{SG} more expressive than the
-ASL\textsuperscript{g\textsubscript{T}} class.
+ASL\textsuperscript{g\textsubscript{T}} class. This section has shown
+that including word boundaries on feature tiers allows an
+L\textsubscript{SG} grammar to express a minimal restriction on the
+number of features--- either one or more than one ---without counting or
+existential quantification, which ensures the grammar remains
+subregular.
+
+\subsection{Ruling out an unattested sour grapes
+pattern}\label{ruling-out-an-unattested-sour-grapes-pattern}
+
+\section{Predictions}\label{predictions}
 
 \newpage
 
