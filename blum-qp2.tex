@@ -572,10 +572,10 @@ that results in multiple vowels being associated to the same feature on
 the surface. Such assimilation can result from the spreading of vowel
 features throughout a word or agreement between non-adjacent vowels.
 This qualifying paper will show that both spreading and agreement
-generate vowel harmony patterns on the surface, and all such patterns
-are captured by a uniform theory of markedness constraints. In the vowel
-harmony literature, the term \enquote{spreading} has generally referred
-to an assimilatory process that transforms underlying ARs with
+generate vowel harmony patterns on the surface, and both kinds of
+assimilation are captured by a theory of markedness based in FSCs. In
+the vowel harmony literature, the term \enquote{spreading} has generally
+referred to an assimilatory process that transforms underlying ARs with
 underspecified vowels into surface ARs in which at least some vowels are
 associated to a single feature. On the surface, the result of a
 spreading process over ARs is a structure in which a single feature is
@@ -621,15 +621,17 @@ surface ARs with non-adjacent identical features, as in (\ref{agree}a).
   \end{tikzpicture}
 \end{exe}
 
-\noindent On the surface, both spreading and agreement are derived via
-the concatenation operation, as shown in (\ref{concat.ex}) and
+On the surface, both spreading and agreement are derived via the
+concatenation operation, as shown in (\ref{concat.ex}) and
 (\ref{agree}b), respectively. In (\ref{concat.ex}), adjacent identical
 features are merged to generate multiple association. In (\ref{agree}b),
 multiple iterations of a +back feature are possible when a primitive
 with a -back feature intervenes between two primitives with +back
-features. The AR in (\ref{agree}b) is possible because each primitive is
-only concatenated to a single primitive that is directly adjacent to it.
-Both the spreading and agreement ARs satisfy FS, the NCC, and the OCP.
+features. The non-adjacent +back features in (\ref{agree}b) are still
+local in the FSC sense because only a single -back feature intervenes
+regardless of the number of vowels associated to it; so agreement
+harmony patterns can still be captured by FSCs. Both spreading and
+agreement ARs satisfy FS, the NCC, and the OCP.
 
 It will be shown that vowel feature assimilation patterns that result
 from both spreading and agreement are local because they are captured by
@@ -821,7 +823,8 @@ because the FSC that captures the pattern need only refer to the
 associations between vowels and features. The next section outlines a
 vowel harmony pattern with transparent vowels.
 
-\subsubsection{Spreading is Local}\label{spreading-is-local}
+\subsubsection{Surface spreading is
+local}\label{surface-spreading-is-local}
 
 Some previous analyses of vowel harmony assume that all harmony patterns
 result from a single assimilation process: feature spreading. Feature
@@ -862,12 +865,13 @@ a single feature that is associated to multiple vowels, as shown in
 (\ref{concat.ex}) and (\ref{akan.ex}). Akan provides an example of a
 classic spreading pattern, in which an initial vowel feature (ATR) is
 associated to all the vowels in a word to the left of a +low blocking
-vowel, as shown in (\ref{akan.obeijii}a). The analysis of Akan provided
-here demonstrates that spreading generates local structures on the
-surface. All vowels are associated to the same ATR feature, as in
-(\ref{akan.obeijii}a), or when two different ATR features are present
-they are adjacent to each other regardless of how many vowels are
-associated to each. In addition, the FSC posited for Akan is able to
+vowel, as shown in (\ref{akan.obeijii}a).
+
+The analysis of Akan provided here demonstrates that spreading ARs are
+local on the surface. All vowels are associated to the same ATR feature,
+as in (\ref{akan.obeijii}a), or when two different ATR features are
+present they are adjacent to each other regardless of how many vowels
+are associated to each. In addition, the FSC posited for Akan is able to
 capture the Akan ATR harmony pattern for words with and without blocking
 vowels.
 
@@ -1113,7 +1117,8 @@ considered local because the FSCs that capture the pattern refer to the
 associations between vowels and features and the ordering between
 features.
 
-\subsubsection{Agreement is Local}\label{agreement-is-local}
+\subsubsection{Surface agreement is
+local}\label{surface-agreement-is-local}
 
 Finnish exemplifies an assimilation mechanism that differs from
 spreading. In Finnish there are grammatical words like
@@ -1187,21 +1192,26 @@ feature on that tier has the opposite value, as shown in
   \end{tikzpicture}
 \end{exe}
 
-The analysis of Finnish provided here demonstrates that agreement
-generates local structures on the surface. Transparent vowels are
-associated to -back features on the same tier as the back features to
-which all other vowels associate. Identical +back features are connected
-via adjacency to the -back feature between them regardless of the number
-of vowels associated to the intervening -back feature. In
-(\ref{finnish.agree}) more than one transparent vowel is associated to a
--back feature that intervenes between two +back features. On the
-segmental tier it would appear that two +back vowels, such as
-{[}\textipa{A}{]} and {[}o{]}, can be separated by more than one -back
-vowel, but on the back feature tier, the +back and -back features are
-adjacent. The grammatical AR in (\ref{finnish.agree}) also does not
-violate the Finnish FSCs in (\ref{fsc.finnish}) and so the Finnish FSCs
-are still able to capture the agreement pattern and thus Finnish vowel
-harmony via agreement can be considered local.
+The analysis of Finnish provided here demonstrates that agreement ARs
+are local on the surface. Transparent vowels are associated to -back
+features on the same tier as the back features to which all other vowels
+associate, which eliminates the need for underspecification. Identical
++back features are connected via adjacency to the -back feature between
+them regardless of the number of vowels associated to the intervening
+-back feature. In (\ref{finnish.agree}) more than one transparent vowel
+is associated to a -back feature that intervenes between two +back
+features. On the segmental tier it would appear that two +back vowels,
+such as {[}\textipa{A}{]} and {[}o{]}, can be separated by more than one
+-back vowel, but on the back feature tier the +back and -back features
+are adjacent. The +back agreement appears to skip over any number of
+transparent vowels because they are all associated to a single -back
+feature, which is adjacent to the agreeing +back features. This
+adjacency on the back tier allows transparent vowels to be associated to
+a feature on the same tier as harmonizing vowels, rather than being
+underspecified. The grammatical AR in (\ref{finnish.agree}) also does
+not violate the Finnish FSCs in (\ref{fsc.finnish}) and so the Finnish
+FSCs are still able to capture the agreement pattern and thus Finnish
+vowel harmony via agreement can be considered local.
 
 \section{Morphologically-conditioned
 harmony}\label{morphologically-conditioned-harmony}
@@ -1719,12 +1729,11 @@ assimilation between morphemes still occurs.
 features in (\ref{turkish.ipler}a), repeated here for example, is
 derived via concatenation so that the two iterations of the -back
 feature are not merged and remain on the surface. The assimilation of
--back must thus be due to agreement rather than spreading, like in
-Finnish, because the surface AR in (\ref{ipler}a) contains two identical
-non-adjacent -back features. The NCC is satisfied in (\ref{ipler})
-because morpheme boundaries are not associated to anything. The OCP is
-also technically satisfied because adjacent elements on the feature tier
-are distinct.
+-back must thus be due to agreement rather than spreading because the
+surface AR in (\ref{ipler}a) contains two identical non-adjacent -back
+features. The NCC is satisfied in (\ref{ipler}) because morpheme
+boundaries are not associated to anything. The OCP is also technically
+satisfied because adjacent elements on the feature tier are distinct.
 
 So far, vowel harmony has been shown to result from two different local
 assimilation mechanisms. Spreading in Akan is local because it
@@ -1733,12 +1742,18 @@ connecting distant vowels ---and utilizes adjacency on feature tiers.
 Agreement in both Finnish and Turkish also demonstrates the local nature
 of vowel harmony assimilation. Computation over agreement ARs is local
 because assimilation occurs over a finite distance--- constrained by the
-adjacency of concatenated primitives. While assimilation is possible
-over any distance on the segmental tier, the adjacency of features to a
-boundary restricts the expressive power of multi-tiered vowel harmony
-ARs. The next section outlines a specific example of how enriching the
-representation with boundaries on feature tiers affects the expressive
-power of multi-tiered ARs.
+adjacency of concatenated primitives.
+
+Each language's vowel harmony pattern determines whether or not
+boundaries must be represented. For example, Finnish utilizes the same
+harmony pattern in roots and suffixes so a single set of FSCs can
+capture the harmony pattern without making reference to a morphological
+boundary. Turkish, on the other hand, has disharmonic roots and suffixes
+harmonize with the root-final vowel so the FSCs must reference a
+morphological boundary in order to distinguish suffixes from roots. The
+next section outlines an example of how enriching the representation
+with boundaries on feature tiers affects the expressive power of
+multi-tiered ARs.
 
 \section{Sour Grapes}\label{sour-grapes}
 
@@ -1746,42 +1761,36 @@ A phenomenon often discussed in autosegmental spreading literature is
 the unattested, but logically possible pattern called sour grapes
 (Lamont, 2018; McCarthy, 2011; Padgett, 1995). Sour grapes spreading is
 described as a pattern in which a feature spreads throughout a word;
-but, if the word contains a blocking segment--- like low vowels in Akan
----no spreading occurs at all. Sour grapes blockers could thus be
-considered to block spreading from any distance. Lamont (2018)
-illustrates what a sour grapes pattern would look like with nasal
-spreading, copied below in (\ref{nsg}).
+but, if the word contains a blocking segment no spreading occurs at all.
+Sour grapes blockers could thus be considered to block spreading from
+any distance. Lamont (2018) illustrates what a sour grapes pattern would
+look like with nasal spreading, shown below in (\ref{nsg}).
 
 \begin{exe}
-\ex{Long distance blocking of local spreading, e.g. with nasal harmony (copied from Lamont 2018)}\label{nsg}
+\ex{Long distance blocking of local spreading, e.g. with nasal harmony (adapted from Lamont 2018)}\label{nsg}
 \begin{xlist}
   \ex /wawa/ $\mapsto$ [wawa]
   \ex /mawa/ $\mapsto$ \textipa{[m\~a\~w\~a]}
-  \ex /awamawa/ $\mapsto$ \textipa{[awam\~a\~w\~a]}
   \ex /mawasa/ $\mapsto$ [mawasa]
-  \ex /mawamawasa/ $\mapsto$ \textipa{[m\~a\~w\~amawasa]}
 \end{xlist}
 \end{exe}
 
-\noindent In (\ref{nsg}a-c) nasality spreads from an {[}m{]} onto each
-segment to the right of it. In (\ref{nsg}d) an {[}s{]} is introduced,
-which prevents nasality from spreading at all. In (\ref{nsg}e) it is
-clear that {[}s{]} only blocks nasal spreading from the closest {[}m{]}
-to its left. Lamont (2018) further shows that the nasal sour grapes
-pattern over two-tiered ARs must be generated by a grammar that is more
-expressive than ASL\textsuperscript{g\textsubscript{T}}. The nasal sour
-grapes pattern does not meet the requirements for any of the subregular
-classes of grammars that ASL\textsuperscript{g\textsubscript{T}} cuts
-across and so Lamont (2018) posits that sour grapes must be generated by
-a more expressive Regular grammar.
+\noindent In (\ref{nsg}b) nasality spreads from an {[}m{]} onto each
+segment to the right of it. In (\ref{nsg}c) an {[}s{]} is introduced,
+which prevents nasality from spreading at all. Lamont (2018) further
+shows that the nasal sour grapes pattern over two-tiered ARs must be
+generated by a grammar that is more expressive than
+ASL\textsuperscript{g\textsubscript{T}}. The nasal sour grapes pattern
+does not meet the requirements for any of the subregular classes of
+grammars that ASL\textsuperscript{g\textsubscript{T}} cuts across and so
+Lamont (2018) posits that sour grapes must be generated by a more
+expressive Regular grammar.
 
 Following Lamont (2018), this section will evaluate whether or not FSCs
 can be used to capture an unattested sour grapes pattern over
-multi-tiered ARs of vowel harmony. A goal shared by all of generative
-phonology is to distinguish attested patterns from logically possible,
-but unattested ones. The remaining section will show that a sour grapes
+multi-tiered ARs of vowel harmony. It will be shown that a sour grapes
 vowel harmony pattern can be described by FSCs over multi-tiered ARs
-only if word boundaries are included in the set of representations
+whether word boundaries are included in the set of representations
 allowed on either the segmental or feature tiers.
 
 \subsection{Sour grapes in vowel
@@ -1791,12 +1800,12 @@ A parallel to the nasal sour grapes pattern can be drawn using the Akan
 vowel harmony pattern discussed in section 2.1. In traditional
 descriptions of Akan, the association of an ATR feature is said to
 spread from an initial vowel onto all -low vowels to its right; for
-example, the word \textipa{O}b\textipa{E}j\textipa{E}\textipa{I} `he
-came and did it', shown in (\ref{sgak}a) and (\ref{akan.sg}a), is
-grammatical in Akan. However, +low vowels block Akan vowel harmony to
-their left; so an Akan-like sour grapes word would have a +low vowel and
-the ATR feature would not spread to any vowel on the left of that +low
-vowel, as in (\ref{sgak}b). The surface ARs in (\ref{akan.sg}) show the
+example, the word \emph{\textipa{obisaI}} `he asked', shown in
+(\ref{sgak}a) and (\ref{akan.sg}a), is grammatical in Akan. However,
++low vowels block Akan vowel harmony to their left; so an Akan-like sour
+grapes word would have a +low vowel and the +ATR feature would not
+spread to any vowel on the left of that +low vowel, as in (\ref{sgak}b)
+and (\ref{akan.sg}b). The surface ARs in (\ref{akan.sg}) show the
 difference between the full spreading harmony in a word of Akan and the
 so-called long-distance blocking effect in a related hypothetical word
 of the sour grapes pattern.
@@ -1804,31 +1813,33 @@ of the sour grapes pattern.
 \begin{exe}
 \ex{ATR harmony}\label{sgak} 
 \begin{xlist}
-  \ex Akan: /\textipa{O}bejei/ $\mapsto$ [\textipa{O}b\textipa{E}j\textipa{E}\textipa{I}] `he came and did it'
-  \ex sour grapes: /\textipa{O}bejea/ $\mapsto$ [\textipa{O}bejea]
+  \ex Akan: /obisai/ $\mapsto$ [\textipa{obisaI}] `he asked'
+  \ex sour grapes: /obisai/ $\mapsto$ [\textipa{obIsaI}]
 \end{xlist}
-\end{exe}
-
-\newpage
+\end{exe}\newpage
 
 \begin{exe}
 \ex{ATR harmony in Akan vs sour grapes}\label{akan.sg} \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, row sep={3.75em,between origins}, column sep={2.5em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  \matrix [matrix of nodes, row sep={3.75em,between origins}, column sep={2.95em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
-(a) Akan &            &           &                   &           &                   &                       & (b) Sour Grapes &            &           &            &           &         & \\
-|(a)| -ATR &           &                   &           &                   &                       &                 & |(b)| -ATR &           & |(f)| +ATR &           &         & \\
-|(1)| \textipa{O} & |(co1)| b & |(2)| \textipa{E} & |(co2)| j & |(3)| \textipa{E} & |(4)| \textipa{I} &     & |(5)| \textipa{O} & |(co3)| b & |(6)| e    & |(co4)| j & |(7)| e & |(8)| a \\
-|(c)| -low        &           &                   &           &                   &                        &     & |(d)| -low        &           &            &           &         & |(e)| +low \\
+(a) Akan   &           &         &           &             &                   &     & (b) Sour Grapes          &            &                   &            &           & \\
+|(a)| +ATR &           &         &           & |(Ab)| -ATR &                   &     & |(b)| +ATR                   &            & |(f)| -ATR        &           &            & \\
+|(1)| o    & |(co1)| b & |(2)| i & |(co2)| s & |(3)| a     & |(4)| \textipa{I} &     & |(5)| o                      & |(co3)| b  & |(6)| \textipa{I} & |(co4)| s & |(7)| a    & |(8)| \textipa{I} \\
+|(c)| -low &           &         &           & |(f2)| +low & |(g)| -low        &     & |(d)| -low                   &            &                    &           & |(h)| +low & |(e)| -low \\
   };
   \draw (a.south) -- (1.north);
-  \draw foreach \x in {2, 3, 4} {(a.south) -- (\x.north)};
-  \draw (1.south) -- (c.north);
-  \draw foreach \x in {2, 3, 4} {(\x.south) -- (c.north)};
-  \draw foreach \x in {6, 7, 8} {(f.south) -- (\x.north)};
-  \draw foreach \x in {5, 6, 7} {(\x.south) -- (d.north)};
+  \draw foreach \x in {1, 2} {(a.south) -- (\x.north)};
+  \draw foreach \x in {1, 2} {(\x.south) -- (c.north)};
+  \draw (3.south) -- (f2.north);
+  \draw (4.south) -- (g.north);
+  \draw foreach \x in {3, 4} {(Ab.south) -- (\x.north)};
   \draw (b.south) -- (5.north);
+  \draw foreach \x in {6, 7, 8} {(f.south) -- (\x.north)};
+  \draw foreach \x in {5, 6} {(\x.south) -- (d.north)};
+  \draw (7.south) -- (h.north);
   \draw (8.south) -- (e.north);
+  \draw[black,->] (a) -- (Ab);
   \draw[black,->] (b) -- (f);
   \draw[black,->] (1) -- (co1);
   \draw[black,->] (co1) -- (2);
@@ -1840,16 +1851,18 @@ of the sour grapes pattern.
   \draw[black,->] (6) -- (co4);
   \draw[black,->] (co4) -- (7);
   \draw[black,->] (7) -- (8);
-  \draw[black,->] (d) -- (e);
+  \draw[black,->] (c) -- (f2);
+  \draw[black,->] (f2) -- (g);
+  \draw[black,->] (d) -- (h);
+  \draw[black,->] (h) -- (e);
   \end{tikzpicture}
 \end{exe}
 
-\noindent In (\ref{akan.sg}a) the -ATR feature has spread from the
-initial -low vowel onto every -low vowel to its right. However, in
-(\ref{akan.sg}b) the final +low vowel prevents the initial -ATR feature
-from spreading. So each vowel maintains its underlying associations on
-the surface and the -low vowels are each associated to one of two
-different adjacent ATR features.
+\noindent In (\ref{akan.sg}a) the +ATR feature has spread from the
+initial -low vowel onto the -low vowel to its right and the +low vowel
+is associated to a different ATR feature. However, in (\ref{akan.sg}b)
+the penultimate +low vowel prevents the initial +ATR feature from
+spreading, so the second vowel is associated to a -ATR feature.
 
 On the surface, a word in an Akan-like language with sour grapes
 (L\textsubscript{SG}) can be distinguished from Akan
@@ -1918,138 +1931,45 @@ right of -low requires that FSCs make reference to final word
 boundaries, which will be represented using the \textipa{\LARGE$\#$}
 symbol.
 
-In addition, the argument could be made that word boundaries are
-represented only on the segmental tier. In that case, the number of
-features on a tier can be calculated by making reference to the
-adjacency of vowels to a word boundary and their associations to
-features. The FSCs in (\ref{fsc.1low}) forbid a strutcure with two
-different ATR features in which the -low feature is associated to the
-word-final vowel regardless of the number of vowels in the word. As in
-Akan, the ordering relation on the ATR tier is excluded because the same
-constraint holds regardless of whether -ATR precedes or succeeds +ATR.
-The ARs in (\ref{sg.bound}) and (\ref{sg.1low}) illustrate the
-difference between a grammatical and an ungrammatical
-L\textsubscript{SG} word.
-
-\begin{exe}
-\ex{Sour grapes FSCs with boundaries on segmental tier}\label{fsc.1low} \\
-  \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
-{
-(a) $\ast$ & |(a)| -ATR & |(b)| +ATR &                  & (b) $\ast$ & |(d)| -ATR & |(e)| +ATR &                & \\
-           & |(1)| V    & |(2)| V    & |(3)| \LARGE$\#$ &            & |(4)| V    & |(5)| V    & |(6)| V$^n$ & |(7)| \LARGE$\#$\\
-           & |(c)| -low &            &                  &            & |(f)| -low &            &                & \\
-};
-  \draw (a.south) -- (1.north);
-  \draw (b.south) -- (2.north);
-  \draw foreach \x in {1, 2} {(\x.south) -- (c.north)};
-  \draw (d.south) -- ( 4.north);
-  \draw (e.south) -- (5.north);
-  \draw foreach \x in {4, 5, 6} {(\x.south) -- (f.north)};
-  \end{tikzpicture}
-
-\ex{Grammatical L$_{SG}$ AR}\label{sg.bound} \\
-  \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
-{
-                     & |(b)| -ATR        &         & |(c)| +ATR &         &         &            &\\
-|(1)| \LARGE$\#$ & |(2)| \textipa{O} & |(3)| b & |(4)| e    & |(5)| j & |(6)| e & |(7)| a    & |(8)| \LARGE$\#$ \\
-                     & |(f)| -low        &         &            &         &         & |(g)| +low &\\
-};
-  \draw (b.south) -- (2.north);
-  \draw (2.south) -- (f.north);
-  \draw foreach \x in {4, 6, 7} {(c.south) -- (\x.north)};
-  \draw foreach \x in {2, 4, 6} {(\x.south) -- (f.north)};
-  \draw (7.south) -- (g.north);
-  \draw[black,->] (b) -- (c);
-  \draw[black,->] (1) -- (2);
-  \draw[black,->] (2) -- (3);
-  \draw[black,->] (3) -- (4);
-  \draw[black,->] (4) -- (5);
-  \draw[black,->] (5) -- (6);
-  \draw[black,->] (6) -- (7);
-  \draw[black,->] (7) -- (8);
-  \draw[black,->] (f) -- (g);
-  \end{tikzpicture}
-\newpage
-
-\ex{Ungrammatical L$_{SG}$ AR} \label{sg.1low} \\
-  \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
-{
-                     & |[red](b)| \textbf{-ATR}        &         & |[red](c)| \textbf{+ATR} &         &         &         &\\
-|(1)| \LARGE$\#$ & |[red](2)| \textbf{\textipa{O}} & |(3)| b & |[red](4)| \textbf{e}    & |(5)| j & |[red](6)| \textbf{e} & |[red](7)| \textbf{i} & |[red](8)| \textbf{\LARGE$\#$} \\
-                     & |[red](f)| \textbf-low        &         &            &         &         &         &\\
-};
-  \draw[thick,red] (b.south) -- (2.north);
-  \draw[thick,red] (c.south) -- (4.north);
-  \draw foreach \x in {6, 7} {(c.south) -- (\x.north)};
-  \draw[thick,red] foreach \x in {2, 4, 6, 7} {(\x.south) -- (f.north)};
-  \draw[black,->] (b) -- (c);
-  \draw[black,->] (1) -- (2);
-  \draw[black,->] (2) -- (3);
-  \draw[black,->] (3) -- (4);
-  \draw[black,->] (4) -- (5);
-  \draw[black,->] (5) -- (6);
-  \draw[black,->] (6) -- (7);
-  \draw[black,->] (7) -- (8);
-  \end{tikzpicture}
-\end{exe}
-
-\noindent The FSCs in (\ref{fsc.1low}) allow the grammatical AR in
-(\ref{sg.bound}) and mark (\ref{sg.1low}) ungrammatical because it
-contains the forbidden substructure of (\ref{fsc.1low}b) in bold and
-red. The difference between these two ARs is that (\ref{sg.bound})
-contains a +low feature that is associated to the final vowel, while
-(\ref{sg.1low}) contains only a single -low feature associated to the
-final vowel.
-
 \subsubsection{Boundaries on feature
 tiers}\label{boundaries-on-feature-tiers}
 
-While sour grapes can be captured by FSCs over multi-tiered ARs when
-word boundaries are restricted to the segmental tier, section 4.1
-demonstrated, for Turkish, that morpheme boundaries must be represented
-on feature tiers as well. Extending this requirement to word boundaries
-in a sour grapes pattern simplifies the FSCs needed to capture the vowel
-harmony pattern in L\textsubscript{SG} by decreasing the number of
-vowels represented on the segmental tier. As mentioned above,
+Section 4.1 demonstrated, for Turkish, that morpheme boundaries must be
+represented on feature tiers, and this same requirement can be extended
+to word boundaries in a sour grapes pattern. As mentioned above,
 L\textsubscript{SG} allows surface spreading ARs with full ATR and low
 harmony in addition to surface agreement ARs only when a final +low
 vowel is present. In order to restrict the occurrence of ATR agreement,
-the FSCs in (\ref{fsc.1low}) above forbid a structure with two different
-ATR features when a -low feature is associated to a vowel that is
-adjacent to the final word boundary. However, with boundaries allowed on
-feature tiers the FSC in (\ref{sg.fsc}) does not need to reference more
-than one vowel on the segmental tier; rather, the -low feature itself is
-designated as word-final. As shown in (\ref{sg.fsc}), the sour grapes
-vowel harmony pattern can thus be captured by forbidding a structure
-with two different ATR features and a -low feature that is adjacent to a
-final word boundary. The ordering relation is excluded on the ATR tier
-because the same constraint holds regardless of the order in which the
-two ATR features occur.
+the FSCs in (\ref{sg.fsc}) forbid a structure with two different
+adjacent ATR features when the -low feature is adjacent to a final word
+boundary.
 
 \begin{exe}
 \ex{Sour Grapes FSC}\label{sg.fsc} \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
 {
-$\ast$  & |(a)| -ATR & |(b)| +ATR \\
-        & |(1)| V    & \\
-        & |(c)| -low & |(d)| \LARGE$\#$ \\
+(a) $\ast$  & |(a)| -ATR & |(b)| +ATR       & & (b) $\ast$ & |(e)| +ATR & |(f)| -ATR \\
+            & |(1)| V    &                  & &            & |(2)| V    & \\
+            & |(c)| -low & |(d)| \LARGE$\#$ & &            & |(g)| -low & |(h)| \LARGE$\#$ \\
 };
   \draw (a.south) -- (1.north);
   \draw (1.south) -- (c.north);
+  \draw[black,->] (a) -- (b);
   \draw[black,->] (c) -- (d);
+  \draw (e.south) -- (2.north);
+  \draw (2.south) -- (g.north);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (g) -- (h);
     \end{tikzpicture}
 
   \ex{Ungrammatical L$_{SG}$ AR} \label{sg.forbid} \\
     \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
 {
-|(a)| \LARGE$\#$ & |[red](b)| \textbf{-ATR}        &         & |[red](c)| \textbf{+ATR} &         &         &         & |(d)| \LARGE$\#$\\
-|(1)| \LARGE$\#$ & |[red](2)| \textbf{\textipa{O}} & |(3)| b & |(4)| e    & |(5)| j & |(6)| e & |(7)| i & |(8)| \LARGE$\#$ \\
-|(e)| \LARGE$\#$ & |[red](f)| \textbf{-low}        &         &            &         &         &         & |[red](g)| \textbf{\LARGE$\#$}\\
+|(a)| \LARGE$\#$ & |[red](b)| \textbf{-ATR} &         & |[red](c)| \textbf{+ATR} &         &        &                   & |(d)| \LARGE$\#$\\
+|(1)| \LARGE$\#$ & |[red](2)| \textbf{o}    & |(3)| b & |(4)| \textipa{I}        & |(5)| s & |(6)| e & |(7)| \textipa{I} & |(8)| \LARGE$\#$ \\
+|(e)| \LARGE$\#$ & |[red](f)| \textbf{-low} &         &                          &         &        &                & |[red](g)| \textbf{\LARGE$\#$}\\
 };
   \draw[thick,red] (b.south) -- (2.north);
   \draw[thick,red] (2.south) -- (f.north);
@@ -2070,23 +1990,106 @@ $\ast$  & |(a)| -ATR & |(b)| +ATR \\
   \end{tikzpicture}
 \end{exe}
 
-Unlike with boundaries only on the segmental tier, when word boundaries
-are represented on feature tiers L\textsubscript{SG} is captured by a
-single simpler FSC; however, L\textsubscript{SG} can be captured with
-FSCs over multi-tiered ARs using both representations. The FSC in
-(\ref{sg.fsc}) includes two different ATR features, but it differs from
-the FSCs in (\ref{fsc.1low}) because it includes only two associations
-to a single vowel and the -low feature is adjacent to a word boundary.
-However, the FSC in (\ref{sg.fsc}) is able to capture the same
-constraint against a word-final -low feature. The AR of the hypothetical
-L\textsubscript{SG} word {[}\textipa{O}bejei{]} in (\ref{sg.forbid}),
-for example, is marked ungrammatical because it contains the forbidden
-structure of (\ref{sg.fsc}) with a -low feature adjacent to a final word
-boundary in bold and red. This same word in (\ref{sg.1low}) is marked
-ungrammatical by the FSC in (\ref{fsc.1low}b). So the sour grapes vowel
-harmony pattern of L\textsubscript{SG} can be captured using FSCs over
-multi-tiered ARs whether word boundaries are represented on the
-segmental tier only or on both the segmental and feature tiers.
+L\textsubscript{SG} can be captured by FSCs when word boundaries are
+represented on feature tiers. The FSC in (\ref{sg.fsc}) is able to
+capture the constraint against a word-final -low feature. The AR of the
+hypothetical L\textsubscript{SG} word {[}\textipa{obIseI}{]} in
+(\ref{sg.forbid}), for example, is marked ungrammatical because it
+contains the forbidden structure of (\ref{sg.fsc}) with a -low feature
+adjacent to a final word boundary in bold and red.
+
+\subsubsection{Boundaries only on segmental
+tier}\label{boundaries-only-on-segmental-tier}
+
+In addition, the argument could be made that word boundaries are
+represented only on the segmental tier. In that case, the number of
+features on a tier can be calculated by making reference to the
+adjacency of vowels to a word boundary and their associations to
+features. The FSCs in (\ref{fsc.1low}) forbid a strutcure with two
+different ATR features in which the -low feature is associated to the
+word-final vowel regardless of the number of vowels in the word. As in
+Akan, the ordering relation on the ATR tier is excluded because the same
+constraint holds regardless of whether -ATR precedes or succeeds +ATR.
+The ordering relation is omitted between vowels because word-medial
+consonants would make vowels non-adjacent. The ARs in (\ref{sg.bound})
+and (\ref{sg.1low}) illustrate the difference between a grammatical and
+an ungrammatical L\textsubscript{SG} word.
+
+\begin{exe}
+\ex{Sour grapes FSCs with boundaries on segmental tier}\label{fsc.1low} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{
+(a) $\ast$ & |(a)| +ATR & |(b)| -ATR &                  & (b) $\ast$ & |(d)| +ATR & |(e)| -ATR &                & \\
+           & |(1)| V    & |(2)| V    & |(3)| \LARGE$\#$ &            & |(4)| V    & |(5)| V    & |(6)| V & |(7)| \LARGE$\#$\\
+           & |(c)| -low &            &                  &            & |(f)| -low &            &                & \\
+};
+  \draw (a.south) -- (1.north);
+  \draw (b.south) -- (2.north);
+  \draw foreach \x in {1, 2} {(\x.south) -- (c.north)};
+  \draw (d.south) -- ( 4.north);
+  \draw (e.south) -- (5.north);
+  \draw foreach \x in {4, 5, 6} {(\x.south) -- (f.north)};
+  \draw[black,->] (2) -- (3);
+  \draw[black,->] (6) -- (7);
+  \end{tikzpicture}
+
+\ex{Grammatical L$_{SG}$ AR}\label{sg.bound} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{
+                 & |(b)| +ATR &         & |(c)| -ATR &      &         &            &                            & \\
+|(1)| \LARGE$\#$ & |(2)| o    & |(3)| b & |(4)| \textipa{I} & |(5)| s & |(6)| a    & |(7)| \textipa{I} & |(8)| \LARGE$\#$ \\
+                 & |(d)| -low &         &                   &         & |(e)| +low & |(f)| -low & \\
+};
+  \draw (b.south) -- (2.north);
+  \draw foreach \x in {4, 6, 7} {(c.south) -- (\x.north)};
+  \draw foreach \x in {2, 4} {(\x.south) -- (d.north)};
+  \draw (6.south) -- (e.north);
+  \draw (7.south) -- (f.north);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (1) -- (2);
+  \draw[black,->] (2) -- (3);
+  \draw[black,->] (3) -- (4);
+  \draw[black,->] (4) -- (5);
+  \draw[black,->] (5) -- (6);
+  \draw[black,->] (6) -- (7);
+  \draw[black,->] (7) -- (8);
+  \draw[black,->] (d) -- (e);
+  \draw[black,->] (e) -- (f);
+  \end{tikzpicture}
+
+\ex{Ungrammatical L$_{SG}$ AR} \label{sg.1low} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, row sep={3.65em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}]
+{
+                 & |[red](b)| \textbf{-ATR}  &         & |[red](c)| \textbf{+ATR}        &         &                       &                                 & \\
+|(1)| \LARGE$\#$ & |[red](2)| \textbf{o}     & |(3)| b & |[red](4)| \textbf{\textipa{I}} & |(5)| s & |[red](6)| \textbf{e} & |[red](7)| \textbf{\textipa{I}} & |[red](8)| \textbf{\LARGE$\#$} \\
+                     & |[red](f)| \textbf-low &        &                                 &         &                       &                                 & \\
+};
+  \draw[thick,red] (b.south) -- (2.north);
+  \draw[thick,red] (c.south) -- (4.north);
+  \draw foreach \x in {6, 7} {(c.south) -- (\x.north)};
+  \draw[thick,red] foreach \x in {2, 4, 7} {(\x.south) -- (f.north)};
+  \draw (6.south) -- (f.north);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (1) -- (2);
+  \draw[black,->] (2) -- (3);
+  \draw[black,->] (3) -- (4);
+  \draw[black,->] (4) -- (5);
+  \draw[black,->] (5) -- (6);
+  \draw[black,->] (6) -- (7);
+  \draw[thick,red,->] (7) -- (8);
+  \end{tikzpicture}
+\end{exe}
+
+\noindent The FSCs in (\ref{fsc.1low}) allow the grammatical AR in
+(\ref{sg.bound}) and mark (\ref{sg.1low}) ungrammatical because it
+contains the forbidden substructure of (\ref{fsc.1low}b) in bold and
+red. The difference between these two ARs is that (\ref{sg.bound})
+contains a +low feature that is associated to the final vowel, while
+(\ref{sg.1low}) contains only a single -low feature associated to the
+final vowel.
 
 \section{Discussion}\label{discussion}
 
