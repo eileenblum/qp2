@@ -111,6 +111,9 @@ Correspondence concerning this article should be addressed to Eileen Blum, 18 Se
 \newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
 
+\usepackage{lineno}
+
+\linenumbers
 \usepackage{tipa}
 \usepackage{gb4e}
 \noautomath
@@ -137,6 +140,12 @@ Correspondence concerning this article should be addressed to Eileen Blum, 18 Se
 \newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
+
+Revisions (p. = page, l. = line): \newline p.4, l.124 fix spelling of
+\enquote{analysis} \newline p.5, l.162 change \enquote{one element on a
+feature} to \enquote{one element on each feature tier} \newline p.12,
+l.360 reword second sentence to define locality \newline p.12, l.362 fix
+spelling of \enquote{adjacent} \newline 
 
 \section{Introduction}\label{introduction}
 
@@ -916,10 +925,12 @@ associated to all the vowels in a word to the left of a +low blocking
 vowel, as shown in (\ref{akan.obeijii}a).
 
 The analysis of Akan provided here demonstrates that spreading ARs are
-local on the surface. All vowels are associated to the same ATR feature,
-as in (\ref{akan.obeijii}a), or when two different ATR features are
-present they are adjacent to each other regardless of how many vowels
-are associated to each. In addition, the FSC posited for Akan is able to
+local on the surface. Here locality means that spreading ARs consist of
+a domain defined by a single ATR feature node, they must include a
+contiguous span of vowels, but they are not bounded in length, as in
+(\ref{akan.obeijii}a); or when two different ATR features are present
+they are adjacent to each other regardless of how many vowels are
+associated to each. In addition, the FSC posited for Akan is able to
 capture the Akan ATR harmony pattern for words with and without blocking
 vowels.
 

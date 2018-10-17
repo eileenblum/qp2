@@ -22,7 +22,7 @@ figsintext        : yes
 figurelist        : no
 tablelist         : no
 footnotelist      : no
-lineno            : no
+lineno            : yes
 mask              : no
 numbersections    : true
 
@@ -43,6 +43,13 @@ header-includes:
 ```{r load_packages, include = FALSE}
 library("papaja")
 ```
+Revisions (p. = page, l. = line):
+\newline p.4, l.124 fix spelling of "analysis"
+\newline p.5, l.162 change "one element on a feature" to "one element on each feature tier"
+\newline p.12, l.360 reword second sentence to define locality
+\newline p.12, l.362 fix spelling of "adjacent"
+\newline 
+
 # Introduction
 
   This qualifying paper aims to investigate the locality of vowel harmony patterns over multi-tiered autosegmental representations (ARs) using @jardinelocaltone's forbidden substructure constraints (FSCs) over multi-tiered ARs. The investigation provides a well-defined, computationally motivated theory of well-formedness in vowel harmony. @jardinelocaltone developed a theory of tonal well-formedness and determined that tone patterns are fundamentally local over two-tiered ARs. Investigating the locality of vowel harmony patterns allows for a theory of well-formedness that makes accurate typological predictions. 
@@ -77,7 +84,7 @@ Finite $\subsetneq$ Regular $\subsetneq$ Context-Free $\subsetneq$ Context-Sensi
   However, this qualifying paper constitutes the first formal language theoretic study of vowel harmony as a phonotactic restriction rather than an input-output map. It will be taking a slightly different approach than has been taken before by evaluating only the restrictions on output substructures. While vowel harmony has been considered a derivational process, this paper aims to determine the locality of only the surface restrictions on vowel harmony patterns over multi-tiered ARs. The harmonizing ARs that will be examined contain at least one feature that is associated to more than one vowel, as it would be on the surface. Ignoring input structures in this way allows for the eventual classification of vowel harmony within the sub-SF hierarchy of patterns, which in turn allows for the comparison of vowel harmony with other phonological patterns that have been classified on the same hierarchy, such as tone in @jardineexpressag. 
   
   The structure of the remainder of this paper is as follows: Section 2 is devoted to the representations with discussion of the motivations in 2.1 and assumptions in 2.2 that are adopted throughout the paper as well as a definition of FSCs in 2.3 and an explanation of different assimilation processes 2.4. Section 3 includes the analysis of two languages that exemplify vowel harmony patterns with neutral--- i.e. blocking and transparent --- vowels. Section 4 analyzes a domain restricted vowel harmony pattern in Turkish. Section 5 discusses how the system laid out so far captures the unattested sour grapes pattern. And section 6 concludes.
-<!-- switched rules out to captures -->
+<!-- switched rules out to captures, fix spelling of analysis -->
 
 # Defining Autosegmental Representations (ARs)
 
@@ -160,6 +167,7 @@ Finite $\subsetneq$ Regular $\subsetneq$ Context-Free $\subsetneq$ Context-Sensi
   \end{tikzpicture}
 \end{exe}
 
+<!-- "at least one element on each feature tier" -->
 First, FS means that each featural element must be associated to at least one vowel on the segmental tier and each vowel on the segmental tier must be associated to at least one element on each featural tier. FS crucially allows vowels to be associated to multiple featural tiers as is necessary for each vowel feature to occupy its own tier. The hypothetical representation in (\ref{akan.ex2}) straighforwardly violates FS because there is a vowel that is not associated to any feature on the ATR tier. While both vowels are associated to a single -low feature, the second vowel is not associated to any feature on the ATR tier. Since vowel harmony patterns will be analyzed, it will be assumed that consonants cannot be associated to vowel features and that FS and vowel harmony in general ignore consonantal elements on the segmental tier. 
 
 Second, the NCC states that association lines between the segmental tier and a feature tier never cross. @odden1994 adds that the NCC can only evaluate the association between the segmental and one featural tier at a time. The representation in (\ref{akan.ex3}) violates the NCC because +ATR precedes -ATR, but is associated to a vowel that is preceded by a vowel associated to -ATR; this configuration creates visually crossed association lines. 
@@ -415,7 +423,7 @@ Some previous analyses of vowel harmony assume that all harmony patterns result 
 
   This paper focuses on surface representations and Akan provides an example of a pattern in which vowel harmony assimilation is due to spreading. The surface spreading ARs used throughout this paper are derived via concatenation with adjacent identical features merged into a single feature that is associated to multiple vowels, as shown in (\ref{concat.ex}) and (\ref{akan.ex}). Akan provides an example of a classic spreading pattern, in which an initial vowel feature (ATR) is associated to all the vowels in a word to the left of a +low blocking vowel, as shown in (\ref{akan.obeijii}a). 
   
-  The analysis of Akan provided here demonstrates that spreading ARs are local on the surface. All vowels are associated to the same ATR feature, as in (\ref{akan.obeijii}a), or when two different ATR features are present they are adjacent to each other regardless of how many vowels are associated to each. In addition, the FSC posited for Akan is able to capture the Akan ATR harmony pattern for words with and without blocking vowels.
+  The analysis of Akan provided here demonstrates that spreading ARs are local on the surface. Here locality means that spreading ARs consist of a domain defined by a single ATR feature node, they must include a contiguous span of vowels, but they are not bounded in length, as in (\ref{akan.obeijii}a); or when two different ATR features are present they are adjacent to each other regardless of how many vowels are associated to each. In addition, the FSC posited for Akan is able to capture the Akan ATR harmony pattern for words with and without blocking vowels.
 
 ## Transparent vowels
 
@@ -586,7 +594,8 @@ In (\ref{finnish.ruveta}a) the [u] and [\textipa{A}] vowels are each associated 
 
 ### Surface agreement is local
 
-<!-- Bakovic 2000: conclusion -->
+<!-- Bakovic 2000: conclusion 
+assimilation mechanism that differs from spreading, due to mechanism that differs from spreading b/c features not adjacent so not merged-->
   Finnish exemplifies an assimilation mechanism that differs from spreading. In Finnish there are grammatical words like (\ref{finnish.ruveta}a), which contain two +back harmonizing vowels with a transparent vowel between them. The NCC prevents Finnish from generating such words by spreading a single +back feature across a -back feature and the two +back features are not merged because they are not adjacent to each other. So the assimilation between two non-adjacent vowels of a +back feature in words like (\ref{finnish.ruveta}a) must be due to a mechanism that differs from feature spreading because the two +back features are not adjacent, and thus not merged during concatenation. In addition, OCP allows multiple iterations of a +back feature to occur as long as each is adjacent to a -back feature. In this paper, this other type of assimilation is called *agreement*. Agreement is represented on the surface as an AR in which two non-adjacent features on a tier share a value and the intervening feature on that tier has the opposite value, as shown in (\ref{finnish.ruveta}) and (\ref{finnish.agree}).
 
 \begin{exe}
@@ -813,6 +822,7 @@ The analysis presented above captures both the Turkish back and round harmony pa
 
   On the surface, all Turkish suffix vowels are associated to the same back feature as root-final vowels. While most Turkish suffixes are monosyllabic, in a grammatical Turkish word with two suffixes the same descriptive generalization holds. For example, in [\textipa{k1z\LARGE+}\textipa{lar}\textipa{\LARGE+}\textipa{1n}] `girls (gen.)' both suffix vowels are associated to the same back feature on the surface, as shown in the AR (\ref{turkish.dprim}). The word [\textipa{k1z\LARGE+}\textipa{lar}\textipa{\LARGE+}\textipa{1n}] contains the root [\textipa{k1z}] followed by two suffixes: [lar] and [\textipa{1n}]. The grammatical AR in (\ref{turkish.dprim}) thus demonstrates that all suffix vowels are associated to the same back feature even when multiple suffixes are present. 
 
+<!-- delete concatenation example and mention of concatenation in above paragraph -->
 \begin{exe}
 \ex \label{turkish.dprim} Turkish root-final and suffix vowels all associated to a single back feature \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
@@ -874,6 +884,7 @@ The analysis presented above captures both the Turkish back and round harmony pa
   \end{tikzpicture}
 \end{exe}
 
+<!-- change wording from "vowel closest to boundary" to "second vowel", back harmony holds betwe vowels in diff suffixes and between root-final and a suffix vowel, add with two suffixes at end of paragraph -->
   The ARs in (\ref{turkish.dishsuf}a) and (\ref{turkish.dishsuf}b), on the other hand, violate the FSCs in (\ref{fsc.turkish.nomorph}a) and (\ref{fsc.turkish.nomorph}b), respectively. In (\ref{turkish.dishsuf}a) the first and second vowels are associated to a +back feature that is adjacent to a -back feature, shown in bold and red. Similarly, in (\ref{turkish.dishsuf}b) the second vowel is associated to a -back vowel that is adjacent to a +back vowel, shown in bold and red. The second morpheme is to the left of a boundary and the third morpheme is to the right of the same boundary, but both are considered suffixes because they follow an initial morpheme. Because the two suffixes do not share the same back feature, (\ref{turkish.dishsuf}b) violates (\ref{fsc.turkish.nomorph}b) despite both morphemes being suffixes; so back harmony holds between two vowels in different suffixes as well as between a root-final and a suffix vowel. Thus the FSCs in (\ref{fsc.turkish.nomorph})\textemdash without morpheme boundaries on feature tiers\textemdash do capture the suffix harmony pattern in Turkish words with two suffixes.
 
   However, Turkish also has grammatical words with disharmonic roots. The FSCs in (\ref{fsc.turkish.nomorph}) do not discriminate between root and suffix vowel features because there is no morpheme boundary on the feature tier. A grammatical Turkish root like [tatil] `vacation' would violate (\ref{fsc.turkish.nomorph}a) because the AR contains the forbidden structure shown in bold and red in (\ref{turkish.tatil}). 
@@ -897,6 +908,7 @@ The analysis presented above captures both the Turkish back and round harmony pa
 \end{exe}
 
 \noindent While the AR in (\ref{turkish.tatil}) does violate the hypothetical FSC in (\ref{fsc.turkish.nomorph}a), [tatil] is an attested grammatical Turkish word. Because the FSC in (\ref{fsc.turkish.nomorph}a) incorrectly marks an attested disharmonic root as ungrammtical, (\ref{fsc.turkish.nomorph}) cannot be said to capture the Turkish back harmony pattern. Alternatively, the FSC in (\ref{fsc.turkishback}a) contains a morpheme boundary on the back feature tier that intervenes between the two back features. Since a disharmonic root like (\ref{turkish.tatil}) contains two different back features in the same morpheme, it does not violate (\ref{fsc.turkishback}a). For the same reason, the FSCs in (\ref{fsc.turkishback}) predict that a disharmonic polysllabic suffix would also be grammatical, but an initial search was unable to find any such suffixes in Turkish. The FSCs in (\ref{fsc.turkishback}) must be adopted to capture the Turkish back harmony pattern because they do not mark attested disharmonic roots as ungrammatical. Adopting (\ref{fsc.turkishback}) requires that morpheme boundaries are also represented on feature tiers.
+<!-- also predicts disharmonic polysyllabic suffixes, but Turkish probably doesn't have those -->
 
   Adding a morpheme boundary to the feature tier allows the FSCs in (\ref{fsc.turkishback}), repeated below in (\ref{turkish.final}), to rule out words with a disharmonic suffix while still allowing words with disharmonic roots. As shown below in (\ref{turkish.final})-(\ref{kizlarin}), both [tatil] and [\textipa{k1z\LARGE+}\textipa{lar}\textipa{\LARGE+}\textipa{1n}] are captured by the same set of FSCs. 
   
@@ -958,7 +970,8 @@ The analysis presented above captures both the Turkish back and round harmony pa
 \noindent Again, the Turkish FSCs posited in this section are repeated in (\ref{turkish.final}) above. Including morpheme boundaries on both segmental and feature tiers allows these two FSCs to capture all of the Turkish vowel harmony patterns discussed so far including words with disharmonic roots, shown in (\ref{tatil}), and words with multiple suffixes, shown in (\ref{kizlarin}).
 
   In summary, Turkish demonstrates the necessity of adding a morpheme boundary `\textipa{\LARGE+}' to the set of representations that can occur on a feature tier. Because all root and suffix vowels do not necessarily have to share the same features on the surface it is necessary to distinguish them from one another. Identifying whether a vowel is part of a root or a suffix is accomplished by ordering the vowels relative to a morpheme boundary. However, since vowels are also ordered with respect to consonants, it is necessary to include an ordering relation on feature tiers so that the FSCs are connected. The morpheme boundaries are projected onto each feature tier so that vowel features are ordered relative to the boundary and can be distinguished as belonging to a root or a suffix. In this way, the vowels are indirectly ordered relative to each other via the ordering between their features in addition to their association to those features. Turkish vowel harmony can be considered local because both its back and round harmony patterns are captured by the connected FSCs in (\ref{fsc.turkishback}) and (\ref{fsc.turkishround}), respectively, which refer to the associations between vowels and features as well as the ordering relation between features and a morpheme boundary. 
-  
+
+<!-- add mention of disharmonic suffix prediction -->
   The present account of Turkish back harmony predicts the possibility of disharmonic polysyllabic suffixes, but the initial survey did not reveal any such suffixes in the language. A more in-depth review of attested Turkish suffixes will be required to verify whether or not this prediction is attested.
 
 ### Locality of Agreement 
@@ -1015,6 +1028,7 @@ The analysis presented above captures both the Turkish back and round harmony pa
 ## Sour grapes in vowel harmony
 
 A parallel to the nasal sour grapes pattern can be drawn using the Akan vowel harmony pattern discussed in section 2.1. In traditional descriptions of Akan, the association of an ATR feature is said to spread from an initial -low vowel onto all -low vowels to its right; for example, the word *\textipa{obisaI}* `he asked', shown in (\ref{sgak}a) and (\ref{akan.sg}a), is grammatical in Akan. However, +low vowels block Akan vowel harmony to their left; so an Akan-like sour grapes word would have a +low vowel and the +ATR feature would not spread to any vowel on the left of that +low vowel, as in (\ref{sgak}b) and (\ref{akan.sg}b). The surface ARs in (\ref{akan.sg}) show the difference between the full spreading harmony in a word of Akan and the so-called long-distance blocking effect in a related hypothetical word of the sour grapes pattern.
+<!-- change sg input -->
 
 \begin{exe}
 \ex{ATR harmony}\label{sgak} 

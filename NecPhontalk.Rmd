@@ -29,16 +29,18 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Background
 
-* Central Goal: to determine surface well-formedness constraints on vowel harmony patterns
-    + Extend Jardine (2017)'s theory of forbidden substructure contraints
-    
+* Central Goals: 
+    + to determine usefulness of multi-tiered ARs
+    + identify surface well-formedness constraints on vowel harmony
+         - Extend Jardine (2017)'s theory of FSCs
 
 
 ## Define ARs
 
+* segmental tier and mutliple features
 * Full Specification
-* The No Crossing Constraint
-* The Obligatory Contour Principle
+* the No Crossing Constraint
+* the Obligatory Contour Principle
 
 
 ## Define FSCs
