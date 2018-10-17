@@ -1,0 +1,58 @@
+---
+title: "Locality of vowel harmony over multi-tiered autosegmental representations"
+author: "Eileen Blum"
+institute: "Rutgers University"
+date: "NecPhon MIT Nov. 4, 2018"
+output: 
+  beamer_presentation:
+    theme: "Antibes"
+    colortheme: "beaver"
+    toc: false
+    incremental: false
+    slide_level: 2
+header-includes:
+  - \usepackage{tipa}
+  - \usepackage{gb4e}
+  - \noautomath
+  - \usepackage{tikz}
+  - \usetikzlibrary{matrix}
+  - \tikzset{marked/.style={draw=none, fill=none}}
+  - \usepackage{mathptmx}
+  - \usepackage{moresize}
+  - \setlength{\parindent}{2em}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+# Introduction
+
+## Background
+
+* Central Goal: to determine surface well-formedness constraints on vowel harmony patterns
+    + Extend Jardine (2017)'s theory of forbidden substructure contraints
+    
+
+
+## Define ARs
+
+* Full Specification
+* The No Crossing Constraint
+* The Obligatory Contour Principle
+* 
+
+
+## Define FSCs
+
+* Concatenation
+
+## Real World Examples
+
+* Neutral Vowels:
+    + Akan
+        - spreading
+    + Finnish
+        - agreement
+* Turkish morpheme boundaries
+* Sour Grapes
+
