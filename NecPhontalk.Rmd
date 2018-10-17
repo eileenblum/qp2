@@ -1,5 +1,5 @@
 ---
-title: "Locality of vowel harmony over multi-tiered autosegmental representations"
+title: "Locality of vowel harmony over multi-tiered ARs"
 author: "Eileen Blum"
 institute: "Rutgers University"
 date: "NecPhon MIT Nov. 4, 2018"
@@ -39,12 +39,12 @@ knitr::opts_chunk$set(echo = FALSE)
 * Full Specification
 * The No Crossing Constraint
 * The Obligatory Contour Principle
-* 
 
 
 ## Define FSCs
 
 * Concatenation
+
 
 ## Real World Examples
 
