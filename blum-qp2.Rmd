@@ -43,6 +43,7 @@ header-includes:
 ```{r load_packages, include = FALSE}
 library("papaja")
 ```
+<!-- passive voice -->
 Revisions (p. = page, l. = line):
 \newline p.4, l.124 fix spelling of "analysis"
 \newline p.5, l.162 change "one element on a feature" to "one element on each feature tier"

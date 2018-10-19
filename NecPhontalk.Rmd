@@ -1,11 +1,11 @@
 ---
-title: "Locality of vowel harmony over multi-tiered ARs"
+title: "Vowel Harmony is Local"
 author: "Eileen Blum"
 institute: "Rutgers University"
 date: "NecPhon MIT Nov. 4, 2018"
 output: 
   beamer_presentation:
-    theme: "Antibes"
+    theme: "default"
     colortheme: "beaver"
     toc: false
     incremental: false
@@ -20,41 +20,632 @@ header-includes:
   - \usepackage{mathptmx}
   - \usepackage{moresize}
   - \setlength{\parindent}{2em}
+  - \usepackage{multicol}
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-# Introduction
 
-## Background
+## Introduction
 
-* Central Goals: 
-    + to determine usefulness of multi-tiered ARs
-    + identify surface well-formedness constraints on vowel harmony
-         - Extend Jardine (2017)'s theory of FSCs
+>- A unified theory of surface markedness constraints captures a variety of vowel harmony patterns
+>- Vowel harmony analysed as a phonotactic constraint rather than a transformation from an underlying form into the surface form (Goldsmith, 1976; Clements, 1976; a.o.)
+>- Transparent vowels don't rely on underspecification
+
+## Locality
+
+>- Autosegmental surface representations of vowel harmony patterns need two relations between elements: association (|) and adjacency ($\rightarrow$)
+>- Attested patterns are captured by static surface well-formedness constraints: forbidden substructure constraints (FSCs) (Jardine 2016, 2017)
+
+## Autosegmental Representations (ARs)
+
+>- Tone patterns have been represented with two autosegmental tiers (Goldsmith, 1976; Jardine, 2016, 2017, etc.)
+>- Vowel harmony can be represented with multiple featural tiers
+    \begin{exe}
+    \ex \label{fsc.ex}
+      \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes,
+          row sep=1em, 
+          nodes={text height=1em, text depth=0.5em}] {
+|(h)| $\pm$ high\\
+|(v)| V         \\
+|(b)| $\pm$ back\\
+  };
+   \draw (h.south) -- (v.north);
+   \draw (v.south) -- (b.north);
+      \end{tikzpicture}
+    \end{exe}
+
+## Representational Assumptions
+
+### Full Specification (FS):
+
+ >- each featural element must be associated to at least one vowel
+ >- each vowel must be associated to at least one element on each feature tier
+ 
+\begin{exe}
+\ex \label{akan.ex2} Violates FS
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+* \& |(b)| -ATR \& \\
+  \& |(d)| V    \& |(e)| V \\
+  \& |(f)| -low \& \\
+  };
+  \draw (b.south) -- (d.north);
+  \draw (d.south) -- (f.north);
+  \draw[thick,black,->] (d) -- (e);
+  \draw foreach \x in {d, e} {(\x.south) -- (f.north)};
+  \end{tikzpicture}
+  \end{exe}
+  
+>- consonants are not associated to vowel features
+
+## Representational Assumptions
+
+### No Crossing Constraint (NCC):
+>- association lines between the segmental tier and a feature tier never cross
+
+\begin{exe}
+\ex \label{akan.ex3} Violates NCC
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+* \& |(a)| +ATR \& |(b)| -ATR \\
+  \& |(c)| V    \& |(d)| V \\
+  \& |(e)| -low \&  \\
+  };
+  \draw (a.south) -- (d.north);
+  \draw (b.south) -- (c.north);
+  \draw[thick,black,->] (a) -- (b);
+  \draw[thick,black,->] (c) -- (d);
+  \draw foreach \x in {c, d} {(\x.south) -- (e.north)};
+  \end{tikzpicture}
+\end{exe}
+
+>- FS and NCC prevent gapped structures (Archangeli & Pulleyblank, 1994; Ringen & Vago, 1998)
+
+## Representational Assumptions
+
+### Obligatory Contour Principle (OCP):
+>- adjacent featural elements must be distinct
+
+\begin{exe}
+\ex \label{akan.ex4} Violates OCP
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+* \& |(a)| -ATR \& |(b)| -ATR \\
+  \& |(c)| V    \& |(d)| V \\
+  \& |(e)| -low \& |(f)| -low \\
+  };
+  \draw (a.south) -- (c.north);
+  \draw (b.south) -- (d.north);
+  \draw (c.south) -- (e.north);
+  \draw (d.south) -- (f.north);
+  \draw[thick,black,->] (a) -- (b);
+  \draw[thick,black,->] (c) -- (d);
+  \draw[thick,black,->] (e) -- (f);
+  \end{tikzpicture}
+\end{exe}
+
+## Representational Assumptions
+
+- A well-formed AR obeys FS, the NCC, and the OCP
+
+\begin{exe}
+\ex \label{akan.ex}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+  \&            \& |(1)| -ATR \& \\
+  \& |(2)| t    \& |(3)| i    \& |(4)| e \\
+  \&            \& |(5)| -low \& \\
+  };
+  \draw foreach \x in {3, 4} {(1.south) -- (\x.north)};
+  \draw foreach \x in {3, 4} {(\x.south) -- (5.north)};
+  \draw[black,->] (2) -- (3);
+  \draw[black,->] (3) -- (4);
+  \end{tikzpicture}
+\end{exe}
+
+## Concatenation
+
+- NCC and OCP derived by concatenation operation ($\circ$) (Jardine & Heinz, 2015)
+    + Concatenation merges autosegmental graph primitives, like (\ref{fsc.ex})
+    
+\begin{exe}
+\ex \label{concat.ex} Concatenation of adjacent autosegmental graph primitives \\
+      \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=1ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+  \&                                     \& |(a)| -ATR \&                                     \& |(b)| -ATR \&  \\
+t \& \node {}; \draw(0, 0) circle (3pt); \& |(1a)| i    \& \node {}; \draw(0, 0) circle (3pt); \& |(2b)| e \\
+  \&                                     \& |(c)| -low \&                                     \& |(d)| -low \& \\
+  };
+  \draw (a.south) -- (1a.north);
+  \draw (1a.south) -- (c.north);
+  \draw (b.south) -- (2b.north);
+  \draw (2b.south) -- (d.north);
+  \end{tikzpicture}
+\end{exe}
+
+## Concatenation
+
+- NCC and OCP derived by concatenation operation ($\circ$) (Jardine & Heinz, 2015)
+    + Concatenation merges autosegmental graph primitives, like (\ref{fsc.ex})
+    
+\begin{exe}
+\ex \label{concat.ex} Concatenation of adjacent autosegmental graph primitives \\
+      \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=1ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+  \&                                     \& |(a)| -ATR \&                                     \& |(b)| -ATR \&  \& \& \& |(1)| -ATR \&  \\
+t \& \node {}; \draw(0, 0) circle (3pt); \& |(1a)| i    \& \node {}; \draw(0, 0) circle (3pt); \& |(2b)| e \& \& $\mapsto$ \& |(2)| t    \& |(3)| i    \& |(4)| e \\
+  \&                                     \& |(c)| -low \&                                     \& |(d)| -low \& \& \& \& |(5)| -low \& \\
+  };
+  \draw (a.south) -- (1a.north);
+  \draw (1a.south) -- (c.north);
+  \draw (b.south) -- (2b.north);
+  \draw (2b.south) -- (d.north);
+  \draw foreach \x in {3, 4} {(1.south) -- (\x.north)};
+  \draw foreach \x in {3, 4} {(\x.south) -- (5.north)};
+  \draw[black,->] (2) -- (3);
+  \draw[black,->] (3) -- (4);
+  \end{tikzpicture}
+\end{exe}
+
+## Terminology
+
+>- Assimilation: vowels have the same feature
+>- Spreading: multiple association
+\begin{exe}
+\ex{Spreading}\label{akan.obeijii} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=3ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+    \& |(a)| +ATR  \&         \&         \&         \&         \&         \& \\
+    \& |(b)| o     \& |(c)| b \& |(d)| e \& |(e)| j \& |(f)| i \& |(g)| i \& \\
+  };
+  \draw foreach \x in {b, d, f, g} {(a.south) -- (\x.north)};
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (f) -- (g);
+  \end{tikzpicture}
+\end{exe}
+
+## Terminology
+
+>- Agreement: different vowels associated to different iterations of the same feature
+\begin{exe}
+\ex Agreement \label{agree} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}]
+  {
+         \& |[blue](a)| \textbf{+back} \&          \& |(b)| -back \&          \& |[blue](c)| \textbf{+back} \& \\
+|(c1)| r \& |(1)| u     \& |(c2)| v \& |(2)| e     \& |(c3)| t \& |(3)| a     \&  \\
+  };
+  \draw (a.south) -- (1.north);
+  \draw (b.south) -- (2.north);
+  \draw (c.south) -- (3.north);
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (c1) -- (1);
+  \draw[black,->] (1) -- (c2);
+  \draw[black,->] (c2) -- (2);
+  \draw[black,->] (2) -- (c3);
+  \draw[black,->] (c3) -- (3);
+  \end{tikzpicture}
+\end{exe}
+
+## Forbidden Substructure Grammar
+
+>- Previous work applied logical descriptions of formal languages to phonological well formedness constraints (Heinz et al., 2011; Rogers et al., 2013)
+>- Forbidden substructure grammar generates a set of well-formed structures and rules out ill formed substructures, r$_1$ through r$_n$
+\begin{exe}
+\ex Forbidden substructure grammar (Jardine, 2017) \label{fsg} \\
+$\neg$r$_1$ $\wedge$ $\neg$r$_2$ $\wedge$ $\neg$r$_3$ $\wedge$ ... $\wedge$ $\neg$r$_n$
+\end{exe}
+
+## Forbidden Substructure Constraints (FSCs)
+
+>- Phonotactic restriction that combines the OT (Prince & Smolensky, 1993, 2004) representation of surface markedness (*) with forbidden substructures, like r$_1$
+>- FSCs can define locality because they refer to elements in a structure connected by an ordering or association relation
+
+# Neutral Vowels
+
+## Blocking Vowels: Akan
+
+### Akan ATR harmony: 
+
+>- If a word contains a sequence of -low vowels they will be associated to a single ATR feature (Clements, 1976)
+>- The vowels on either side of a +low vowel can be associated to different ATR features
+
+## Blocking Vowels: Akan
+
+\begin{table}[h]
+  \caption{Akan Vowels}
+  \begin{tabular}{c|c|c}
+       & +ATR        & -ATR       \\\hline\hline
+  -low & i           & \textipa{I}\\ \cline{2-3}
+       & u           & \textipa{U}\\ \cline{2-3}
+       & e           & \textipa{E}\\ \cline{2-3}
+       & o           & \textipa{O}\\\hline
+  +low & \textipa{3} & a\\\hline
+  \end{tabular}
+  \label{akan_vowels}
+\end{table}
+
+>- -low vowels in sequence are associated to a single ATR feature: [obejii] `he came and removed it'
+>- -low vowels on either side of a +low vowel can be associated to different ATR features: [p\textipa{I}r\textipa{3}ko]  `pig'
+
+## Blocking Vowels: Akan
+
+- Akan ATR harmony pattern captured by a single FSC
+    + forbids two adjacent vowels associated to a single -low feature from being
+associated to different ATR features
+
+\begin{exe}
+\ex \label{fsc.akana}
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+$\ast$ \& |(a)| +ATR \& |(f)| -ATR \\
+       \& |(c)| V    \& |(h)| V \\
+       \& |(e)| -low \&  \\
+  };
+  \draw (a.south) -- (c.north);
+  \draw (f.south) -- (h.north);
+  \draw foreach \x in {c, h} {(\x.south) -- (e.north)};
+  \end{tikzpicture}
+\end{exe}
+
+## Blocking Vowels: Akan
+
+- Akan FSC in (\ref{fsc.akana}) allows grammatical spreading AR
+
+\begin{exe}
+\ex{[obejii] `he came and removed it'}\label{akan.obeijii.a} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=4ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+|(a)| +ATR  \&  \\
+|(b)| o     \& |(c)| b \& |(d)| e \& |(e)| j \& |(f)| i \& |(g)| i \& \\
+|(h)| -low  \&  \\
+  };
+  \draw foreach \x in {b, d, f, g} {(a.south) -- (\x.north)};
+  \draw foreach \x in {b, d, f, g} {(\x.south) -- (h.north)};
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (f) -- (g);
+  \end{tikzpicture}
+\end{exe}
+
+## Blocking Vowels: Akan
+
+- and (\ref{fsc.akana}) rules out an ungrammatical disharmonic AR because it contains the forbidden substructure
+
+\begin{exe}
+\ex{Ungrammatical AR}\label{akan.obeijii.b} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=4ex, column sep=2ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+|[red](i)| \textbf{+ATR}  \&         \&                       \&         \& |[red](j)| \textbf{-ATR} \\
+|(k)| o                   \& |(l)| b \& |[red](m)| \textbf{e} \& |(n)| j \& |[red](o)| \textbf{\textipa{I}} \& |(p)| \textipa{I} \\
+|[red](q)| \textbf{-low}  \& \\
+  };
+  \draw (i.south) -- (k.north);
+  \draw[red,thick] (i.south) -- (m.north);
+  \draw[red,thick] (j.south) -- (o.north);
+  \draw (j.south) -- (p.north);
+  \draw foreach \x in {k, p} {(\x.south) -- (q.north)};
+  \draw[red,thick] foreach \x in {m, o} {(\x.south) -- (q.north)};
+  \draw[black,->] (i) -- (j);
+  \draw[black,->] (k) -- (l);
+  \draw[black,->] (l) -- (m);
+  \draw[black,->] (m) -- (n);
+  \draw[black,->] (n) -- (o);
+  \draw[black,->] (o) -- (p);
+  \end{tikzpicture}
+\end{exe}
+
+## Blocking Vowels: Akan
+
+- The same FSC in (\ref{fsc.akana}) also allows a grammatical disharmonic AR with a +low vowel
+
+\begin{exe}
+\ex{[p\textipa{I}r\textipa{3}ko] `pig'}\label{ex.akan+low} \\
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, 
+          row sep=2.5ex, column sep=2.25ex,
+          nodes={text height=1em, text depth=0.5em}] 
+  {
+        \& |(a)| -ATR        \&         \&                   \&         \& |(b)| +ATR\\
+|(c)| p \& |(d)| \textipa{I} \& |(e)| r \& |(f)| \textipa{3} \& |(g)| k \& |(h)| o\\
+        \& |(i)| -low        \&         \& |(j)| +low        \&         \& |(k)| -low\\
+  };
+  \draw foreach \x in {d, f} {(a.south) -- (\x.north)};
+  \draw (b.south) -- (h.north);
+  \draw (d.south) -- (i.north);
+  \draw (f.south) -- (j.north);
+  \draw (h.south) -- (k.north);
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (f) -- (g);
+  \draw[black,->] (g) -- (h);
+  \draw[black,->] (i) -- (j);
+  \draw[black,->] (j) -- (k);
+  \end{tikzpicture}
+\end{exe}
+
+## Spreading is local
+
+### Spreading ARs...
+
+>- consist of an unbounded span of contiguous vowels associated to a single ATR feature node 
+>- OR when two different ATR features are present, the features are adjacent to each other regardless of how many vowels are associated to each
+
+>- the FSC posited in (\ref{fsc.akana}) captures the Akan ATR harmony pattern for words with
+and without blocking +low vowels
+
+## Transparent Vowels: Finnish
+
+### Finnish Back harmony:
+
+>- Harmonizing vowels in a root are associated to a single back feature 
+>- Harmonizing suffix vowels are associated to the same back feature as the harmonizing root-final vowel (Nevins, 2010; Ringen & Heinamaki, 1999; van der Hulst, 2017; Välimaa-Blum, 1986)
+
+>- Harmony appears to skip over [-back, -round, -low] vowels
+
+## Transparent Vowels: Finnish
+
+\begin{table}[h]
+  \caption{Finnish Vowels}
+  \begin{tabular}{c|c|c|c|c}
+       & -round          & \multicolumn{2}{l|}{+round} &  \\\hline\hline
+  -low & \textipa{i, i:} & \textipa{y, y:}             & \textipa{u, u:} \\\cline{2-4}
+       & \textipa{e, e:} & \textipa{\o, \o:}           & \textipa{o, o:} \\\hline\cline{3-5}
+  +low &                 & \textipa{\ae, \ae:}         & \textipa{A, A:} & -round\\\hline\hline
+                         & \multicolumn{2}{l|}{-back}  & +back \\\hline
+  \end{tabular}
+  \label{finnish_vowels}
+\end{table}
+
+>- Default -back suffix vowel: [\textipa{tien\ae}] `road'
+>- Two harmonizing vowels in sequence are associated to a single back feature: [\textipa{poutA}] `fine weather'
+>- Harmonizing vowels on either side of a transparent vowel are associated to the same back feature: [\textipa{ruvetA}] `start'
+>- The transparent vowel is associated to a different back feature **on the same tier**
+
+## Transparent Vowels: Finnish
+
+- Set of Finnish FSCs forbid +round or +low vowels from being associated to a -back feature that succeeds a +back feature
+
+\begin{exe}
+\ex{Finnish FSCs} \label{fsc.finnish.ab}\\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.25em,between origins}, column sep={2em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+(a)  \& * \& |(a)| +back \&            \& |(b)| -back \& \& (b) \& * \& |(1)| +back \&  \& |(2)| -back  \\
+     \& \&               \&            \& |(d)| V     \& \&       \&   \&             \&  \& |(6)| V      \\
+     \& \&               \& |(e)| +low \&             \& \&       \&   \&             \&  \& \\
+     \& \&               \&            \&             \& \&       \&   \&             \&  \& |(9)| +round \\
+  };
+  \draw (b.south) -- (d.north);
+  \draw (d.south) -- (e.north);
+  \draw[black,->] (a) -- (b);
+  \draw (2.south) -- (6.north);
+  \draw (6.south) -- (9.north);
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (1) -- (2);
+  \end{tikzpicture}
+\end{exe}
+
+## Transparent Vowels: Finnish
+
+- and +round or +low vowels from being associated to a -back feature that precedes a +back feature
+
+\begin{exe}
+\ex{Finnish FSCs} \label{fsc.finnish.cd}\\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.25em,between origins}, column sep={2em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+  (a) \& *          \& |(f)| -back \& \& |(g)| +back \& \& (b)  \& * \& |(10)| -back  \& \& |(11)| +back \\
+      \&            \& |(h)| V     \& \&             \& \&      \&   \& |(12)| V      \& \& \\
+      \& |(j)| +low \&             \& \&             \& \&      \&   \&               \& \& \\
+      \&            \&             \& \&             \& \&      \&   \& |(14)| +round \& \& \\
+  };
+  \draw (f.south) -- (h.north);
+  \draw (h.south) -- (j.north);
+  \draw[black,->] (f) -- (g);
+  \draw (10.south) -- (12.north);
+  \draw (12.south) -- (14.north);
+  \draw[black,->] (10) -- (11);
+  \end{tikzpicture}
+\end{exe}
+
+## Transparent Vowels: Finnish
+
+- A fully harmonic word does not violate any Finnish FSCs
+
+\begin{exe}
+\ex{\textipa{[poutA]} `fine weather'} \label{finnish.pouta.a} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+\&            \& |(a)| +back  \&         \&             \& \\ 
+\& |(b)| p    \& |(c)| o      \& |(d)| u \& |(e)| t     \& |(f)| \textipa{A} \\
+\& |(l)| -low \&              \&         \& |(m)| +low  \& \\
+\&            \& |(j)| +round \&         \&             \& |(k)| -round \\
+  };
+  \draw foreach \x in {c, d, f} {(a.south) -- (\x.north)};
+  \draw foreach \x in {c, d} {(\x.south) -- (j.north)};
+  \draw foreach \x in {c, d} {(\x.south) -- (l.north)};
+  \draw (f.south) -- (k.north);
+  \draw (f.south) -- (m.north);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (j) -- (k);
+  \draw[black,->] (l) -- (m);
+  \end{tikzpicture}
+\end{exe}
+
+## Transparent Vowels: Finnish
+
+- A disharmonic word is ungrammatical because it contains the forbidden structure of (\ref{fsc.finnish.ab}a)
+
+\begin{exe}
+\ex{Ungrammatical disharmonic word}\label{finnish.pouta.b} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+\&               \& |[red](n)| \textbf{+back} \&          \&                          \&  |[red](o)| \textbf{-back} \\
+\& |(p)| p       \& |(q)| o                   \& |(r)| u  \& |(s)| t                  \& |[red](t)| \textbf{\ae} \\
+\& |(z)| -low    \&                           \&          \& |[red](1)| \textbf{+low} \& \\
+\&               \& |(x)| +round              \&          \&                          \& |(y)| -round \\
+  };
+  \draw foreach \x in {q, r} {(n.south) -- (\x.north)};
+  \draw[thick,red] (o.south) -- (t.north);
+  \draw foreach \x in {q, r} {(\x.south) -- (x.north)};
+  \draw foreach \x in {q, r} {(\x.south) -- (z.north)};
+  \draw (t.south) -- (y.north);
+  \draw[thick,red] (t.south) -- (1.north);
+  \draw[thick,red,->] (n) -- (o);
+  \draw[black,->] (p) -- (q);
+  \draw[black,->] (q) -- (r);
+  \draw[black,->] (r) -- (s);
+  \draw[black,->] (s) -- (t);
+  \draw[black,->] (x) -- (y);
+  \draw[black,->] (z) -- (1);
+  \end{tikzpicture}
+\end{exe}
+
+## Transparent Vowels: Finnish
+
+- Transparent vowels \textipa{[i, i:, e, e:]} *do not require underspecification*
+
+\begin{exe}
+\ex{\textipa{\textipa{[ruvetA]}} `start'}\label{finnish.ruveta.a} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+           \& |(a)| +back \&         \& |(b)| -back \&              \& |(c)| +back       \& \&  \\ 
+|(d)| r    \& |(e)| u     \& |(f)| v \& |(g)| e     \& |(h)| t      \& |(i)| \textipa{A} \& \& \\
+|(j)| -low \&             \&         \&             \&              \& |(k)| +low        \& \&  \\
+           \& |(l)| +round \&         \&            \& |(m)| -round \&                   \& \&  \\
+  };
+  \draw (a.south) -- (e.north);
+  \draw (b.south) -- (g.north);
+  \draw (c.south) -- (i.north);
+  \draw foreach \x in {e, g} {(\x.south) -- (j.north)};
+  \draw (e.south) -- (l.north);
+  \draw (i.south) -- (k.north);
+  \draw foreach \x in {g, i} {(\x.south) -- (m.north)};
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (d) --(e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (f) -- (g);
+  \draw[black,->] (g) -- (h);
+  \draw[black,->] (h) -- (i);
+  \draw[black,->] (j) -- (k);
+  \draw[black,->] (l) -- (m);
+  \end{tikzpicture}
+\end{exe}
+
+## Transparent Vowels: Finnish
+
+- A disharmonic word with a transparent vowel is ungrammatical because it contains the forbidden structure of (\ref{fsc.finnish.ab}a)
+
+\begin{exe}
+\ex{Ungrammatical word with transparent vowel}\label{finnish.ruveta.b} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+      \&          \& |[red](n)| \textbf{+back}  \&          \&         \&              \& |[red](o)| \textbf{-back} \\
+      \& |(q)| r  \& |(r)| u                    \& |(s)| v  \& |(t)| e \& |(u)| t      \& |[red](v)| \textbf{\textipa{\ae}} \\
+      \& |(w)| -low   \&                        \&          \&         \&              \& |[red](x)| \textbf{+low} \\
+      \&          \& |(y)| +round               \&          \&         \& |(z)| -round \&  \\
+  };
+  \draw (n.south) -- (r.north);
+  \draw (o.south) -- (t.north);
+  \draw[thick,red] (o.south) -- (v.north);
+  \draw foreach \x in {r, t} {(\x.south) -- (w.north)};
+  \draw[thick,red] (v.south) -- (x.north);
+  \draw (r.south) -- (y.north);
+  \draw foreach \x in {t, v} {(\x.south) -- (z.north)};
+  \draw[thick,red,->] (n) -- (o);
+  \draw[black,->] (q) -- (r);
+  \draw[black,->] (r) -- (s);
+  \draw[black,->] (s) -- (t);
+  \draw[black,->] (t) -- (u);
+  \draw[black,->] (u) --(v);
+  \draw[black,->] (w) -- (x);
+  \draw[black,->] (y) -- (z);
+  \end{tikzpicture}
+\end{exe}
+
+## Agreement is local
+
+### Agreemnt ARs...
+
+>- consist of multiple iterations of the same feature, with a different intervening feature on the same tier
+>- result from adjacency between assimilating and intervening features
+
+>- The FSCs posited in (\ref{fsc.finnish.ab}) and (\ref{fsc.finnish.cd}) capture the Finnish back harmony pattern for words with and without transparent vowels
+
+## Discussion
+
+- Well-formed surface ARs of vowel harmony are local
+- Autosegmental representations of vowel harmony utilize adjacency and association relations
+- FSCs capture attested vowel harmony patterns that use neutral vowels: Akan, Finnish
+- Transparent vowels do not require underspecification
+
+## Discussion
+
+- FSCs can capture morphologically-conditioned harmony: morpheme boundaries on feature tiers in Turkish
+- FSCs over multi-tiered ARs can also capture an unattested pattern: sour grapes
+
+## Future Work
+
+>- Are multi-tiered ARs too powerful?
+>- Can multi-tiered ARs be restricted further to exclude unattested patterns?
+
+## References
+
+- Archangeli, D., & Pulleyblank, D. (1994). Grounded phonology (Vol. 25). MIT Press.
+- Clements, G. (1976). Vowel harmony in non-linear generative phonology: An autosegmental model.
+- Goldsmith, J. (1976). Autosegmental phonology (PhD thesis). Massachusetts Institute of Technology.
+- Heinz, J., Rawal, C., & Tanner, H. G. (2011). Tier-based strictly local constraints for phonology.
+In Proceedings of the 49th annual meeting of the association for computational linguistics:
+Human language technologies: Short papers (Vol. 2). Association for Computational
+Linguistics.
+- Jardine, A., & Heinz, J. (2015a). A concatenation operation to derive autosegmental graphs. In
+Proceedings of the 14th annual meeting on the mathematics of language (mol 2015) (pp.
+139–151). Chicago, USA: Association for Computational Linguistics.
 
 
-## Define ARs
+## References
 
-* segmental tier and mutliple features
-* Full Specification
-* the No Crossing Constraint
-* the Obligatory Contour Principle
+- Jardine, A. (2016). Locality and non-linear representations in tonal phonology (PhD thesis). University of Delaware.
+- Jardine, A. (2017). The local nature of tone association patterns. Phonology, 34(2), 385–405.
+- Nevins, A. (2010). Locality in vowel harmony. Linguistic Inquiry Monographs (Vol. 55). MIT Press.
+- Prince, A., & Smolensky, P. (1993). Optimality theory: Constraint interaction in generative grammar
+(No. 2). Rutgers University Center for Cognitive Science.
+- Ringen, C., & Heinamaki, O. (1999). Variation in finnish vowel harmony: An ot account. Natural Languge and Linguistic Theory, 17, 303–337.
+- Ringen, C., & Vago, R. (1998). Hungarian vowel harmony in optimality. Phonology, 15, 393–416.
 
+## References
 
-## Define FSCs
-
-* Concatenation
-
-
-## Real World Examples
-
-* Neutral Vowels:
-    + Akan
-        - spreading
-    + Finnish
-        - agreement
-* Turkish morpheme boundaries
-* Sour Grapes
-
+- Rogers, J., Heinz, J., Fero, M., Hurst, J., Lambert, D., & Wibel, S. (2013). Cognitive and sub-regular complexity. Formal Grammar, 90–108.
+- Välimaa-Blum, R. (1986). Finnish vowel harmony as a prescriptive and descriptive rule: An autosegmental account. In F. Marshall (Ed.), Proceedings of the third eastern states conference on linguistics. University of Pittsburgh.
+- van der Hulst, H. (2017). A representational account of vowel harmony in terms of variable elements
+and licensing. In Approaches to hungarian (Vol. 15). John Benjamins Publishing Company.
