@@ -606,10 +606,13 @@ and without blocking +low vowels
 
 - Well-formed surface ARs of vowel harmony are local
 - Autosegmental representations of vowel harmony utilize adjacency and association relations
+
 - FSCs capture attested vowel harmony patterns that use neutral vowels: Akan, Finnish
 - Transparent vowels do not require underspecification
 
 ## Discussion
+
+### ARs can also represent boundaries 
 
 - FSCs can capture morphologically-conditioned harmony: morpheme boundaries on feature tiers in Turkish
 - FSCs over multi-tiered ARs can also capture an unattested pattern: sour grapes
@@ -618,6 +621,11 @@ and without blocking +low vowels
 
 >- Are multi-tiered ARs too powerful?
 >- Can multi-tiered ARs be restricted further to exclude unattested patterns?
+
+## Thank you
+
+- QP chair- Adam Jardine
+- QP committee- Bruce Tesar, Simon Charlow
 
 ## References
 
