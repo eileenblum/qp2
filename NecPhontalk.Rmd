@@ -21,6 +21,7 @@ header-includes:
   - \usepackage{moresize}
   - \setlength{\parindent}{2em}
   - \usepackage{multicol}
+  - \usecolortheme[RGB={204,0,51}]{structure}
 ---
 
 ```{r setup, include=FALSE}
@@ -30,13 +31,13 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Introduction
 
 >- A unified theory of surface markedness constraints captures a variety of vowel harmony patterns
->- Vowel harmony analysed as a phonotactic constraint rather than a transformation from an underlying form into the surface form (Goldsmith, 1976; Clements, 1976; a.o.)
+>- Vowel harmony as a phonotactic constraint rather than a transformation from an underlying form into the surface form (Goldsmith, 1976; Clements, 1976; a.o.)
 >- Transparent vowels don't rely on underspecification
 
 ## Locality
 
->- Autosegmental surface representations of vowel harmony patterns need two relations between elements: association (|) and adjacency ($\rightarrow$)
 >- Attested patterns are captured by static surface well-formedness constraints: forbidden substructure constraints (FSCs) (Jardine 2016, 2017)
+>- FSCs over autosegmental representations use one of two relations: association (|) and successor ($\rightarrow$)
 
 ## Autosegmental Representations (ARs)
 
@@ -63,48 +64,48 @@ knitr::opts_chunk$set(echo = FALSE)
 
  >- each featural element must be associated to at least one vowel
  >- each vowel must be associated to at least one element on each feature tier
+ >- consonants are not associated to vowel features
  
 \begin{exe}
-\ex \label{akan.ex2} Violates FS
+\ex \label{akan.ex2} Full Specification \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
   {
-* \& |(b)| -ATR \& \\
-  \& |(d)| V    \& |(e)| V \\
-  \& |(f)| -low \& \\
+$\ast$ \& |(a)| -ATR \&         \& \& \& $\checkmark$ \& |(1)| -ATR \& \\
+       \& |(c)| V    \& |(d)| V \& \& \&              \& |(2)| V    \& |(3)| V \\
+       \& |(f)| -low \&         \& \& \&              \& |(4)| -low \& \\
   };
-  \draw (b.south) -- (d.north);
-  \draw (d.south) -- (f.north);
-  \draw[thick,black,->] (d) -- (e);
-  \draw foreach \x in {d, e} {(\x.south) -- (f.north)};
+  \draw (a.south) -- (c.north);
+  \draw foreach \x in {c, d} {(\x.south) -- (f.north)};
+  \draw foreach \x in {2, 3} {(1.south) -- (\x.north)};
+  \draw foreach \x in {2, 3} {(\x.south) -- (4.north)};
   \end{tikzpicture}
-  \end{exe}
-  
->- consonants are not associated to vowel features
+\end{exe}
 
 ## Representational Assumptions
 
 ### No Crossing Constraint (NCC):
 >- association lines between the segmental tier and a feature tier never cross
+>- FS and NCC prevent gapped structures (Archangeli & Pulleyblank, 1994; Ringen & Vago, 1998)
 
 \begin{exe}
-\ex \label{akan.ex3} Violates NCC
+\ex \label{akan.ex3} No Crossing Constraint \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
   {
-* \& |(a)| +ATR \& |(b)| -ATR \\
-  \& |(c)| V    \& |(d)| V \\
-  \& |(e)| -low \&  \\
+$\ast$ \& |(a)| +ATR \& |(b)| -ATR \& \& \& $\checkmark$ \& |(1)| +ATR \& |(2)| -ATR\\
+       \& |(c)| V    \& |(d)| V    \& \& \&              \& |(3)| V    \& |(4)| V \\
+       \& |(e)| -low \&            \& \& \&              \& |(5)| -low\\
   };
   \draw (a.south) -- (d.north);
   \draw (b.south) -- (c.north);
   \draw[thick,black,->] (a) -- (b);
-  \draw[thick,black,->] (c) -- (d);
   \draw foreach \x in {c, d} {(\x.south) -- (e.north)};
+  \draw (1.south) -- (3.north);
+  \draw (2.south) -- (4.north);
+  \draw foreach \x in {3, 4} {(\x.south) -- (5.north)};
   \end{tikzpicture}
 \end{exe}
-
->- FS and NCC prevent gapped structures (Archangeli & Pulleyblank, 1994; Ringen & Vago, 1998)
 
 ## Representational Assumptions
 
@@ -112,21 +113,26 @@ knitr::opts_chunk$set(echo = FALSE)
 >- adjacent featural elements must be distinct
 
 \begin{exe}
-\ex \label{akan.ex4} Violates OCP
+\ex \label{akan.ex4} Obligatory Contour Principle \\
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
   {
-* \& |(a)| -ATR \& |(b)| -ATR \\
-  \& |(c)| V    \& |(d)| V \\
-  \& |(e)| -low \& |(f)| -low \\
+$\ast$ \& |(a)| -ATR \& |(b)| -ATR \& \& \& $\checkmark$ \& |(1)| -ATR \& |(2)| +ATR \\
+       \& |(c)| V    \& |(d)| V    \& \& \&              \& |(3)| V    \& |(4)| V \\
+       \& |(e)| -low \& |(f)| -low \& \& \&              \& |(5)| -low \& |(6)| +low\\
   };
   \draw (a.south) -- (c.north);
   \draw (b.south) -- (d.north);
   \draw (c.south) -- (e.north);
   \draw (d.south) -- (f.north);
-  \draw[thick,black,->] (a) -- (b);
-  \draw[thick,black,->] (c) -- (d);
-  \draw[thick,black,->] (e) -- (f);
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (e) -- (f);
+  \draw (1.south) -- (3.north);
+  \draw (2.south) -- (4.north);
+  \draw (3.south) -- (5.north);
+  \draw (4.south) -- (6.north);
+  \draw[black,->] (1) -- (2);
+  \draw[black,->] (5) -- (6);
   \end{tikzpicture}
 \end{exe}
 
@@ -143,52 +149,6 @@ knitr::opts_chunk$set(echo = FALSE)
   \& |(2)| t    \& |(3)| i    \& |(4)| e \\
   \&            \& |(5)| -low \& \\
   };
-  \draw foreach \x in {3, 4} {(1.south) -- (\x.north)};
-  \draw foreach \x in {3, 4} {(\x.south) -- (5.north)};
-  \draw[black,->] (2) -- (3);
-  \draw[black,->] (3) -- (4);
-  \end{tikzpicture}
-\end{exe}
-
-## Concatenation
-
-- NCC and OCP derived by concatenation operation ($\circ$) (Jardine & Heinz, 2015)
-    + Concatenation merges autosegmental graph primitives, like (\ref{fsc.ex})
-    
-\begin{exe}
-\ex \label{concat.ex} Concatenation of adjacent autosegmental graph primitives \\
-      \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=1ex, nodes={text height=1em, text depth=0.5em}] 
-  {
-  \&                                     \& |(a)| -ATR \&                                     \& |(b)| -ATR \&  \\
-t \& \node {}; \draw(0, 0) circle (3pt); \& |(1a)| i    \& \node {}; \draw(0, 0) circle (3pt); \& |(2b)| e \\
-  \&                                     \& |(c)| -low \&                                     \& |(d)| -low \& \\
-  };
-  \draw (a.south) -- (1a.north);
-  \draw (1a.south) -- (c.north);
-  \draw (b.south) -- (2b.north);
-  \draw (2b.south) -- (d.north);
-  \end{tikzpicture}
-\end{exe}
-
-## Concatenation
-
-- NCC and OCP derived by concatenation operation ($\circ$) (Jardine & Heinz, 2015)
-    + Concatenation merges autosegmental graph primitives, like (\ref{fsc.ex})
-    
-\begin{exe}
-\ex \label{concat.ex} Concatenation of adjacent autosegmental graph primitives \\
-      \begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=1ex, nodes={text height=1em, text depth=0.5em}] 
-  {
-  \&                                     \& |(a)| -ATR \&                                     \& |(b)| -ATR \&  \& \& \& |(1)| -ATR \&  \\
-t \& \node {}; \draw(0, 0) circle (3pt); \& |(1a)| i    \& \node {}; \draw(0, 0) circle (3pt); \& |(2b)| e \& \& $\mapsto$ \& |(2)| t    \& |(3)| i    \& |(4)| e \\
-  \&                                     \& |(c)| -low \&                                     \& |(d)| -low \& \& \& \& |(5)| -low \& \\
-  };
-  \draw (a.south) -- (1a.north);
-  \draw (1a.south) -- (c.north);
-  \draw (b.south) -- (2b.north);
-  \draw (2b.south) -- (d.north);
   \draw foreach \x in {3, 4} {(1.south) -- (\x.north)};
   \draw foreach \x in {3, 4} {(\x.south) -- (5.north)};
   \draw[black,->] (2) -- (3);
@@ -285,8 +245,7 @@ $\neg$r$_1$ $\wedge$ $\neg$r$_2$ $\wedge$ $\neg$r$_3$ $\wedge$ ... $\wedge$ $\ne
 ## Blocking Vowels: Akan
 
 - Akan ATR harmony pattern captured by a single FSC
-    + forbids two adjacent vowels associated to a single -low feature from being
-associated to different ATR features
+    + forbids two -low vowels from being associated to different ATR features
 
 \begin{exe}
 \ex \label{fsc.akana}
@@ -389,11 +348,39 @@ $\ast$ \& |(a)| +ATR \& |(f)| -ATR \\
 
 ### Spreading ARs...
 
->- consist of an unbounded span of contiguous vowels associated to a single ATR feature node 
->- OR when two different ATR features are present, the features are adjacent to each other regardless of how many vowels are associated to each
+>- consist of an unbounded span of contiguous vowels associated to a single feature 
+>- successor relation between two different features on the same tier
 
->- the FSC posited in (\ref{fsc.akana}) captures the Akan ATR harmony pattern for words with
-and without blocking +low vowels
+## Spreading is local
+
+>- OCP makes ARs local because different features on a tier are in successor relation regardless of how many vowels are associated to each.
+
+\begin{exe}
+\ex{[p\textipa{I}r\textipa{3}ko] `pig'}\label{ex.akan+low} \\
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, 
+          row sep=2.5ex, column sep=2.25ex,
+          nodes={text height=1em, text depth=0.5em}] 
+  {
+        \& |[blue](a)| \textbf{-ATR}        \&         \&                   \&         \& |[blue](b)| \textbf{+ATR} \\
+|(c)| p \& |(d)| \textipa{I} \& |(e)| r \& |(f)| \textipa{3} \& |(g)| k \& |(h)| o\\
+        \& |(i)| -low        \&         \& |(j)| +low        \&         \& |(k)| -low\\
+  };
+  \draw foreach \x in {d, f} {(a.south) -- (\x.north)};
+  \draw (b.south) -- (h.north);
+  \draw (d.south) -- (i.north);
+  \draw (f.south) -- (j.north);
+  \draw (h.south) -- (k.north);
+  \draw[thick,blue,->] (a) -- (b);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (f) -- (g);
+  \draw[black,->] (g) -- (h);
+  \draw[black,->] (i) -- (j);
+  \draw[black,->] (j) -- (k);
+  \end{tikzpicture}
+\end{exe}
 
 ## Transparent Vowels: Finnish
 
@@ -449,7 +436,7 @@ and without blocking +low vowels
 
 ## Transparent Vowels: Finnish
 
-- and +round or +low vowels from being associated to a -back feature that precedes a +back feature
+- and forbid +round or +low vowels from being associated to a -back feature that precedes a +back feature
 
 \begin{exe}
 \ex{Finnish FSCs} \label{fsc.finnish.cd}\\
@@ -530,7 +517,7 @@ and without blocking +low vowels
 
 ## Transparent Vowels: Finnish
 
-- Transparent vowels \textipa{[i, i:, e, e:]} *do not require underspecification*
+- Transparent vowels \textipa{[i, i:, e, e:]} are associated to a feature *on each feature tier*
 
 \begin{exe}
 \ex{\textipa{\textipa{[ruvetA]}} `start'}\label{finnish.ruveta.a} \\
@@ -598,17 +585,49 @@ and without blocking +low vowels
 ### Agreemnt ARs...
 
 >- consist of multiple iterations of the same feature, with a different intervening feature on the same tier
->- result from adjacency between assimilating and intervening features
+>- successor relation between assimilating and intervening features
 
->- The FSCs posited in (\ref{fsc.finnish.ab}) and (\ref{fsc.finnish.cd}) capture the Finnish back harmony pattern for words with and without transparent vowels
+## Agreement is local
+
+>- Transparent vowels associated to a feature *on each feature tier*
+>- ARs are local because successor relation between features on each tier
+
+\begin{exe}
+\ex{\textipa{\textipa{[ruvetA]}} `start'}\label{finnish.ruveta.a} \\
+  \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+           \& |(a)| +back \&         \& |(b)| -back \&              \& |(c)| +back       \& \&  \\ 
+|(d)| r    \& |(e)| u     \& |(f)| v \& |(g)| e     \& |(h)| t      \& |(i)| \textipa{A} \& \& \\
+|(j)| -low \&             \&         \&             \&              \& |(k)| +low        \& \&  \\
+           \& |(l)| +round \&         \&            \& |(m)| -round \&                   \& \&  \\
+  };
+  \draw (a.south) -- (e.north);
+  \draw (b.south) -- (g.north);
+  \draw (c.south) -- (i.north);
+  \draw foreach \x in {e, g} {(\x.south) -- (j.north)};
+  \draw (e.south) -- (l.north);
+  \draw (i.south) -- (k.north);
+  \draw foreach \x in {g, i} {(\x.south) -- (m.north)};
+  \draw[black,->] (a) -- (b);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (d) --(e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (f) -- (g);
+  \draw[black,->] (g) -- (h);
+  \draw[black,->] (h) -- (i);
+  \draw[black,->] (j) -- (k);
+  \draw[black,->] (l) -- (m);
+  \end{tikzpicture}
+\end{exe}
 
 ## Discussion
 
 - Well-formed surface ARs of vowel harmony are local
-- Autosegmental representations of vowel harmony utilize adjacency and association relations
+- Autosegmental representations of vowel harmony utilize successor association relations
 
 - FSCs capture attested vowel harmony patterns that use neutral vowels: Akan, Finnish
-- Transparent vowels do not require underspecification
+- Transparent vowels do not require underspecification on the surface
 
 ## Discussion
 
@@ -657,3 +676,30 @@ Proceedings of the 14th annual meeting on the mathematics of language (mol 2015)
 - Välimaa-Blum, R. (1986). Finnish vowel harmony as a prescriptive and descriptive rule: An autosegmental account. In F. Marshall (Ed.), Proceedings of the third eastern states conference on linguistics. University of Pittsburgh.
 - van der Hulst, H. (2017). A representational account of vowel harmony in terms of variable elements
 and licensing. In Approaches to hungarian (Vol. 15). John Benjamins Publishing Company.
+
+# Appendix
+
+## Concatenation
+
+- NCC and OCP derived by concatenation operation ($\circ$) (Jardine & Heinz, 2015)
+    + Concatenation merges autosegmental graph primitives, like (\ref{fsc.ex})
+    
+\begin{exe}
+\ex \label{concat.ex} Concatenation of adjacent autosegmental graph primitives \\
+      \begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=1ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+  \&                                     \& |(a)| -ATR \&                                     \& |(b)| -ATR \&  \& \& \& |(1)| -ATR \&  \\
+t \& \node {}; \draw(0, 0) circle (3pt); \& |(1a)| i    \& \node {}; \draw(0, 0) circle (3pt); \& |(2b)| e \& \& $\mapsto$ \& |(2)| t    \& |(3)| i    \& |(4)| e \\
+  \&                                     \& |(c)| -low \&                                     \& |(d)| -low \& \& \& \& |(5)| -low \& \\
+  };
+  \draw (a.south) -- (1a.north);
+  \draw (1a.south) -- (c.north);
+  \draw (b.south) -- (2b.north);
+  \draw (2b.south) -- (d.north);
+  \draw foreach \x in {3, 4} {(1.south) -- (\x.north)};
+  \draw foreach \x in {3, 4} {(\x.south) -- (5.north)};
+  \draw[black,->] (2) -- (3);
+  \draw[black,->] (3) -- (4);
+  \end{tikzpicture}
+\end{exe}
