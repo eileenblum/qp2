@@ -36,8 +36,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Locality
 
->- Attested patterns are captured by static surface well-formedness constraints: forbidden substructure constraints (FSCs) (Jardine 2016, 2017)
->- FSCs over autosegmental representations use one of two relations: association (|) and successor ($\rightarrow$)
+>- Attested vowel harmony patterns captured by static surface well-formedness constraints: forbidden substructure constraints (FSCs) (Jardine 2016, 2017)
+>- FSCs over autosegmental representations (ARs) use one of two relations: association (|) and successor ($\rightarrow$)
 
 ## Autosegmental Representations (ARs)
 
@@ -201,19 +201,10 @@ $\ast$ \& |(a)| -ATR \& |(b)| -ATR \& \& \& $\checkmark$ \& |(1)| -ATR \& |(2)| 
   \end{tikzpicture}
 \end{exe}
 
-## Forbidden Substructure Grammar
-
->- Previous work applied logical descriptions of formal languages to phonological well formedness constraints (Heinz et al., 2011; Rogers et al., 2013)
->- Forbidden substructure grammar generates a set of well-formed structures and rules out ill formed substructures, r$_1$ through r$_n$
-\begin{exe}
-\ex Forbidden substructure grammar (Jardine, 2017) \label{fsg} \\
-$\neg$r$_1$ $\wedge$ $\neg$r$_2$ $\wedge$ $\neg$r$_3$ $\wedge$ ... $\wedge$ $\neg$r$_n$
-\end{exe}
-
 ## Forbidden Substructure Constraints (FSCs)
 
->- Phonotactic restriction that combines the OT (Prince & Smolensky, 1993, 2004) representation of surface markedness (*) with forbidden substructures, like r$_1$
->- FSCs can define locality because they refer to elements in a structure connected by an ordering or association relation
+>- \textbf{Phonotactic restriction} that combines the OT (Prince & Smolensky, 1993, 2004) representation of \textbf{surface markedness (*)} with \textbf{forbidden substructures} (Heinz et al., 2011; Rogers et al., 2013; Jardine, 2017)
+>- FSCs define locality because they refer to elements in a structure connected by an ordering or association relation
 
 # Neutral Vowels
 
@@ -346,14 +337,14 @@ $\ast$ \& |(a)| +ATR \& |(f)| -ATR \\
 
 ## Spreading is local
 
-### Spreading ARs...
+### Spreading ARs consist of...
 
->- consist of an unbounded span of contiguous vowels associated to a single feature 
+>- an unbounded span of contiguous vowels associated to a single feature 
 >- successor relation between two different features on the same tier
 
 ## Spreading is local
 
->- OCP makes ARs local because different features on a tier are in successor relation regardless of how many vowels are associated to each.
+>- \textbf{OCP makes ARs local} because different features on a tier are in successor relation regardless of how many vowels are associated to each.
 
 \begin{exe}
 \ex{[p\textipa{I}r\textipa{3}ko] `pig'}\label{ex.akan+low} \\
@@ -389,7 +380,7 @@ $\ast$ \& |(a)| +ATR \& |(f)| -ATR \\
 >- Harmonizing vowels in a root are associated to a single back feature 
 >- Harmonizing suffix vowels are associated to the same back feature as the harmonizing root-final vowel (Nevins, 2010; Ringen & Heinamaki, 1999; van der Hulst, 2017; Välimaa-Blum, 1986)
 
->- Harmony appears to skip over [-back, -round, -low] vowels
+>- Back harmony appears to skip over [-back, -round, -low] vowels
 
 ## Transparent Vowels: Finnish
 
@@ -582,15 +573,15 @@ $\ast$ \& |(a)| +ATR \& |(f)| -ATR \\
 
 ## Agreement is local
 
-### Agreemnt ARs...
+### Agreemnt ARs consist of...
 
->- consist of multiple iterations of the same feature, with a different intervening feature on the same tier
+>- multiple iterations of the same feature, with a different intervening feature on the same tier
 >- successor relation between assimilating and intervening features
 
 ## Agreement is local
 
 >- Transparent vowels associated to a feature *on each feature tier*
->- ARs are local because successor relation between features on each tier
+>- ARs are local because of successor relation between features on each tier
 
 \begin{exe}
 \ex{\textipa{\textipa{[ruvetA]}} `start'}\label{finnish.ruveta.a} \\
@@ -623,18 +614,22 @@ $\ast$ \& |(a)| +ATR \& |(f)| -ATR \\
 
 ## Discussion
 
-- Well-formed surface ARs of vowel harmony are local
-- Autosegmental representations of vowel harmony utilize successor association relations
+### Well-formed surface ARs of vowel harmony are local
 
-- FSCs capture attested vowel harmony patterns that use neutral vowels: Akan, Finnish
-- Transparent vowels do not require underspecification on the surface
+## Discussion
+
+### Well-formed surface ARs of vowel harmony are local
+
+>- ARs of vowel harmony utilize successor and association relations
+>- FSCs capture attested vowel harmony patterns that use neutral vowels: Akan, Finnish
+>- Transparent vowels do not require underspecification on the surface
 
 ## Discussion
 
 ### ARs can also represent boundaries 
 
-- FSCs can capture morphologically-conditioned harmony: morpheme boundaries on feature tiers in Turkish
-- FSCs over multi-tiered ARs can also capture an unattested pattern: sour grapes
+>- FSCs can capture morphologically-conditioned harmony: morpheme boundaries on feature tiers in Turkish
+>- FSCs over multi-tiered ARs can also capture an unattested pattern: sour grapes
 
 ## Future Work
 
@@ -702,4 +697,14 @@ t \& \node {}; \draw(0, 0) circle (3pt); \& |(1a)| i    \& \node {}; \draw(0, 0)
   \draw[black,->] (2) -- (3);
   \draw[black,->] (3) -- (4);
   \end{tikzpicture}
+\end{exe}
+
+
+## Forbidden Substructure Grammar
+
+- Previous work applied logical descriptions of formal languages to phonological well formedness constraints (Heinz et al., 2011; Rogers et al., 2013)
+- Forbidden substructure grammar generates a set of well-formed structures and rules out ill formed substructures, r$_1$ through r$_n$
+\begin{exe}
+\ex Forbidden substructure grammar (Jardine, 2017) \label{fsg} \\
+$\neg$r$_1$ $\wedge$ $\neg$r$_2$ $\wedge$ $\neg$r$_3$ $\wedge$ ... $\wedge$ $\neg$r$_n$
 \end{exe}
