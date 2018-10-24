@@ -201,6 +201,15 @@ $\ast$ \& |(a)| -ATR \& |(b)| -ATR \& \& \& $\checkmark$ \& |(1)| -ATR \& |(2)| 
   \end{tikzpicture}
 \end{exe}
 
+## Forbidden Substructure Grammar
+
+>- Previous work applied logical descriptions of formal languages to phonological well formedness constraints (Heinz et al., 2011; Rogers et al., 2013)
+>- Forbidden substructure grammar is a conjunction of negative literals that generates a set of well-formed structures and rules out ill formed substructures, r$_1$ through r$_n$
+\begin{exe}
+\ex Forbidden substructure grammar (Jardine, 2017) \label{fsg} \\
+$\neg$r$_1$ $\wedge$ $\neg$r$_2$ $\wedge$ $\neg$r$_3$ $\wedge$ ... $\wedge$ $\neg$r$_n$
+\end{exe}
+
 ## Forbidden Substructure Constraints (FSCs)
 
 >- \textbf{Phonotactic restriction} that combines the OT (Prince & Smolensky, 1993, 2004) representation of \textbf{surface markedness (*)} with \textbf{forbidden substructures} (Heinz et al., 2011; Rogers et al., 2013; Jardine, 2017)
@@ -641,6 +650,10 @@ $\ast$ \& |(a)| +ATR \& |(f)| -ATR \\
 - QP chair- Adam Jardine
 - QP committee- Bruce Tesar, Simon Charlow
 
+```{r echo=FALSE, out.width='50%'}
+knitr::include_graphics('./Boole_front.jpg')
+```
+
 ## References
 
 - Archangeli, D., & Pulleyblank, D. (1994). Grounded phonology (Vol. 25). MIT Press.
@@ -699,12 +712,3 @@ t \& \node {}; \draw(0, 0) circle (3pt); \& |(1a)| i    \& \node {}; \draw(0, 0)
   \end{tikzpicture}
 \end{exe}
 
-
-## Forbidden Substructure Grammar
-
-- Previous work applied logical descriptions of formal languages to phonological well formedness constraints (Heinz et al., 2011; Rogers et al., 2013)
-- Forbidden substructure grammar generates a set of well-formed structures and rules out ill formed substructures, r$_1$ through r$_n$
-\begin{exe}
-\ex Forbidden substructure grammar (Jardine, 2017) \label{fsg} \\
-$\neg$r$_1$ $\wedge$ $\neg$r$_2$ $\wedge$ $\neg$r$_3$ $\wedge$ ... $\wedge$ $\neg$r$_n$
-\end{exe}
