@@ -46,21 +46,21 @@ header-includes:
     + neutral vowels: blocking in Akan, transparent vowels in Finnish
 - Transparent vowels don't rely on underspecification
 
-## Why should we care?
+## Why do we care?
 <!-- ARs are SL (simplify constraints with more complex representations), strings are TSL; explanatory power, pattern that is complex with one rep is simple with diff rep -->
-ARs make vowel harmony patterns Strictly Local (SL)
+\noindent Autosegmental representations (ARs) make vowel harmony strictly local
 
-## Why should we care?
+## Why do we care?
 
-ARs make vowel harmony patterns Strictly Local (SL)
+\noindent Autosegmental representations (ARs) make vowel harmony strictly local
 
-- Patterns that are complex with one representation are made simpler with another
+- Patterns that are complex with one representation can be simpler with a different representation
 
-## Why should we care?
+## Why do we care?
 
-ARs make vowel harmony patterns Strictly Local (SL)
+\noindent Autosegmental representations (ARs) make vowel harmony strictly local
 
-- Patterns that are complex with one representation are made simpler with another
+- Patterns that are complex with one representation can be simpler with a different representation
 - ARs provide explanatory power
     + simpler subregular class than with strings (McMullin & Hansson, 2014; Aks\textipa{\"e}nova, 2017; Aks\textipa{\"e}nova & Deshmukh, 2018)
 
@@ -71,7 +71,7 @@ ARs make vowel harmony patterns Strictly Local (SL)
 ## Locality
 
 - Attested vowel harmony patterns captured by static surface well-formedness constraints: forbidden substructure constraints (FSCs) (Jardine 2016, 2017)
-- FSCs over autosegmental representations (ARs) use two relations: association (|) and successor ($\rightarrow$)
+- FSCs over ARs use two relations: association (|) and successor ($\rightarrow$)
 
 Akan: [p\textipa{I}r\textipa{3}ko] `pig'
 \begin{tikzpicture}[baseline=(current bounding box.north)]
