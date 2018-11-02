@@ -62,7 +62,7 @@ header-includes:
 
 - Patterns that are complex with one representation can be simpler with a different representation
 - ARs provide explanatory power
-    + simpler subregular class than with strings (McMullin & Hansson, 2014; Aks\textipa{\"e}nova, 2017; Aks\textipa{\"e}nova & Deshmukh, 2018)
+    + allow for strictly local descriptions with single representation as opposed to multiple distinct representations (Heinz, 2010; Heinz et al, 2011; Aks\textipa{\"e}nova & Deshmukh, 2018)
 
 ## Locality
 
@@ -363,7 +363,9 @@ $\ast$ \& |[red](a)| \textbf{+ATR} \& |[red](f)| \textbf{-ATR} \\
 
 - Akan FSC in (\ref{fsc.akana}) allows grammatical spreading AR
 
-[obejii] `he came and removed it'
+\begin{multicols}{2}
+
+\underline{[obejii] `he came and removed it'}
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, ampersand replacement=\&, row sep=4ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
   {
@@ -379,6 +381,22 @@ $\ast$ \& |[red](a)| \textbf{+ATR} \& |[red](f)| \textbf{-ATR} \\
   \draw[black,->] (e) -- (f);
   \draw[black,->] (f) -- (g);
   \end{tikzpicture}
+  
+\columnbreak
+
+\underline{Akan FSC}
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+$\ast$ \& |[red](a)| \textbf{+ATR} \& |[red](f)| \textbf{-ATR} \\
+       \& |[red](c)| \textbf{V}    \& |[red](h)| \textbf{V} \\
+       \& |[red](e)| \textbf{-low} \&  \\
+  };
+  \draw[thick,red] (a.south) -- (c.north);
+  \draw[thick,red] (f.south) -- (h.north);
+  \draw[thick,red] foreach \x in {c, h} {(\x.south) -- (e.north)};
+  \end{tikzpicture}
+\end{multicols}
 
 ## Blocking Vowels: Akan
 
@@ -428,7 +446,9 @@ $\ast$ \& |[red](a)| \textbf{+ATR} \& |[red](f)| \textbf{-ATR} \\
 
 - The same FSC in (\ref{fsc.akana}) also allows a grammatical disharmonic AR with a +low vowel
 
-[p\textipa{I}r\textipa{3}ko] `pig'
+\begin{multicols}{2}
+
+\underline{[p\textipa{I}r\textipa{3}ko] `pig'}
 \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, ampersand replacement=\&, 
           row sep=2.5ex, column sep=2.25ex,
@@ -452,6 +472,22 @@ $\ast$ \& |[red](a)| \textbf{+ATR} \& |[red](f)| \textbf{-ATR} \\
   \draw[black,->] (i) -- (j);
   \draw[black,->] (j) -- (k);
   \end{tikzpicture}
+
+\columnbreak
+
+\underline{Akan FSC}
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
+  {
+\& \& $\ast$ \& |[red](a)| \textbf{+ATR} \& |[red](f)| \textbf{-ATR} \\
+\& \&        \& |[red](c)| \textbf{V}    \& |[red](h)| \textbf{V} \\
+\& \&        \& |[red](e)| \textbf{-low} \&  \\
+  };
+  \draw[thick,red] (a.south) -- (c.north);
+  \draw[thick,red] (f.south) -- (h.north);
+  \draw[thick,red] foreach \x in {c, h} {(\x.south) -- (e.north)};
+  \end{tikzpicture}
+\end{multicols}
 
 ## Spreading is local
 
@@ -517,15 +553,13 @@ Finnish Back harmony:
 >- The transparent vowel is associated to a different back feature **on the same tier**
 
 ## Transparent Vowels: Finnish
-<!-- dig for default, what vowel is in suffix if root has only transparent vowels?
-\begin{minipage}[t]{.5\linewidth} 
-...
-\end{minipage}
-\begin{minipage}...
-...
-\end{minipage}
-
-OR rearrange: round constraints first, then low constraints and say which will focus on-->
+<!-- dig for default, what vowel is in suffix if root has only transparent vowels? -->
+<!-- \begin{minipage}[t]{.5\linewidth}  -->
+<!-- ... -->
+<!-- \end{minipage} -->
+<!-- \begin{minipage}... -->
+<!-- ... -->
+<!-- \end{minipage} -->
 
 - Set of Finnish FSCs forbid +round vowels from being associated to a -back feature that succeeds a +back feature
 
@@ -576,7 +610,9 @@ OR rearrange: round constraints first, then low constraints and say which will f
 
 - A fully harmonic word does not violate any Finnish FSCs
 
-\textipa{[poutA]} `fine weather'
+\begin{multicols}{2}
+
+\underline{\textipa{[poutA]} `fine weather'}
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
@@ -597,6 +633,22 @@ OR rearrange: round constraints first, then low constraints and say which will f
   \draw[black,->] (j) -- (k);
   \draw[black,->] (l) -- (m);
   \end{tikzpicture}
+
+\columnbreak
+
+\underline{Finnish FSC}
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+$\ast$ \& |[red](a)| \textbf{+back} \&                 \& |[red](b)| \textbf{-back} \\
+       \&                           \&                 \& |[red](c)| \textbf{V} \\
+       \&                           \& |[red](d)| \textbf{+low} \& \\
+  };
+  \draw[thick,red] (b.south) -- (c.north);
+  \draw[thick,red] (c.south) -- (d.north);
+  \draw[thick,red,->] (a) -- (b);
+\end{tikzpicture}
+\end{multicols}
 
 ## Transparent Vowels: Finnish
 
@@ -648,6 +700,8 @@ $\ast$ \& |[red](a)| \textbf{+back} \&                 \& |[red](b)| \textbf{-ba
 
 - Transparent vowels \textipa{[i, i:, e, e:]} are associated to a feature *on each feature tier*
 
+\begin{multicols}{2}
+
 \textipa{\textipa{[ruvetA]}} `start'
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
@@ -674,6 +728,22 @@ $\ast$ \& |[red](a)| \textbf{+back} \&                 \& |[red](b)| \textbf{-ba
   \draw[black,->] (j) -- (k);
   \draw[black,->] (l) -- (m);
   \end{tikzpicture}
+
+\columnbreak
+
+\underline{Finnish FSC}
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+$\ast$ \& |[red](a)| \textbf{+back} \&                 \& |[red](b)| \textbf{-back} \\
+       \&                           \&                 \& |[red](c)| \textbf{V} \\
+       \&                           \& |[red](d)| \textbf{+low} \& \\
+  };
+  \draw[thick,red] (b.south) -- (c.north);
+  \draw[thick,red] (c.south) -- (d.north);
+  \draw[thick,red,->] (a) -- (b);
+\end{tikzpicture}
+\end{multicols}
 
 ## Transparent Vowels: Finnish
 
@@ -732,7 +802,7 @@ Agreement ARs consist of...
 ## Agreement is local
 
 >- Transparent vowels associated to a feature *on each feature tier*
->- ARs make patterns local because of successor relation between features on each tier
+>- ARs make patterns local because of multiple association and the successor relations on distinct tiers
 
 \textipa{[mAisemiA]} `scenery.plural.partitive'
 \begin{tikzpicture}[baseline=(current bounding box.north)]
@@ -765,11 +835,11 @@ Agreement ARs consist of...
 
 ## Discussion
 
-Well-formed surface ARs of vowel harmony are local
+\noindent Well-formed multi-tiered surface ARs make vowel harmony strictly local
 
 ## Discussion
 
-Well-formed surface ARs of vowel harmony are local
+\noindent Well-formed multi-tiered surface ARs make vowel harmony strictly local
 
 >- ARs of vowel harmony utilize successor and association relations
 >- FSCs capture attested vowel harmony patterns that use neutral vowels: Akan, Finnish
@@ -777,7 +847,7 @@ Well-formed surface ARs of vowel harmony are local
 
 ## Discussion
 
-ARs can also represent boundaries 
+Multi-tiered ARs can also represent boundaries 
 
 >- FSCs can capture morphologically-conditioned harmony: morpheme boundaries on feature tiers in Turkish
 >- FSCs over multi-tiered ARs can also capture an unattested pattern: sour grapes
@@ -810,11 +880,11 @@ knitr::include_graphics('./Boole_back.jpg')
 
 ## References
 
-- Aks\textipa{\"e}nova, A. (2017). Tier alphabet(s): tendencies and restrictions. Qualifying paper. Stonybrook University
-- Aks\textipa{\"e}nova, A. (2018). Formal restrictions on multiple tiers. Proceedings of the Society for Computation in Linguistics, 1 (8).
+- Aks\textipa{\"e}nova, A. and Deshmukh, S. (2018). Formal restrictions on multiple tiers. Proceedings of the Society for Computation in Linguistics, 1(8).
 - Archangeli, D., & Pulleyblank, D. (1994). Grounded phonology (Vol. 25). MIT Press.
 - Clements, G. (1976). Vowel harmony in non-linear generative phonology: An autosegmental model.
 - Goldsmith, J. (1976). Autosegmental phonology (PhD thesis). Massachusetts Institute of Technology.
+- Heinz, J. (2010). Learning long-distance phonotactics. Linguistic Inquiry, 4(4), 623-661.
 - Heinz, J., Rawal, C., & Tanner, H. G. (2011). Tier-based strictly local constraints for phonology. In Proceedings of the 49th annual meeting of the association for computational linguistics: Human language technologies: Short papers (Vol. 2). Association for Computational Linguistics.
 
 ## References
@@ -824,15 +894,14 @@ Proceedings of the 14th annual meeting on the mathematics of language (mol 2015)
 139–151). Chicago, USA: Association for Computational Linguistics.
 - Jardine, A. (2016). Locality and non-linear representations in tonal phonology (PhD thesis). University of Delaware.
 - Jardine, A. (2017). The local nature of tone association patterns. Phonology, 34(2), 385–405.
-- McMullin, K. & Hansson, G. (2014). Long-distance phonotactics as tier-based strictly 2-local languages. Proceedings of the 2014 Annual Meeting on Phonology.
 - Nevins, A. (2010). Locality in vowel harmony. Linguistic Inquiry Monographs (Vol. 55). MIT Press.
 - Prince, A., & Smolensky, P. (1993). Optimality theory: Constraint interaction in generative grammar
 (No. 2). Rutgers University Center for Cognitive Science.
+- Ringen, C., & Heinamaki, O. (1999). Variation in finnish vowel harmony: An ot account. Natural Languge and Linguistic Theory, 17, 303–337.
 
 
 ## References
 
-- Ringen, C., & Heinamaki, O. (1999). Variation in finnish vowel harmony: An ot account. Natural Languge and Linguistic Theory, 17, 303–337.
 - Ringen, C., & Vago, R. (1998). Hungarian vowel harmony in optimality. Phonology, 15, 393–416.
 - Rogers, J., Heinz, J., Fero, M., Hurst, J., Lambert, D., & Wibel, S. (2013). Cognitive and sub-regular complexity. Formal Grammar, 90–108.
 - Välimaa-Blum, R. (1986). Finnish vowel harmony as a prescriptive and descriptive rule: An autosegmental account. In F. Marshall (Ed.), Proceedings of the third eastern states conference on linguistics. University of Pittsburgh.
@@ -844,7 +913,7 @@ and licensing. In Approaches to hungarian (Vol. 15). John Benjamins Publishing C
 ## Concatenation
 
 - NCC and OCP derived by concatenation operation ($\circ$) (Jardine & Heinz, 2015)
-    + Concatenation merges autosegmental graph primitives, like (\ref{fsc.ex})
+    + Concatenation merges autosegmental graph primitives
     
 \begin{exe}
 \ex \label{concat.ex} Concatenation of adjacent autosegmental graph primitives \\
@@ -912,5 +981,123 @@ $\ast$ \& |[red](a)| \textbf{+back} \& \&  |[red](b)| \textbf{-back} \\
   \draw[thick,red] (b.south) -- (c.north);
   \draw[thick,red] (c.south) -- (d.north);
   \draw[thick,red,->] (a) -- (b);
+\end{tikzpicture}
+\end{multicols}
+
+## Morphologically-conditioned harmony: Turkish
+
+Turkish back harmony: 
+
+- Suffix vowels are associated to the same back feature as the root-final vowel
+- Multiple suffix vowels are associated to the same back feature
+- Disharmonic roots
+
+## Morphologically-conditioned harmony: Turkish
+
+\begin{table}[h]
+  \caption{Turkish Vowels}
+  \begin{tabular}{cc|c|cc|c|c|cc}
+        & & \multicolumn{2}{|l}{-back}  &        & \multicolumn{2}{|l}{+back} &             & \\\cline{1-7}\cline{1-7}
+  +high & & i                           & ü      &                            & \textipa{1} & u \\\cline{1-7}
+  -high & & e                           & ö      &                            & a           & o \\\cline{1-7}\cline{1-7}
+        & & -round                      & +round &                            & -round      & +round \\
+  \end{tabular}
+  \label{turkish_vowels}
+\end{table}
+
+- Suffix vowels are associated to the same back feature as the root-final vowel: [\textipa{ip\LARGE+}ler] `rope (Nom.pl)'
+- All suffix vowels are associated to the same back feature: [\textipa{k1z\LARGE+}\textipa{lar}\textipa{\LARGE+}\textipa{1n}] `girls (gen.)'
+- Disharmonic roots are also grammatical: [tatil] `vacation'
+
+## Morphologically-conditioned harmony: Turkish
+
+- Turkish FSCs forbid two back features in a successor relation with a morpheme boundary from having different values
+
+\begin{exe}
+\ex \label{fsc.turkishback}
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={2em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+(a) $\ast$ \& |[red](a)| +back \& |[red](b)| \LARGE+ \& |[red](c)| -back \& \\
+(b) $\ast$ \& |[red](1)| \textbf{-back} \& |[red](2)| \textbf{\LARGE+} \& |[red](3)| \textbf{+back} \\
+  };
+  \draw[red,->] (a) -- (b);
+  \draw[red,->] (b) -- (c);
+  \draw[thick,red,->] (1) -- (2);
+  \draw[thick,red,->] (2) -- (3);
+  \end{tikzpicture}
+\end{exe}
+
+## Morphologically-conditioned harmony: Turkish
+
+- FSC in (\ref{fsc.turkishback}b) allows a grammatical Turkish word
+
+\begin{multicols}{2}
+
+\underline{[\textipa{ip\LARGE+}ler] `rope (Nom.pl)}
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+(a) \& |(a)| -back \&              \& |(3)| \LARGE+ \&         \& |(2)| -back \& \\ 
+    \& |(b)| i     \& |(c)| p      \& |(d)| \LARGE+ \& |(e)| l \& |(f)| e     \& |(g)| r \& \\
+  };
+  \draw (a.south) -- (b.north);
+  \draw (2.south) -- (f.north);
+  \draw[black,->] (a) -- (3);
+  \draw[black,->] (3) -- (2);
+  \draw[black,->] (b) -- (c);
+  \draw[black,->] (c) -- (d);
+  \draw[black,->] (d) -- (e);
+  \draw[black,->] (e) -- (f);
+  \draw[black,->] (f) -- (g);
+\end{tikzpicture}
+  
+\columnbreak
+  
+\underline{Turkish FSC}
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+$\ast$ \& |[red](1)| \textbf{-back} \& |[red](2)| \textbf{\LARGE+} \& |[red](3)| \textbf{+back} \\
+  };
+  \draw[thick,red,->] (1) -- (2);
+  \draw[thick,red,->] (2) -- (3);
+\end{tikzpicture}
+\end{multicols}
+
+## Morphologically-conditioned harmony: Turkish
+
+- and (\ref{fsc.turkishback}b) rules out an ungrammatical word that contains the forbidden substructure
+
+\begin{multicols}{2}
+
+\underline{Ungrammatical Turkish word}
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+|[red](h)| \textbf{-back} \&         \& |[red](1)| \textbf{\LARGE+} \&         \& |[red](i)| \textbf{+back} \& \\
+|(j)| i                   \& |(k)| p \& |(l)| \LARGE+               \& |(m)| l \& |(n)| a \& |(o)| r \\
+  };
+  \draw (h.south) -- (j.north);
+  \draw (i.south) -- (n.north);
+  \draw[black,->] (j) -- (k);
+  \draw[black,->] (k) -- (l);
+  \draw[black,->] (l) -- (m);
+  \draw[black,->] (m) -- (n);
+  \draw[black,->] (n) -- (o);
+  \draw[red,thick,->] (h) -- (1);
+  \draw[red,thick,->] (1) -- (i);
+\end{tikzpicture}
+
+\columnbreak
+
+\underline{Turkish FSC}
+\begin{tikzpicture}[baseline=(current bounding box.north)]
+  \matrix [matrix of nodes, ampersand replacement=\&, row sep={3.45em,between origins}, column sep={3.5em,between origins}, nodes={text height=1em, text depth=0.5em}] 
+  {
+$\ast$ \& |[red](1)| \textbf{-back} \& |[red](2)| \textbf{\LARGE+} \& |[red](3)| \textbf{+back} \\
+  };
+  \draw[thick,red,->] (1) -- (2);
+  \draw[thick,red,->] (2) -- (3);
 \end{tikzpicture}
 \end{multicols}

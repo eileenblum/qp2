@@ -141,34 +141,43 @@ Correspondence concerning this article should be addressed to Eileen Blum, 18 Se
 \begin{document}
 \maketitle
 
-Revisions (p. = page, l. = line): \newline p.4, l.124 fix spelling of
-\enquote{analysis} \newline p.5, l.162 change \enquote{one element on a
-feature} to \enquote{one element on each feature tier} \newline p.12,
-l.360 reword second sentence to define locality \newline p.12, l.362 fix
-spelling of \enquote{adjacent} \newline 
+Revisions (sec = section, p. = page, l. = line): \newline sec1, p.1,
+l.11 reword first sentence \newline sec1, p.1, l.19-26 clarify analysis
+of vh as phonotactic restriction, only surface ARs \newline sec1.1, p.4,
+l.132 fix spelling of \enquote{analysis} \newline sec2.2, p.6, l.170
+change \enquote{one element on a feature} to \enquote{one element on
+each feature tier} \newline sec2.3, p.8, l.238-240 add \enquote{used to
+define r\(_1\)-r\(_n\)} to clarify what the constraint definition
+language is \newline sec2.3, p.8, l.244-245 change \enquote{is thus a
+conjunction of surface markedness constraints} to \enquote{thus consists
+of the set of surface markedness constraints} \newline sec3.1.1, p.12,
+l.360 fix spelling of \enquote{adjacent} \newline sec3.1.1, p.12,
+l.365-366 reword second sentence to define locality \newline 
 
 \section{Introduction}\label{introduction}
 
 This qualifying paper aims to investigate the locality of vowel harmony
-patterns over multi-tiered autosegmental representations (ARs) using
-Jardine (2017)'s forbidden substructure constraints (FSCs) over
-multi-tiered ARs. The investigation provides a well-defined,
-computationally motivated theory of well-formedness in vowel harmony.
-Jardine (2017) developed a theory of tonal well-formedness and
-determined that tone patterns are fundamentally local over two-tiered
-ARs. Investigating the locality of vowel harmony patterns allows for a
-theory of well-formedness that makes accurate typological predictions.
+patterns using forbidden substructure constraints (FSCs) over
+multi-tiered autosegmental representations (ARs). The investigation
+provides a well-defined, computationally motivated theory of
+well-formedness in vowel harmony. Jardine (2017) developed a theory of
+tonal well-formedness and determined that tone patterns are
+fundamentally local over two-tiered ARs. Investigating the locality of
+vowel harmony patterns allows for a theory of well-formedness that makes
+accurate typological predictions.
 
+This qualifying paper analyzes vowel harmony as a phonotactic
+restriction using only surface ARs rather than an input-output map.
 Previous work has analyzed vowel harmony patterns as resulting from a
 single assimilation process, whether it be feature spreading or
 agreement (Bakovic, 2000; Clements, 1976; McCarthy, 2011; Nevins, 2010;
 Rose \& Walker, 2011; van der Hulst \& Smith, 1986; Walker, 2010).
-However, this qualifying paper shows that given a uniform theory of
-markedness constraints, surface vowel harmony patterns can result from
-either spreading or agreement. It will be argued that vowel harmony is
-local because all such patterns can be captured by FSCs, which refer to
-the adjacency between features and/or their associations to the vowels
-in a word.
+However, this paper shows that given a uniform theory of surface
+markedness constraints, vowel harmony patterns utilize surface ARs that
+can reflect either type of assimilation. The paper further argues that
+vowel harmony is strictly local on the surface because all such patterns
+can be captured by FSCs, which refer to the adjacency between features
+and/or their associations to the vowels in a word.
 
 First, the locality of a traditional spreading pattern will be
 demonstrated for Akan. The basic spreading pattern with blocking vowels
@@ -203,8 +212,8 @@ derivation of its ARs.
 
 Lastly, this qualifying paper will show that FSCs over multi-tiered ARs
 can also capture an unattested sour grapes vowel harmony pattern.
-Regardless of whether word boundaries are specified or not on feature
-tiers, their presence in an AR allows the theory outlined here to
+Regardless of whether word boundaries are specified on feature tiers or
+not, their presence in an AR allows the theory outlined here to
 represent an unattested pattern. Sour grapes is a vowel harmony pattern
 in which a single blocking vowel prevents the spread of a feature
 regardless of how many vowels intervene. Despite being unattested in the
@@ -593,14 +602,15 @@ languages} in order to explicitly define the possible range of such
 constraints and their interpretations. Jardine (2016) and Jardine (2017)
 introduced the forbidden substructure grammars, which refer to
 phonological structures and are both restrictive and computationally
-local. The logical language outlined in (\ref{fsg}) thus constitutes a
-constraint definition language because it explicitly defines the
-possible surface well-formedness constraints as being those which forbid
-an ill-formed piece of a structure (a substructure).
+local. The logical language used to define r\(_1\)-r\(_n\) in
+(\ref{fsg}) thus constitutes a constraint definition language because it
+explicitly defines the possible surface well-formedness constraints as
+being those which forbid an ill-formed piece of a structure (a
+substructure).
 
-A FSC thus combines the OT representation of surface markedness (using
-*) with the logical language for forbidding a substructure, like r\(_1\)
-in (\ref{fsg}). A forbidden substructure grammar is thus the conjunction
+A FSC combines the OT representation of surface markedness (using *)
+with the logical language for forbidding a substructure, like r\(_1\) in
+(\ref{fsg}). A forbidden substructure grammar thus consists of the set
 of surface markedness constraints that rule out ill-formed
 substructures, i.e.~FSCs. FSCs serve as a type of phonotactic
 restriction such that \enquote{well-formedness is based on contiguous
@@ -1023,9 +1033,9 @@ is crucial in order to allow transparency of certain -back vowels.
   \matrix [matrix of nodes, row sep={3.45em,between origins}, column sep={2.25em,between origins}, nodes={text height=1em, text depth=0.5em}] 
   {
 (a)  & * & |(a)| +back &            & |(b)| -back & & (b) & * & |(1)| +back &  & |(2)| -back  \\
-     & &               &            & |(d)| V     & &       &   &             &  & |(6)| V      \\
-     & &               & |(e)| +low &             & &       &   &             &  & \\
-     & &               &            &             & &       &   &             &  & |(9)| +round \\
+     & &               &            & |(d)| V     & &     &   &             &  & |(6)| V      \\
+     & &               & |(e)| +low &             & &     &   &             &  & \\
+     & &               &            &             & &     &   &             &  & |(9)| +round \\
 (c)  & *          & |(f)| -back & & |(g)| +back & & (d)  & * & |(10)| -back  & & |(11)| +back \\
      &            & |(h)| V     & &             & &      &   & |(12)| V      & & \\
      & |(j)| +low &             & &             & &      &   &               & & \\
