@@ -498,7 +498,9 @@ Spreading ARs consist of...
 
 ## Spreading is local
 
->- \textbf{OCP makes ARs local} because different features on a tier are in successor relation regardless of how many vowels are associated to each.
+- Spreading patterns are local over multi-tiered ARs
+    + multiple association
+    + distinct successor relations on each tier
 
 [p\textipa{I}r\textipa{3}ko] `pig'
 \begin{tikzpicture}[baseline=(current bounding box.north)]
@@ -506,7 +508,7 @@ Spreading ARs consist of...
           row sep=2.5ex, column sep=2.25ex,
           nodes={text height=1em, text depth=0.5em}] 
   {
-        \& |[blue](a)| \textbf{-ATR}        \&         \&                   \&         \& |[blue](b)| \textbf{+ATR} \\
+        \& |(a)| -ATR        \&         \&                   \&         \& |(b)| +ATR \\
 |(c)| p \& |(d)| \textipa{I} \& |(e)| r \& |(f)| \textipa{3} \& |(g)| k \& |(h)| o\\
         \& |(i)| -low        \&         \& |(j)| +low        \&         \& |(k)| -low\\
   };
@@ -515,7 +517,7 @@ Spreading ARs consist of...
   \draw (d.south) -- (i.north);
   \draw (f.south) -- (j.north);
   \draw (h.south) -- (k.north);
-  \draw[thick,blue,->] (a) -- (b);
+  \draw[black,->] (a) -- (b);
   \draw[black,->] (c) -- (d);
   \draw[black,->] (d) -- (e);
   \draw[black,->] (e) -- (f);
@@ -797,12 +799,14 @@ $\ast$ \& |[red](a)| \textbf{+back} \&                 \& |[red](b)| \textbf{-ba
 
 Agreement ARs consist of...
 
->- multiple iterations of the same feature, with a different intervening feature on the same tier
+>- Multiple iterations of the same feature, with a different intervening feature on the same tier
+>- Transparent vowels associated to a feature \textbf{on each feature tier}
 
 ## Agreement is local
 
->- Transparent vowels associated to a feature *on each feature tier*
->- ARs make patterns local because of multiple association and the successor relations on distinct tiers
+- Multi-tiered ARs make agreement patterns local 
+    + multiple association
+    + successor relations on distinct tiers
 
 \textipa{[mAisemiA]} `scenery.plural.partitive'
 \begin{tikzpicture}[baseline=(current bounding box.north)]
