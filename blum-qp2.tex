@@ -308,19 +308,35 @@ stricly local within a Chomsky-based hierarchy of sets of pairs of
 strings and demonstrating their learnability (Chandlee \& Heinz, 2018;
 Chandlee \& Jardine, 2013; Chandlee, Eyraud, \& Heinz, 2014).
 
-However, in this paper vowel harmony is viewed as a phonotactic
-restriction such that only surface ARs are analyzed. The analysis of
-surface representations utilizes a different understanding of
-terminology than what is traditionally assumed for vowel harmony. For
-example, vowel harmony is considered an assimilation pattern, which
-means that vowels in a word are associated to the same feature. On the
-surface, vowels can be associated to the same feature in one of two
-ways: spreading or agreement. In this paper, a spreading AR is one in
-which multiple vowels are associated to a single feature; thus spreading
-is equated with multiple association. An agreement AR is one in which
-vowels are associated to different iterations of the same feature with
-the same value because there is a feature that intervenes with a
-different value on the same tier.
+However, this paper views vowel harmony as a phonotactic restriction
+rather than a process that changes an input form into an output, as
+described above. Phonotactics restrict the possible forms that can be
+found on the surface regardless of the input; so this paper analyzes
+only surface vowel harmony patterns. Because this paper takes a
+different perspective than traditional accounts of vowel harmony, it
+utilizes a slightly different understanding of certain terminology as
+well. Vowel harmony is traditionally considered an assimilatory process,
+but in this paper assimilation means that\textemdash on the
+surface\textemdash vowels in a word are associated to a feature with the
+same value as the feature on the same tier that is associated to other
+vowels in the word. Assimilation can be represented in one of two ways:
+spreading or agreement. Spreading is traditionally understood as a
+process that changes an input into an output with multiple vowels
+associated to a single feature. However, in this paper spreading only
+refers to the output surface form so a spreading AR is one in which
+multiple vowels are associated to a single feature; thus
+\enquote{spreading} means multiple association. Similarly, agreement is
+traditionally understood as a process that changes an input into an
+output surface form with multiple vowels associated to different
+iterations of a feature that all have the same value. In this paper,
+agreement also refers only to the output surface form so an agreement AR
+is one in which vowels are associated to different iterations of a
+feature with the same value; \enquote{agreement} means that vowels don't
+have differing values for a particular feature. This paper thus adapts
+the terminology traditionally used to discuss vowel harmony as a
+transformational process and uses the terms to refer only to output
+structures that can be restricted by the phonotactic constraints of a
+language.
 
 This qualifying paper constitutes the first formal language theoretic
 study of vowel harmony as a phonotactic restriction rather than an
@@ -1078,20 +1094,28 @@ features. \newpage
   \end{tikzpicture}
 \end{exe}
 
-Crucially, the behavior of the transparent vowels with respect to vowel
+Crucially, the behavior of transparent vowels with respect to vowel
 harmony in Finnish is captured by the four FSCs in (\ref{fsc.finnish})
 without reference to underspecification of back features. For example,
 the words in (\ref{finnish_trans}) all contain vowels with -back
 features that follow +back vowels, but because the -back vowels are also
 {[}-low, -round{]} the words are grammatical. The transparent vowels are
-associated to all the same features as the harmonizing vowels and their
-so-called transparency results from the interaction of the -back
-features with -low and -round features, as shown in
+associated to features on the same tiers as the harmonizing vowel
+features and their so-called transparency results from the interaction
+of the -back features with -low and -round features, as shown in
 (\ref{finnish.ruveta}). Because the Finnish FSCs only forbid
-associations to certain back features when vowels are also either +low
-or +round, the {[}-back, -low, -round{]} vowels are able to occur
-anywhere within a word and do not affect the back feature values of
-other vowels.
+associations to -back features when vowels are also either +low or
++round, the {[}-back, -low, -round{]} vowels are able to occur anywhere
+within a word. While Finnish does have {[}-back, +low{]} and {[}-back,
++round{]} vowels, they do not occur unless all the vowels in a word are
+associated to a single -back feature because the Finnish FSCs only
+forbid {[}-back, +low{]} and {[}-back,+round{]} vowels when the -back
+feature is either preceeded or succeeded by a +back feature. This
+additional restricion enforces +back agreement across transparent
+vowels; it is only ever the case that a +back and a -back feature are in
+a successor relation if the -back vowel is also -low and -round. So, in
+words with more than one back feature any -back vowel must be
+transparent and all other vowels must be +back.
 
 \begin{exe}
 \ex{\textipa{\textipa{[ruvetA]}} `start'}\label{finnish.ruveta} \\
@@ -1143,16 +1167,15 @@ each associated to a +back feature, but not the same one. The {[}e{]}
 vowel occurs between them and is associated to a -back feature. The two
 +back features are also in a successor relation with the intervening
 -back feature. The AR in (\ref{finnish.ruveta}a) is grammatical because
-it satisfies FS, the NCC, and the OCP and the -back vowel is not
-associated to a +low or a +round feature, so the AR does not violate any
-of the FSCs in (\ref{fsc.finnish}). The AR in (\ref{finnish.ruveta}b),
-on the other hand, contains a {[}-back, +low{]} vowel, and so
-(\ref{fsc.finnish}a) is violated, as shown in bold and red. Despite
-being separated by a transparent vowel, it is still necessary for the
-suffix and root vowels to agree and the same FSCs that capture Finnish
-back harmony in (\ref{finnish.ruveta}a) also enforce agreement across a
-transparent vowel by marking words like (\ref{finnish.ruveta}b) as
-ungrammatical.
+the -back vowel is not associated to a +low or a +round feature, so the
+AR does not violate any of the FSCs in (\ref{fsc.finnish}). The AR in
+(\ref{finnish.ruveta}b), on the other hand, contains a {[}-back, +low{]}
+vowel, and so (\ref{fsc.finnish}a) is violated, as shown in bold and
+red. Despite being separated by a transparent vowel, it is still
+necessary for the suffix and root vowels to agree and the same FSCs that
+capture Finnish back harmony in (\ref{finnish.ruveta}a) also enforce
+agreement across a transparent vowel by marking words like
+(\ref{finnish.ruveta}b) as ungrammatical.
 
 In summary, the vowel harmony pattern with transparent vowels in Finnish
 can be captured using the four FSCs in (\ref{fsc.finnish}). These FSCs
@@ -1586,6 +1609,7 @@ suffix vowel features because there is no morpheme boundary on the
 feature tier. A grammatical Turkish root like {[}tatil{]} `vacation'
 would violate (\ref{fsc.turkish.nomorph}a) because the AR contains the
 forbidden structure shown in bold and red in (\ref{turkish.tatil}).
+\newpage
 
 \begin{exe}
 \ex{[tatil] `vacation'} \label{turkish.tatil} \\
