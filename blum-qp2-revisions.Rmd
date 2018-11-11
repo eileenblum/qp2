@@ -3,20 +3,85 @@ title: "Revisions: On the locality of vowel harmony over multi-tiered autosegmen
 author: "Eileen Blum"
 date: "11/8/2018"
 output: pdf_document
+indent: true
 header-includes:
   - \usepackage{tipa}
+  - \usepackage{enumitem}
+  - \usepackage{parskip}
 ---
-(sec = section, p. = page, l. = line, ex. = example):
-\newline
-\newline \textbf{throughout the paper:} change "adjacent" to "successive" when referring to features, remove "adjacent" when referring to vowels, remove reference to concatenation after sec2.2 (ok when adding morpheme boundary for Turkish)
-\newline \textbf{sec1: p.1, l.11} reword first sentence to clarify analysis of vh as phonotactic restriction, only surface ARs. \textbf{l.16} avoid derivational wording "vowel harmony patterns utilize..."
-\newline \textbf{sec1.1: p.3, l.111-119} add paragraph explicitly defining use of terms: assimilation, spreading, agreement "However, in this paper...". \textbf{p.4, l.133} fix spelling of "analysis"
-\newline \textbf{sec2.2: p.6, l.171} change "one element on a feature" to "one element on each feature tier".
-\newline \textbf{sec2.3: p.8, l.239} add "used to define r$_1$-r$_n$" to clarify what the constraint definition language is. \textbf{l.243-244} change "is thus a conjunction of surface markedness constraints" to "thus consists of the set of surface markedness constraints"
-\newline \textbf{sec2.4: p.8, l.258-271} rearrange paragraph to explain previous account of assimilation process then explain terms with respect to surface representations. \textbf{p.9, l.273, ex.9} remove example 9b that shows concatenation and paragraph describing it
-\newline \textbf{p.12, l.364-365} reword sentence to define locality "Here locality means...". \textbf{l.366} fix spelling of "adjacent"
-\newline \textbf{sec3.2: p.15, l.430, ex.20} change example to show that disagreement across transparent vowel is ungrammatical. \textbf{l.423} add mention of successor relation between back features. \textbf{l.427} change "certain back features" to "-back features". \textbf{l.429-435} Explain how FSCs enforce +back agreement. \textbf{l.441} remove "it satisfies FS, the NCC, and the OCP". \textbf{l.443-446} add sentence explaining that ex.20b shows that disagreement across transparent vowel is ungrammatical
-\newline \textbf{sec.3.2.1: p.16, l.460} change "adjacent to a" to "in a successor relation with the intervening". \textbf{l.464-465, ex.21} change example to shorter word with multiple transparent vowels. \textbf{l.477-479} split sentences so final sentence says "Thus Finnish vowel harmony demonstrates surface agreement and can be considered local"
-\newline \textbf{sec.4.1: p.18, l.508} delete "For example". \textbf{p.18. l.532} add "in a successor relation with each other". \textbf{l.565, ex.29} remove concatenation example. \textbf{p.20, l.568-577} change wording from "vowel closest to boundary" to "second vowel", clarify that back harmony holds between vowels in diff suffixes and between root-final and a suffix vowel, add "with two suffixes" at end of paragraph. \textbf{p.22, l.620-622} add prediction of polysyllabic disharmonic suffixes
-\newline \textbf{sec.4.1.1: p.22, l.627; p.23, l.640, 643} change "adjacency" to "the successor relation". \textbf{p.23, l.645} clarify "each language determines which primitives it makes use of". \textbf{l.652} change that "Finnish uses ... primitives with morpheme boundary on segmental tier" to "Finnish does not utilize morpheme boundary primitives"
-\newline \textbf{sec5.1: p.24, l.681} change "initial vowel" to "initial -low vowel". \textbf{l.685} add "Following ex. 37" to connect ARs with transformation example. \textbf{p.24, l.688-690, ex.37} change input of Akan and SG examples. \textbf{p.26, l.726, ex.41} change [e] to [\textipa{E}] and switch ATR feature values to make vowel feature representations accurate. \textbf{p.27, l.748, ex.44} switch ATR feature values, change [e] to [\textipa{E}], and switch red ATR association line from first [\textipa{I}] to last one, make association between first [\textipa{I}] and -low black 
+I would like to start by thanking you all again for accommodating the defense deadline and for all of your suggestions to help me further improve this qualifying paper. I will first address the three major points of revision suggested at my defense and then I will provide more detailed responses to comments I received from Adam Jardine and Bruce Tesar. The three major comments from the defense were:
+
+\setbox1=\hbox{1.}
+\setlist{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=1.8cm, labelindent=1.2cm, labelwidth=\wd1, itemindent=*, labelsep=\dimexpr0.6cm-\wd1}
+
+\begin{enumerate}
+  \item The Finnish analysis needs to be fixed: it does not block disagreeing vowels across transparent vowels. If you cannot find a fix, there needs to be a thorough discussion of why and a brief discussion of potential solutions.
+  \item There should be a terminology section early on so that the wording used throughout about spreading, agreement, assimilation, etc. is crystal clear. The wording throughout the paper should be checked as to not confuse derivational and phonotactic views of phonological generalizations.
+  \item The contribution of the graph primitive discussion is unclear, especially when it is brought up in later sections. The point of this is to establish a universal set of structures. Do what is necessary to establish this, and then do not bring it up again.
+\end{enumerate}
+
+  To address point #2 first, I have added a paragraph in section 1.1 on page 3 from lines 111-119, which explains that traditional accounts view vowel harmony as a transformational process, but this paper views vowel harmony as a phonotactic restriction so the focus is only on output surface structures. This paragraph further explains that the paper uses traditional vowel harmony terms\textemdash such as "assimilation", "spreading", and "agreement"\textemdash to refer only to output surface structures rather than transformational processes. More specifically, the meanings of these terms are traditionally understood in transformational terms to say that vowel harmony is a process that changes an input structure into an output structure in which vowels share a feature. However, on the surface "assimilation" means that vowels are associated to a feature with the same value, "spreading" means multiple association, and "agreement" means that vowels don't have differing values for a particular feature. In addition, I rearranged the paragraph in section 2.4 on page 8 lines 258-271 so that it mirrors the added paragraph and again explains the terminology with respect to surface structures. I also did check the wording throughout the paper to ensure that transformational terminology is avoided and/or clarified.
+
+  To address point #3, I removed any mention of the graph primitives or concatenation after section 2.2 of the introduction. Except, I left in a discussion of graph primitives where it was necessary to add something to the universal set of primitives, i.e. morpheme boundaries in Turkish.
+  
+  Lastly for point #1, I changed the ungrammatical Finnish example (20b) in section 3.2 on page 15, line 430 so that it shows why disagreement across a transparent vowel is ungrammatical and I added a sentence stating as much on lines 443-446. I also added an explanation to the paragraph above the example\textemdash on lines 427-435\textemdash of how the Finnish FSCs both allow transparent vowels to occur anywhere in a word and enforce +back agreement across them by forbidding ARs with more than one back feature when the -back vowel is also either +low or +round.
+
+ I will now detail my responses to the more specific comments I received from my committee members.
+
+# Responses to committee comments
+
+## Adam Jardine
+\bigskip
+\noindent \textbf{Comment 1:} You use the term "adjacent" throughout the paper and you seem to use adjacency as an order between elements either from left to right or right to left, but you represent only a unidirectional successor relation with an arrow in the ARs. Is there a difference between the adjacency and successor relations?
+\newline \textbf{Response:} I removed any mention of "adjacent" or "adjacency" in the paper and replaced it with the terms "successive" or "in a successor relation with" in order to clarify that this paper relies only on the uniderectional successor relation between elements. I also removed any reference to adjacent vowels because the paper does not assume that vowels are necessarily in a successor relation with each other because consonant can and do often intervene between them.
+
+\noindent \textbf{Comment 2:} In section 3.2 on page 15, line 427, before example (20): "Finnish FSCs only forbid associations to certain back features..." What back features? Be more specific here.
+\newline \textbf{Response:} I changed the words "certain back features" to "-back features" so as to clarify which back features are forbidden in the Finnish FSCs.
+
+\noindent \textbf{Comment 3:} Same sentence: "the [-back, -low, -round] vowels are able to occur anywhere within a word and do not affect the back feature values of other vowels" ... what do you mean by affect here? It's not that the transparent vowels are affecting the features on the vowels. It's that agreement *must* occur across these vowels. How is that happening?
+\newline \textbf{Response:} I added an explanation to the paragraph above  example (20)\textemdash on lines 427-435\textemdash of how the Finnish FSCs both allow transparent vowels to occur anywhere in a word and enforce +back agreement across them by forbidding ARs with more than one back feature when the -back vowel is also either +low or +round. Because the FSCs include the successor relation between back features with different values, the [-back, +low] and [-back, +round] vowels can only ever occur in words where all the vowels are associated to a single back feature *and* two different back features can only be present in the AR of a word if the -back vowel is also [-low, -round], i.e. transparent.
+
+\noindent \textbf{Comment 4:} On line 441, below example (20): "The AR in (20a) is grammatical because it satisfies FS, the NCC, and the OCP..." FS, the NCC, and OCP are irrelevant here, because you've already established that these constraints are universally adhered to.
+\newline \textbf{Response:} I removed the clause "it satisfies FS, the NCC, and the OCP" from this sentence so that it only refers to the features and their associations that make the example grammatical.
+
+\noindent \textbf{Comment 5:} Use "first and second vowel" rather than "closest to the morpheme boundary" because the latter is ambiguous in examples with multiple morpheme boundaries.
+\newline \textbf{Response:} I made the suggested change in order to clarify precisely which vowel I was referring to.
+
+## Bruce Tesar
+
+\noindent \textbf{Comment 1:} Bruce pointed out two spelling errors and suggested one word replacemnt. The first spelling error was "anaylsis" in section 1.1 on page 4, line 143. The second spelling error was "adjadcent" in section 3.1 on page 12, line 367. Thirdly, he suggested that in section 2.2 on page 6, line 171 the words "a feature tier" be replaced with "each feature tier".
+\newline \textbf{Response:} I fixed the spelling of "analysis" and replaced "adjacent" with "one succeeds the other". I also switched "a" to "each" so as to clarify that FS requires vowels to be associated to a feature on all tiers. This requirement  and the distinction between "a"  and "each" is important in order to represent transparent vowels in Finnish without relying on surface underspecification.
+
+\noindent \textbf{Comment 2:} Section 2.3 on page 8, line 239\textemdash Wouldn't the "constraint definition language" be the language defining what r$_n$ can be? Assuming that each restricted substructure r$_n$ is considered to be a constraint.
+\newline \textbf{Response:} I changed the wording of this sentence from "The logical language outlined in (8) thus constitutes a constraint definition
+language" to "he logical language used to define $\neg$r$_1$ through $\neg$r$_n$ (8) thus constitutes a constraint definition language " in order to clarify that the constraint definition language is the logical language that defines the constraints $\neg$r$_1$ through $\neg$r$_n$ and not the set of constraints themselves.
+
+\noindent \textbf{Comment 3:} Section 2.3 on page 8, lines 243-244\textemdash Be careful! Describing it as the conjunction of OT surface markedness constraints is highly misleading if interpreted from an OT standpoint, because of the quite distinct notion of "constraint conjunction".
+\newline \textbf{Response:} I changed the wording of this sentence from "is thus a conjunction of surface markedness constraints" to "thus consists of the set of surface markedness constraints" in order to clarify that a forbidden substructure grammar is the set of forbidden substructure constraints that capture a pattern without confusing the logical conjunction of FSCs with the OT concept of constraint conjunction.
+
+\noindent \textbf{Comment 4:} Section 3.1.1 on page 12, lines 364-365\textemdash "locality" here means within a domain defined by a single ATR feature node, which must involve a contiguous span of vowels but is not bounded in length.
+\newline \textbf{Response:} I changed the wording of the first half of this sentence from "All vowels are associated to the same feature" to "Here locality means that spreading ARs consist of a domain defined by a single ATR feature node, they must include a contiguous span of vowels, but they are not bounded in length" so as to clarify what is meant by "local" with respect to spreading ARs in the previous sentence.
+
+\noindent \textbf{Comment 5:} Section 3.2.1 on pages 16-17, lines 466-481\textemdash I can't discern what notion of locality is in use here.
+\newline \textbf{Response:} I added the second sentence and changed the order of this paragraph in order to clarify why agreement ARs are local.
+
+\noindent \textbf{Comment 6:} Section 4.1 on page 18, lines 533-536\textemdash You should emphasize that the distinct -back specifications for "consecutive" vowels in (25a) are necessary because of the inclusion of the morpheme boundary as a symbol on the feature tier itself. It took me a while to catch on to this.
+\newline \textbf{Response:} I added two sentences explaining that it is necessary for multiple iterations of a feature with the same value to occur on either side of a morpheme boundary in order to satisfy the NCC.
+
+\noindent \textbf{Comment 7:} Section 4.1 on page 19, lines 554-555\textemdash An analysis in which morpheme boundaries are represented only on the segmental tier "would also incorrectly rule out" (?) disharmonic roots.
+\newline \textbf{Response:} I changed the words "but not disharmonic roots" to "and would also incorrectly rule out disharmonic roots" so as it correct the reasoning for why morpheme boundaries are represented on segmental and feature tiers in the Turkish analysis.
+
+\noindent \textbf{Comment 8:} Section 4.1 on page 22, lines 622-624\textemdash Does Turkish have any suffixes containing more than one vowel? I suspect not, but it is worth commenting on, and addressing the prediction this analysis makes for multi-vowel suffixes, namely that can also be internally disharmonic.
+\newline \textbf{Response:} I added a few sentences at the end of the section to acknowledge the prediction that polysllabic suffixes could also be disharmonic like Turkish polysyllabic roots, but I do not have evidence of polysyllabic suffixes in Turkish at this time.
+
+\noindent \textbf{Comment 9:}Section 4.1.1 on page 23, lines 647-648\textemdash Does the concatenation of primitives vary cross-linguistically? If so, what range of options is available for representation generation? Any serious discussion of typological properties needs to pin down all such sources of cross-linguistic variation.
+\newline \textbf{Response:} I changed this sentence from "The concatenation of primitives further accounts for the language-specific nature of the underspecification of boundaries" to "While the concatenation of primitives is a universal process for deriving the surface ARs used in this paper, each language determines which primitives it makes use of" in order to clarify what the language-specific aspect of concatenation is. It is not the concatenation process itself that varies, but each language determines what primitives are needed.
+
+\noindent \textbf{Comment 10:} Section 5.1 on page 24, line 683\textemdash an initial -low vowel?
+\newline \textbf{Response:} I added the - in "spread from an initial -low vowel" to clarify that the input initial vowel is -low rather than +low as the previous wording suggested.
+
+\noindent \textbf{Comment 11:} Section 5.1 on page 24, line 691-692, example (37)\textemdash This would only work if the second vowel was -ATR in the *input*, right? If it is +ATR in the input, it will stay +ATR in the absence of spreading. REMEMBER: lack of assimilation does not entail dissimilation.
+\newline \textbf{Response:} I changed the input forms for these examples in order to illustrate the transformational notion of spreading that would traditionally be used to explain sour grapes blocking. On line 687 I also added "Following example 27" at the beginning of the sentence to connect the surface ARs in (38) with the output of the transformations in (37).
+
+\noindent \textbf{Comment 12:} Secton 5.1 on pages 26-27\textemdash I don't understand why (42b) needs 3 segmental specifications, in contrast to (42a) which only has 2. It also doesn't match the highlighted substructure in (44).
+\newline \textbf{Response:} While thinking about this comment I realized that my ungrammatical ARs in (41) and (44) were incorrect, so I changed the [e] vowels to their -ATR counterpart [\textipa{E}] and I had to switch the ATR values because [o] is +ATR. In (44) I also switched the bold red association line onto the final [\textipa{I}] rather than the first one in the word so as to illustrate the actual constraint that makes the word ungrammatical. Ones I had corrected the ARs in (41) and (44), it became more clear that constraints with the ATR features in each possible order were needed because of the successor relation between the vowel and the word boundary, but this does not require (42b) to contain three vowels. 
