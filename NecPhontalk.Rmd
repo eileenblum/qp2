@@ -2,7 +2,7 @@
 title: "Vowel Harmony is local over multi-tiered ARs"
 author: "Eileen Blum"
 institute: "Rutgers University"
-date: "NecPhon MIT Nov. 4, 2018"
+date: "NECPhon MIT Nov. 4, 2018"
 output: 
   beamer_presentation:
     theme: "Boadilla"
@@ -23,22 +23,8 @@ header-includes:
   - \usepackage{multicol}
   - \usecolortheme[RGB={204,0,51}]{structure}
 ---
-## Introduction
+<!-- adapt for diss defense, SCAMP (explain system + Eastern Mari problem) -->
 
-- Vowel harmony as a phonotactic constraint rather than a transformation from an underlying form into the surface form (Goldsmith, 1976; Clements, 1976; a.o.)
-
-## Introduction
-
-- Vowel harmony as a phonotactic constraint rather than a transformation from an underlying form into the surface form (Goldsmith, 1976; Clements, 1976; a.o.)
-- A unified theory of forbidden substructure constraints over multi-tiered autosegmental representations captures a variety of vowel harmony patterns
-
-
-## Introduction
-
-- Vowel harmony as a phonotactic constraint rather than a transformation from an underlying form into the surface form (Goldsmith, 1976; Clements, 1976; a.o.)
-- A unified theory of phonotactic constraints as forbidden substructure constraints over multi-tiered autosegmental representations captures a variety of vowel harmony patterns
-    + neutral vowels: blocking in Akan, transparent vowels in Finnish
-    
 ## Introduction
 
 - Vowel harmony as a phonotactic constraint rather than a transformation from an underlying form into the surface form (Goldsmith, 1976; Clements, 1976; a.o.)
@@ -47,26 +33,12 @@ header-includes:
 - Transparent vowels don't rely on underspecification
 
 ## Why do we care?
-<!-- ARs are SL (simplify constraints with more complex representations), strings are TSL; explanatory power, pattern that is complex with one rep is simple with diff rep -->
-\noindent Autosegmental representations (ARs) make vowel harmony strictly local
-
-## Why do we care?
-
-\noindent Autosegmental representations (ARs) make vowel harmony strictly local
-
-- Patterns that are complex with one representation can be simpler with a different representation
-
-## Why do we care?
 
 \noindent Autosegmental representations (ARs) make vowel harmony strictly local
 
 - Patterns that are complex with one representation can be simpler with a different representation
 - ARs provide explanatory power
     + allow for strictly local descriptions with single representation as opposed to multiple distinct representations (Heinz, 2010; Heinz et al, 2011; Aks\textipa{\"e}nova & Deshmukh, 2018)
-
-## Locality
-
-- Attested vowel harmony patterns captured by static surface well-formedness constraints: forbidden substructure constraints (FSCs) (Jardine 2016, 2017)
 
 ## Locality
 
@@ -101,10 +73,6 @@ Akan: [p\textipa{I}r\textipa{3}ko] `pig'
 ## Autosegmental Representations (ARs)
 
 - Tone patterns have been represented with two autosegmental tiers (Goldsmith, 1976; Jardine, 2016, 2017, etc.)
-
-## Autosegmental Representations (ARs)
-
-- Tone patterns have been represented with two autosegmental tiers (Goldsmith, 1976; Jardine, 2016, 2017, etc.)
 - Vowel harmony can be represented with multiple featural tiers
 
   \begin{tikzpicture}[baseline=(current bounding box.north)]
@@ -123,9 +91,9 @@ Akan: [p\textipa{I}r\textipa{3}ko] `pig'
 
 Full Specification (FS):
 
- >- each featural element must be associated to at least one vowel
- >- each vowel must be associated to at least one element on each feature tier
- >- consonants are not associated to vowel features
+ - each featural element must be associated to at least one vowel
+ - each vowel must be associated to at least one element on each feature tier
+ - consonants are not associated to vowel features
  
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
@@ -144,8 +112,8 @@ $\ast$ \& |(a)| -ATR \&         \& \& \& $\checkmark$ \& |(1)| -ATR \& \\
 
  No Crossing Constraint (NCC):
  
->- association lines between the segmental tier and a feature tier never cross
->- FS and NCC prevent gapped structures (Archangeli & Pulleyblank, 1994; Ringen & Vago, 1998)
+- association lines between the segmental tier and a feature tier never cross
+- FS and NCC prevent gapped structures (Archangeli & Pulleyblank, 1994; Ringen & Vago, 1998)
 
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
@@ -171,7 +139,7 @@ $\ast$ \& |(a)| +ATR \& |(b)| -ATR \& \& \& $\checkmark$ \& |(1)| +ATR \& |(2)| 
 
  Obligatory Contour Principle (OCP):
  
->- adjacent featural elements must be distinct
+- adjacent featural elements must be distinct
 
   \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=2.25ex, nodes={text height=1em, text depth=0.5em}] 
@@ -245,29 +213,6 @@ $\ast$ \& |(a)| -ATR \& |(b)| -ATR \& \& \& $\checkmark$ \& |(1)| -ATR \& |(2)| 
 
 \columnbreak
 
-\end{multicols}
-
-## Terminology
-
-\begin{multicols}{2}
-
-\noindent Spreading: multiple association
-\begin{tikzpicture}[baseline=(current bounding box.north)]
-  \matrix [matrix of nodes, ampersand replacement=\&, row sep=3ex, column sep=2ex, nodes={text height=1em, text depth=0.5em}] 
-  {
-    \& |(a)| +ATR  \&         \&         \&         \&         \&         \& \\
-    \& |(b)| o     \& |(c)| b \& |(d)| e \& |(e)| j \& |(f)| i \& |(g)| i \& \\
-  };
-  \draw foreach \x in {b, d, f, g} {(a.south) -- (\x.north)};
-  \draw[black,->] (b) -- (c);
-  \draw[black,->] (c) -- (d);
-  \draw[black,->] (d) -- (e);
-  \draw[black,->] (e) -- (f);
-  \draw[black,->] (f) -- (g);
-\end{tikzpicture}
-
-\columnbreak
-
 \noindent Agreement: different vowels associated to different iterations of the same feature
 \begin{tikzpicture}[baseline=(current bounding box.north)]
   \matrix [matrix of nodes, ampersand replacement=\&, row sep=2.5ex, column sep=0.5ex, nodes={text height=1em, text depth=0.5em}]
@@ -291,19 +236,6 @@ $\ast$ \& |(a)| -ATR \& |(b)| -ATR \& \& \& $\checkmark$ \& |(1)| -ATR \& |(2)| 
 ## Forbidden Substructure Grammar
 
 - Previous work applied logical descriptions of formal languages to phonological well formedness constraints (Heinz et al., 2011; Rogers et al., 2013)
-
-## Forbidden Substructure Grammar
-
-- Previous work applied logical descriptions of formal languages to phonological well formedness constraints (Heinz et al., 2011; Rogers et al., 2013)
-- Forbidden substructure grammar is a conjunction of negative literals
-    + literals = substructures
-    + describes a set of well-formed structures by ruling out ill formed substructures
-
-    $\neg$r$_1$ $\wedge$ $\neg$r$_2$ $\wedge$ $\neg$r$_3$ $\wedge$ ... $\wedge$ $\neg$r$_n$
-
-## Forbidden Substructure Grammar
-
-- Previous work applied logical descriptions of formal languages to phonological well formedness constraints (Heinz et al., 2011; Rogers et al., 2013)
 - Forbidden substructure grammar is a conjunction of negative literals
     + literals = substructures
     + describes a set of well-formed structures by ruling out ill formed substructures, r$_1$ through r$_n$
@@ -318,8 +250,8 @@ $\ast$ \& |(a)| -ATR \& |(b)| -ATR \& \& \& $\checkmark$ \& |(1)| -ATR \& |(2)| 
 
  Akan ATR harmony: 
 
->- If a word contains a sequence of -low vowels they will be associated to a single ATR feature (Clements, 1976)
->- The vowels on either side of a +low vowel can be associated to different ATR features
+- If a word contains a sequence of -low vowels they will be associated to a single ATR feature (Clements, 1976)
+- The vowels on either side of a +low vowel can be associated to different ATR features
 
 ## Blocking Vowels: Akan
 
@@ -336,8 +268,8 @@ $\ast$ \& |(a)| -ATR \& |(b)| -ATR \& \& \& $\checkmark$ \& |(1)| -ATR \& |(2)| 
   \label{akan_vowels}
 \end{table}
 
->- -low vowels in sequence are associated to a single ATR feature: [obejii] `he came and removed it'
->- -low vowels on either side of a +low vowel can be associated to different ATR features: [p\textipa{I}r\textipa{3}ko]  `pig'
+- -low vowels in sequence are associated to a single ATR feature: [obejii] `he came and removed it'
+- -low vowels on either side of a +low vowel can be associated to different ATR features: [p\textipa{I}r\textipa{3}ko]  `pig'
 
 ## Blocking Vowels: Akan
 
@@ -493,8 +425,8 @@ $\ast$ \& |[red](a)| \textbf{+ATR} \& |[red](f)| \textbf{-ATR} \\
 
 Spreading ARs consist of...
 
->- an unbounded span of contiguous vowels associated to a single feature 
->- successor relation between two different features on the same tier
+- an unbounded span of contiguous vowels associated to a single feature 
+- successor relation between two different features on the same tier
 
 ## Spreading is local
 
@@ -531,10 +463,10 @@ Spreading ARs consist of...
 
 Finnish Back harmony:
 
->- Harmonizing vowels in a root are associated to a single back feature 
->- Harmonizing suffix vowels are associated to the same back feature as the harmonizing root-final vowel (Nevins, 2010; Ringen & Heinamaki, 1999; van der Hulst, 2017; Välimaa-Blum, 1986)
+- Harmonizing vowels in a root are associated to a single back feature 
+- Harmonizing suffix vowels are associated to the same back feature as the harmonizing root-final vowel (Nevins, 2010; Ringen & Heinamaki, 1999; van der Hulst, 2017; Välimaa-Blum, 1986)
 
->- Back harmony appears to skip over [-back, -round, -low] vowels
+- Back harmony appears to skip over [-back, -round, -low] vowels
 
 ## Transparent Vowels: Finnish
 
@@ -550,9 +482,9 @@ Finnish Back harmony:
   \label{finnish_vowels}
 \end{table}
 
->- Two harmonizing vowels in sequence are associated to a single back feature: [\textipa{poutA}] `fine weather'
->- Harmonizing vowels on either side of a transparent vowel are associated to the same back feature: [\textipa{ruvetA}] `start'
->- The transparent vowel is associated to a different back feature **on the same tier**
+- Two harmonizing vowels in sequence are associated to a single back feature: [\textipa{poutA}] `fine weather'
+- Harmonizing vowels on either side of a transparent vowel are associated to the same back feature: [\textipa{ruvetA}] `start'
+- The transparent vowel is associated to a different back feature **on the same tier**
 
 ## Transparent Vowels: Finnish
 <!-- dig for default, what vowel is in suffix if root has only transparent vowels? -->
@@ -799,8 +731,8 @@ $\ast$ \& |[red](a)| \textbf{+back} \&                 \& |[red](b)| \textbf{-ba
 
 Agreement ARs consist of...
 
->- Multiple iterations of the same feature, with a different intervening feature on the same tier
->- Transparent vowels associated to a feature \textbf{on each feature tier}
+- Multiple iterations of the same feature, with a different intervening feature on the same tier
+- Transparent vowels associated to a feature \textbf{on each feature tier}
 
 ## Agreement is local
 
@@ -841,25 +773,21 @@ Agreement ARs consist of...
 
 \noindent Well-formed multi-tiered surface ARs make vowel harmony strictly local
 
-## Discussion
-
-\noindent Well-formed multi-tiered surface ARs make vowel harmony strictly local
-
->- ARs of vowel harmony utilize successor and association relations
->- FSCs capture attested vowel harmony patterns that use neutral vowels: Akan, Finnish
->- Transparent vowels do not require underspecification on the surface
+- ARs of vowel harmony utilize successor and association relations
+- FSCs capture attested vowel harmony patterns that use neutral vowels: Akan, Finnish
+- Transparent vowels do not require underspecification on the surface
 
 ## Discussion
 
 Multi-tiered ARs can also represent boundaries 
 
->- FSCs can capture morphologically-conditioned harmony: morpheme boundaries on feature tiers in Turkish
->- FSCs over multi-tiered ARs can also capture an unattested pattern: sour grapes
+- FSCs can capture morphologically-conditioned harmony: morpheme boundaries on feature tiers in Turkish
+- FSCs over multi-tiered ARs can also capture an unattested pattern: sour grapes
 
 ## Future Work
 
->- Are multi-tiered ARs too powerful?
->- Can multi-tiered ARs be restricted further to exclude unattested patterns?
+- Are multi-tiered ARs too powerful?
+- Can multi-tiered ARs be restricted further to exclude unattested patterns?
 
 ## Thank You
 

@@ -111,9 +111,6 @@ Correspondence concerning this article should be addressed to Eileen Blum, 18 Se
 \newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
 
-\usepackage{lineno}
-
-\linenumbers
 \usepackage{tipa}
 \usepackage{gb4e}
 \noautomath
